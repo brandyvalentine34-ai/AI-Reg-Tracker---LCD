@@ -1,0 +1,6 @@
+{
+  "name": "Global AI Regulatory Tracker",
+  "description": "Comprehensive regulatory intelligence tracker monitoring key AI legislation, rules, and governance frameworks across Singapore, US, UK, EU, China, Korea, and Hong Kong.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
