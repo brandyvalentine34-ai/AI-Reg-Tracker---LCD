@@ -285,7 +285,7 @@ export default function App() {
 
           <div className="flex items-center gap-4 text-[11px]">
             <span className="text-slate-400">
-              Curated for compliance officers, legal counsels & AI builders
+              Curated by LCD Compliance for internal sharing and information purposes
             </span>
           </div>
         </div>
