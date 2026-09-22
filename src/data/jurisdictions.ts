@@ -11,11 +11,11 @@ export const JURISDICTIONS: Record<string, Jurisdiction> = {
     approachLabel: 'Collaborative Governance & Sandbox',
     approachSummary: 'Pragmatic, pro-business framework utilizing global pilot testing (AI Verify), model governance guidelines, and sectoral agility rather than prescriptive omnibus legislation.',
     primaryPhilosophy: 'Promoting trusted AI innovation through practical testing toolkits, international interoperability, and iterative guidelines.',
-    leadAgencies: ['IMDA', 'AI Verify Foundation', 'PDPC', 'MAS', 'GovTech'],
+    leadAgencies: ['MAS', 'IMDA', 'AI Verify Foundation', 'PDPC', 'CSA', 'GovTech'],
     keyStats: {
       bindingLaws: 1,
-      guidelines: 3,
-      enactedCount: 4,
+      guidelines: 4,
+      enactedCount: 5,
     },
     mapCoords: {
       x: 775,
@@ -35,11 +35,11 @@ export const JURISDICTIONS: Record<string, Jurisdiction> = {
     approachLabel: 'Sectoral & State-Driven',
     approachSummary: 'Decentralized approach relying on Presidential Executive Orders, voluntary federal frameworks (NIST), agency enforcement (FTC, SEC), and state-level pioneer statutes (CA, CO).',
     primaryPhilosophy: 'Market-driven competitiveness balanced with critical infrastructure safety evaluations and state consumer protection protections.',
-    leadAgencies: ['NIST', 'US AISI', 'White House OSTP', 'FTC', 'California Privacy Protection Agency'],
+    leadAgencies: ['SEC', 'NIST', 'US AISI', 'FTC', 'White House OSTP', 'California Privacy Protection Agency'],
     keyStats: {
       bindingLaws: 3,
-      guidelines: 1,
-      enactedCount: 4,
+      guidelines: 2,
+      enactedCount: 5,
     },
     mapCoords: {
       x: 215,
@@ -59,11 +59,11 @@ export const JURISDICTIONS: Record<string, Jurisdiction> = {
     approachLabel: 'Pro-Innovation & Regulators-Led',
     approachSummary: 'Cross-cutting principles delegated to specialized domain regulators (CMA, FCA, ICO) supported by the UK AI Safety Institute, with targeted frontier model legislation emerging.',
     primaryPhilosophy: 'Avoid blanket pre-emptive regulation; empower established sectoral regulators to apply five core principles proportionately.',
-    leadAgencies: ['DSIT', 'UK AISI', 'CMA', 'ICO', 'FCA', 'Ofcom'],
+    leadAgencies: ['FCA', 'Bank of England / PRA', 'UK AISI', 'CMA', 'ICO', 'DSIT'],
     keyStats: {
       bindingLaws: 1,
-      guidelines: 2,
-      enactedCount: 3,
+      guidelines: 3,
+      enactedCount: 4,
     },
     mapCoords: {
       x: 480,
@@ -83,11 +83,11 @@ export const JURISDICTIONS: Record<string, Jurisdiction> = {
     approachLabel: 'Comprehensive Horizontal Risk-Based',
     approachSummary: 'The global benchmark for omnibus risk-tier legislation (EU AI Act). Bans unacceptable-risk practices, enforces strict conformity for high-risk systems, and imposes transparency on GPAI.',
     primaryPhilosophy: 'Fundamental rights, safety, and strict accountability with substantial extraterritorial reach and worldwide regulatory gravity.',
-    leadAgencies: ['EU AI Office', 'European Commission', 'EDPB', 'National Market Surveillance Authorities'],
+    leadAgencies: ['ESMA', 'EU AI Office', 'European Commission', 'EBA', 'EDPB'],
     keyStats: {
       bindingLaws: 2,
-      guidelines: 1,
-      enactedCount: 3,
+      guidelines: 2,
+      enactedCount: 4,
     },
     mapCoords: {
       x: 520,
@@ -107,11 +107,11 @@ export const JURISDICTIONS: Record<string, Jurisdiction> = {
     approachLabel: 'Targeted Content & Service Mandates',
     approachSummary: 'Iterative, targeted binding regulations focusing on generative services, deep synthesis, algorithmic recommendations, and mandatory algorithm filing with the CAC.',
     primaryPhilosophy: 'Ideological alignment with socialist values, public opinion influence control, national security, and strict technical safety corpus standards.',
-    leadAgencies: ['CAC (Cyberspace Administration)', 'MIIT', 'MOST', 'SAMR', 'TC260'],
+    leadAgencies: ['NFRA', 'PBOC', 'CAC (Cyberspace Administration)', 'MIIT', 'TC260'],
     keyStats: {
       bindingLaws: 2,
-      guidelines: 1,
-      enactedCount: 3,
+      guidelines: 2,
+      enactedCount: 4,
     },
     mapCoords: {
       x: 770,
@@ -131,11 +131,11 @@ export const JURISDICTIONS: Record<string, Jurisdiction> = {
     approachLabel: 'Balanced Promotion & High-Impact Safety',
     approachSummary: 'Dual-track framework through the Framework Act on AI (AI Basic Act), combining aggressive domestic semiconductor/AI industrial promotion with safeguards for high-risk applications.',
     primaryPhilosophy: 'National AI industrial competitiveness and global safety summit diplomacy paired with transparent automated decision privacy rights.',
-    leadAgencies: ['MSIT', 'PIPC', 'National AI Committee', 'KISA'],
+    leadAgencies: ['FSC', 'FSS', 'MSIT', 'PIPC', 'National AI Committee'],
     keyStats: {
       bindingLaws: 2,
-      guidelines: 1,
-      enactedCount: 3,
+      guidelines: 2,
+      enactedCount: 4,
     },
     mapCoords: {
       x: 835,
@@ -155,11 +155,11 @@ export const JURISDICTIONS: Record<string, Jurisdiction> = {
     approachLabel: 'Principles-Based & Financial Hub Guidance',
     approachSummary: 'Guidance-first model led by the Privacy Commissioner (PCPD) and banking regulator (HKMA), featuring a Generative AI Sandbox and clear ethical AI adoption frameworks.',
     primaryPhilosophy: 'Positioning as an international AI innovation & fintech hub while maintaining stringent privacy and fiduciary risk governance.',
-    leadAgencies: ['PCPD', 'HKMA', 'SFC', 'Digital Policy Office (DPO)', 'Cyberport'],
+    leadAgencies: ['HKMA', 'SFC', 'PCPD', 'Digital Policy Office (DPO)', 'Cyberport'],
     keyStats: {
-      bindingLaws: 1,
-      guidelines: 2,
-      enactedCount: 3,
+      bindingLaws: 0,
+      guidelines: 4,
+      enactedCount: 4,
     },
     mapCoords: {
       x: 795,
