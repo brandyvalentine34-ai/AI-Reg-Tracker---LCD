@@ -14,8 +14,8 @@ export const JURISDICTIONS: Record<string, Jurisdiction> = {
     leadAgencies: ['IMDA', 'AI Verify Foundation', 'PDPC', 'MAS', 'GovTech'],
     keyStats: {
       bindingLaws: 1,
-      guidelines: 5,
-      enactedCount: 6,
+      guidelines: 3,
+      enactedCount: 4,
     },
     mapCoords: {
       x: 775,
@@ -37,9 +37,9 @@ export const JURISDICTIONS: Record<string, Jurisdiction> = {
     primaryPhilosophy: 'Market-driven competitiveness balanced with critical infrastructure safety evaluations and state consumer protection protections.',
     leadAgencies: ['NIST', 'US AISI', 'White House OSTP', 'FTC', 'California Privacy Protection Agency'],
     keyStats: {
-      bindingLaws: 4,
-      guidelines: 3,
-      enactedCount: 7,
+      bindingLaws: 3,
+      guidelines: 1,
+      enactedCount: 4,
     },
     mapCoords: {
       x: 215,
@@ -62,8 +62,8 @@ export const JURISDICTIONS: Record<string, Jurisdiction> = {
     leadAgencies: ['DSIT', 'UK AISI', 'CMA', 'ICO', 'FCA', 'Ofcom'],
     keyStats: {
       bindingLaws: 1,
-      guidelines: 4,
-      enactedCount: 5,
+      guidelines: 2,
+      enactedCount: 3,
     },
     mapCoords: {
       x: 480,
@@ -85,9 +85,9 @@ export const JURISDICTIONS: Record<string, Jurisdiction> = {
     primaryPhilosophy: 'Fundamental rights, safety, and strict accountability with substantial extraterritorial reach and worldwide regulatory gravity.',
     leadAgencies: ['EU AI Office', 'European Commission', 'EDPB', 'National Market Surveillance Authorities'],
     keyStats: {
-      bindingLaws: 3,
-      guidelines: 3,
-      enactedCount: 6,
+      bindingLaws: 2,
+      guidelines: 1,
+      enactedCount: 3,
     },
     mapCoords: {
       x: 520,
@@ -109,9 +109,9 @@ export const JURISDICTIONS: Record<string, Jurisdiction> = {
     primaryPhilosophy: 'Ideological alignment with socialist values, public opinion influence control, national security, and strict technical safety corpus standards.',
     leadAgencies: ['CAC (Cyberspace Administration)', 'MIIT', 'MOST', 'SAMR', 'TC260'],
     keyStats: {
-      bindingLaws: 4,
-      guidelines: 2,
-      enactedCount: 6,
+      bindingLaws: 2,
+      guidelines: 1,
+      enactedCount: 3,
     },
     mapCoords: {
       x: 770,
@@ -129,13 +129,13 @@ export const JURISDICTIONS: Record<string, Jurisdiction> = {
     region: 'East Asia',
     approach: 'balanced_safety',
     approachLabel: 'Balanced Promotion & High-Impact Safety',
-    approachSummary: 'Dual-track framework through the Framework Act on AI (AI Basic Act), combining aggressive sovereign semiconductor/AI industrial promotion with safeguards for high-risk applications.',
-    primaryPhilosophy: 'National AI industrial sovereignty and global safety summit diplomacy paired with transparent automated decision privacy rights.',
+    approachSummary: 'Dual-track framework through the Framework Act on AI (AI Basic Act), combining aggressive domestic semiconductor/AI industrial promotion with safeguards for high-risk applications.',
+    primaryPhilosophy: 'National AI industrial competitiveness and global safety summit diplomacy paired with transparent automated decision privacy rights.',
     leadAgencies: ['MSIT', 'PIPC', 'National AI Committee', 'KISA'],
     keyStats: {
       bindingLaws: 2,
-      guidelines: 3,
-      enactedCount: 5,
+      guidelines: 1,
+      enactedCount: 3,
     },
     mapCoords: {
       x: 835,
@@ -158,8 +158,8 @@ export const JURISDICTIONS: Record<string, Jurisdiction> = {
     leadAgencies: ['PCPD', 'HKMA', 'SFC', 'Digital Policy Office (DPO)', 'Cyberport'],
     keyStats: {
       bindingLaws: 1,
-      guidelines: 4,
-      enactedCount: 5,
+      guidelines: 2,
+      enactedCount: 3,
     },
     mapCoords: {
       x: 795,
@@ -206,7 +206,7 @@ export const TOPIC_METADATA: Record<TopicCategory, { label: string; description:
   },
   national_strategy_safety: {
     label: 'National Strategy & AI Safety Institutes',
-    description: 'Government roadmaps, AISI red-teaming consortiums, sovereign compute, and sandboxes.',
+    description: 'Government roadmaps, AISI red-teaming consortiums, compute infrastructure, and sandboxes.',
     color: 'sky',
   },
 };

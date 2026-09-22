@@ -95,20 +95,23 @@ export const FilterBar: FC<FilterBarProps> = ({
     REGULATIONS.filter((r) => r.topics.includes(topic)).length;
 
   return (
-    <div className="bg-slate-900 border border-slate-800 rounded-2xl p-4 sm:p-5 shadow-lg">
+    <div className="bg-white border border-slate-200 rounded-2xl p-4 sm:p-5 shadow-sm">
       {/* Top Filter Bar Header */}
-      <div className="flex items-center justify-between gap-3 pb-3 border-b border-slate-800">
+      <div className="flex items-center justify-between gap-3 pb-3 border-b border-slate-100">
         <div className="flex items-center gap-2">
-          <div className="p-1.5 bg-indigo-500/10 text-indigo-400 rounded-lg">
+          <div className="p-1.5 bg-[#071d49]/10 text-[#071d49] rounded-lg">
             <Filter className="w-4 h-4" />
           </div>
           <div>
-            <h3 className="text-sm font-bold text-white flex items-center gap-2">
-              Filter Intelligence
-              <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700">
+            <h3 className="text-sm font-bold text-[#071d49] flex items-center gap-2">
+              Filter Legislation
+              <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-slate-100 text-slate-700 border border-slate-200">
                 {filteredCount} of {totalCount}
               </span>
             </h3>
+            <p className="text-[11px] text-slate-500 font-medium">
+              Curated for the last 2 years (Sep 2024 – Sep 2026) • Updated as of Sep 2026
+            </p>
           </div>
         </div>
 
@@ -116,7 +119,7 @@ export const FilterBar: FC<FilterBarProps> = ({
           {hasActiveFilters && (
             <button
               onClick={resetAllFilters}
-              className="flex items-center gap-1 text-xs text-rose-400 hover:text-rose-300 px-2.5 py-1 rounded-md bg-rose-500/10 hover:bg-rose-500/20 border border-rose-500/30 transition-colors"
+              className="flex items-center gap-1 text-xs text-rose-600 hover:text-rose-700 px-2.5 py-1 rounded-md bg-rose-50 hover:bg-rose-100 border border-rose-200 transition-colors font-medium"
             >
               <RotateCcw className="w-3 h-3" />
               <span>Reset Filters</span>
@@ -125,7 +128,7 @@ export const FilterBar: FC<FilterBarProps> = ({
 
           <button
             onClick={() => setIsExpanded(!isExpanded)}
-            className="p-1 text-slate-400 hover:text-slate-200 rounded-lg hover:bg-slate-800"
+            className="p-1 text-slate-400 hover:text-slate-700 rounded-lg hover:bg-slate-100"
             title={isExpanded ? 'Collapse filters' : 'Expand filters'}
           >
             {isExpanded ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
@@ -139,11 +142,11 @@ export const FilterBar: FC<FilterBarProps> = ({
           {/* 1. COUNTRY DROPDOWN FILTER */}
           <div>
             <div className="flex items-center justify-between mb-2">
-              <span className="text-xs font-semibold uppercase tracking-wider text-slate-400 flex items-center gap-1.5">
-                <Globe className="w-3.5 h-3.5 text-indigo-400" />
+              <span className="text-xs font-bold uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
+                <Globe className="w-3.5 h-3.5 text-[#0033ff]" />
                 Filter by Country
               </span>
-              <span className="text-[11px] text-slate-400">
+              <span className="text-[11px] text-slate-400 font-medium">
                 {filters.jurisdictions.length === 0
                   ? 'All Countries'
                   : JURISDICTIONS[filters.jurisdictions[0]]?.name || '1 Selected'}
@@ -161,7 +164,7 @@ export const FilterBar: FC<FilterBarProps> = ({
                       jurisdictions: val === 'all' ? [] : [val as JurisdictionId],
                     });
                   }}
-                  className="w-full appearance-none pl-3.5 pr-9 py-2 text-xs font-semibold bg-slate-800 text-slate-200 border border-slate-700 hover:border-slate-600 focus:border-indigo-500 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500/30 transition-colors cursor-pointer"
+                  className="w-full appearance-none pl-3.5 pr-9 py-2 text-xs font-semibold bg-slate-50 text-slate-800 border border-slate-200 hover:border-slate-300 focus:border-[#071d49] rounded-xl focus:outline-none focus:ring-2 focus:ring-[#071d49]/20 transition-colors cursor-pointer"
                 >
                   <option value="all">🌐 All Countries (7 Monitored)</option>
                   {Object.values(JURISDICTIONS).map((j) => (
@@ -176,7 +179,7 @@ export const FilterBar: FC<FilterBarProps> = ({
               {filters.jurisdictions.length > 0 && (
                 <button
                   onClick={() => onFilterChange({ ...filters, jurisdictions: [] })}
-                  className="text-xs text-slate-400 hover:text-slate-200 underline font-medium"
+                  className="text-xs text-[#0033ff] hover:text-[#071d49] underline font-medium"
                 >
                   Clear country filter
                 </button>
@@ -187,11 +190,11 @@ export const FilterBar: FC<FilterBarProps> = ({
           {/* 2. TOPIC CATEGORIES */}
           <div>
             <div className="flex items-center justify-between mb-2">
-              <span className="text-xs font-semibold uppercase tracking-wider text-slate-400 flex items-center gap-1.5">
-                <Tag className="w-3.5 h-3.5 text-indigo-400" />
+              <span className="text-xs font-bold uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
+                <Tag className="w-3.5 h-3.5 text-[#0033ff]" />
                 Key Regulatory Topics
               </span>
-              <span className="text-[11px] text-slate-400">
+              <span className="text-[11px] text-slate-400 font-medium">
                 {filters.topics.length === 0 ? 'All Topics' : `${filters.topics.length} Selected`}
               </span>
             </div>
@@ -207,17 +210,17 @@ export const FilterBar: FC<FilterBarProps> = ({
                     onClick={() => toggleTopic(topic)}
                     className={`inline-flex items-center gap-2 px-2.5 py-1.5 rounded-lg text-xs font-medium transition-all ${
                       isSelected
-                        ? 'bg-indigo-500/25 text-indigo-200 border border-indigo-500/60 font-semibold ring-1 ring-indigo-500/30'
-                        : 'bg-slate-800/50 text-slate-400 border border-slate-700/60 hover:text-slate-200 hover:bg-slate-800'
+                        ? 'bg-[#071d49] text-white border border-[#071d49] font-semibold shadow-sm'
+                        : 'bg-slate-50 text-slate-600 border border-slate-200 hover:text-[#071d49] hover:bg-slate-100'
                     }`}
                   >
                     <span
                       className={`w-1.5 h-1.5 rounded-full ${
-                        isSelected ? 'bg-indigo-400' : 'bg-slate-500'
+                        isSelected ? 'bg-[#00b1ff]' : 'bg-slate-400'
                       }`}
                     />
                     <span>{meta.label}</span>
-                    <span className="text-[10px] text-slate-400 font-bold">({count})</span>
+                    <span className={`text-[10px] font-bold ${isSelected ? 'text-blue-200' : 'text-slate-400'}`}>({count})</span>
                   </button>
                 );
               })}
@@ -225,11 +228,11 @@ export const FilterBar: FC<FilterBarProps> = ({
           </div>
 
           {/* 3. INSTRUMENT & STATUS (Two Columns) */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2 border-t border-slate-800/70">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2 border-t border-slate-100">
             {/* Legal Instrument Type */}
             <div>
-              <span className="text-xs font-semibold uppercase tracking-wider text-slate-400 flex items-center gap-1.5 mb-2">
-                <FileText className="w-3.5 h-3.5 text-indigo-400" />
+              <span className="text-xs font-bold uppercase tracking-wider text-slate-500 flex items-center gap-1.5 mb-2">
+                <FileText className="w-3.5 h-3.5 text-[#0033ff]" />
                 Legal Instrument Type
               </span>
               <div className="flex flex-wrap gap-1.5">
@@ -243,8 +246,8 @@ export const FilterBar: FC<FilterBarProps> = ({
                       onClick={() => toggleInstrument(inst)}
                       className={`px-2.5 py-1 rounded-md text-xs font-medium transition-colors ${
                         isSelected
-                          ? 'bg-blue-600 text-white font-semibold'
-                          : 'bg-slate-800 text-slate-400 hover:text-slate-200 border border-slate-700/50'
+                          ? 'bg-[#0033ff] text-white font-semibold shadow-sm'
+                          : 'bg-slate-100 text-slate-600 hover:bg-slate-200 border border-slate-200'
                       }`}
                     >
                       {meta.short}
@@ -256,8 +259,8 @@ export const FilterBar: FC<FilterBarProps> = ({
 
             {/* Enforcement Status */}
             <div>
-              <span className="text-xs font-semibold uppercase tracking-wider text-slate-400 flex items-center gap-1.5 mb-2">
-                <Activity className="w-3.5 h-3.5 text-indigo-400" />
+              <span className="text-xs font-bold uppercase tracking-wider text-slate-500 flex items-center gap-1.5 mb-2">
+                <Activity className="w-3.5 h-3.5 text-[#0033ff]" />
                 Enforcement Status
               </span>
               <div className="flex flex-wrap gap-1.5">
@@ -271,8 +274,8 @@ export const FilterBar: FC<FilterBarProps> = ({
                       onClick={() => toggleStatus(status)}
                       className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-medium transition-colors ${
                         isSelected
-                          ? 'bg-emerald-600 text-white font-semibold'
-                          : 'bg-slate-800 text-slate-400 hover:text-slate-200 border border-slate-700/50'
+                          ? 'bg-[#071d49] text-white font-semibold shadow-sm'
+                          : 'bg-slate-100 text-slate-600 hover:bg-slate-200 border border-slate-200'
                       }`}
                     >
                       <span className={`w-1.5 h-1.5 rounded-full ${meta.dotClass}`} />

@@ -92,4 +92,38 @@ export interface FilterState {
   statuses: EnforcementStatus[];
 }
 
-export type ViewMode = 'map' | 'directory';
+export type ViewMode = 'map' | 'directory' | 'industry_news';
+
+export type IndustrySector =
+  | 'energy'
+  | 'infrastructure'
+  | 'compute_cloud';
+
+export interface IndustryNewsItem {
+  id: string;
+  title: string;
+  sector: IndustrySector;
+  sectorLabel: string;
+  jurisdictionId: JurisdictionId;
+  countryName: string;
+  countryFlag: string;
+  date: string;
+  regulator: string;
+  summary: string;
+  complianceTakeaways: string[];
+  impactLevel: 'Critical' | 'High' | 'Medium';
+  focusArea: string;
+  officialSourceUrl: string;
+  officialSourceLabel: string;
+  tags: string[];
+}
+
+export interface SectorMetric {
+  sector: IndustrySector;
+  label: string;
+  trackedDevelopments: number;
+  activeRegulationsCount: number;
+  iconName: string;
+  description: string;
+}
+

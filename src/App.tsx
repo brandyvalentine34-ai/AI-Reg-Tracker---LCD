@@ -14,6 +14,7 @@ import { FilterBar } from './components/FilterBar';
 import { RegulationCard } from './components/RegulationCard';
 import { RegulationModal } from './components/RegulationModal';
 import { JurisdictionDetailDrawer } from './components/JurisdictionDetailDrawer';
+import { IndustryNewsSection } from './components/IndustryNewsSection';
 import { 
   Layers, 
   AlertCircle, 
@@ -114,7 +115,7 @@ export default function App() {
   const selectedCountry = filters.jurisdictions.length === 1 ? filters.jurisdictions[0] : null;
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col font-sans">
+    <div className="min-h-screen bg-slate-50 text-slate-800 flex flex-col font-sans">
       {/* Top Header & Navigation */}
       <Header
         viewMode={viewMode}
@@ -129,34 +130,34 @@ export default function App() {
       {/* Main App Canvas */}
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6">
         {/* Quick Context Strip */}
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-4 rounded-xl bg-slate-900/60 border border-slate-800/80 text-xs">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-4 rounded-xl bg-white border border-slate-200 text-xs shadow-sm">
           <div className="flex items-center gap-3">
-            <span className="p-2 rounded-lg bg-indigo-500/10 text-indigo-400">
+            <span className="p-2 rounded-lg bg-[#071d49]/10 text-[#071d49]">
               <Scale className="w-4 h-4" />
             </span>
             <div>
-              <span className="font-bold text-slate-200">
+              <span className="font-bold text-[#071d49]">
                 Monitoring 7 Jurisdictions
               </span>
-              <span className="text-slate-400 ml-1.5 hidden sm:inline">
+              <span className="text-slate-500 ml-1.5 hidden sm:inline">
                 · Singapore · United States · United Kingdom · European Union · China · South Korea · Hong Kong
               </span>
             </div>
           </div>
 
-          <div className="flex items-center gap-4 text-slate-400">
+          <div className="flex items-center gap-4 text-slate-500">
             <div>
-              <span className="font-bold text-white">{REGULATIONS.length}</span> Key Instruments
+              <span className="font-bold text-[#071d49]">{REGULATIONS.length}</span> Key Instruments
             </div>
-            <div className="w-1 h-1 rounded-full bg-slate-700" />
+            <div className="w-1 h-1 rounded-full bg-slate-300" />
             <div>
-              <span className="font-bold text-emerald-400">
+              <span className="font-bold text-emerald-700">
                 {REGULATIONS.filter((r) => r.status === 'in_force').length}
               </span> In Force
             </div>
-            <div className="w-1 h-1 rounded-full bg-slate-700" />
+            <div className="w-1 h-1 rounded-full bg-slate-300" />
             <div>
-              <span className="font-bold text-amber-400">
+              <span className="font-bold text-amber-700">
                 {REGULATIONS.filter((r) => r.status === 'staggered').length}
               </span> Staggered
             </div>
@@ -181,11 +182,11 @@ export default function App() {
             <div className="pt-2">
               <div className="flex items-center justify-between mb-4">
                 <div>
-                  <h3 className="text-base font-bold text-white tracking-tight flex items-center gap-2">
-                    <Layers className="w-4 h-4 text-indigo-400" />
+                  <h3 className="text-base font-bold text-[#071d49] tracking-tight flex items-center gap-2">
+                    <Layers className="w-4 h-4 text-[#0033ff]" />
                     Key AI Legislative Instruments ({filteredRegulations.length})
                   </h3>
-                  <p className="text-xs text-slate-400">
+                  <p className="text-xs text-slate-500">
                     {selectedCountry
                       ? `Filtered by ${JURISDICTIONS[selectedCountry].name}`
                       : 'Showing flagship legislation across all 7 monitored jurisdictions'}
@@ -194,7 +195,7 @@ export default function App() {
 
                 <button
                   onClick={() => setViewMode('directory')}
-                  className="text-xs font-semibold text-indigo-400 hover:text-indigo-300 flex items-center gap-1"
+                  className="text-xs font-semibold text-[#0033ff] hover:underline flex items-center gap-1"
                 >
                   <span>Open Full Directory with Faceted Filters →</span>
                 </button>
@@ -216,7 +217,7 @@ export default function App() {
                 <div className="text-center pt-4">
                   <button
                     onClick={() => setViewMode('directory')}
-                    className="px-5 py-2.5 bg-slate-900 hover:bg-slate-850 text-indigo-400 border border-slate-800 rounded-xl text-xs font-bold transition-colors"
+                    className="px-5 py-2.5 bg-white hover:bg-slate-50 text-[#071d49] border border-slate-200 rounded-xl text-xs font-bold transition-colors shadow-sm"
                   >
                     View All {filteredRegulations.length} Monitored Regulations in Directory →
                   </button>
@@ -239,15 +240,15 @@ export default function App() {
 
             {/* Empty Filter Results Notice */}
             {filteredRegulations.length === 0 ? (
-              <div className="p-12 text-center bg-slate-900 rounded-2xl border border-slate-800 space-y-3">
-                <AlertCircle className="w-10 h-10 text-amber-400 mx-auto" />
-                <h3 className="text-base font-bold text-white">No regulations found matching your filters</h3>
-                <p className="text-xs text-slate-400 max-w-md mx-auto">
+              <div className="p-12 text-center bg-white rounded-2xl border border-slate-200 shadow-sm space-y-3">
+                <AlertCircle className="w-10 h-10 text-amber-500 mx-auto" />
+                <h3 className="text-base font-bold text-[#071d49]">No regulations found matching your filters</h3>
+                <p className="text-xs text-slate-500 max-w-md mx-auto">
                   Try clearing some filter criteria, selecting &quot;All Countries&quot;, or resetting all filters.
                 </p>
                 <button
                   onClick={handleResetFilters}
-                  className="mt-2 inline-flex items-center gap-1.5 px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl text-xs font-semibold shadow-md transition-colors"
+                  className="mt-2 inline-flex items-center gap-1.5 px-4 py-2 bg-[#071d49] hover:bg-[#041333] text-white rounded-xl text-xs font-semibold shadow-sm transition-colors"
                 >
                   <RotateCcw className="w-3.5 h-3.5" />
                   <span>Reset All Filters</span>
@@ -269,22 +270,31 @@ export default function App() {
             )}
           </div>
         )}
+
+        {/* VIEW 3: INDUSTRY NEWS VIEW */}
+        {viewMode === 'industry_news' && (
+          <IndustryNewsSection
+            selectedCountry={selectedCountry}
+            onSelectCountry={handleSelectCountry}
+            onOpenJurisdictionProfile={(id) => setActiveDrawerJurisdiction(id)}
+          />
+        )}
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-slate-800 bg-slate-950 py-8 px-4 sm:px-6 lg:px-8 mt-12 text-xs text-slate-500">
+      <footer className="border-t border-slate-200 bg-white py-8 px-4 sm:px-6 lg:px-8 mt-12 text-xs text-slate-500">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
           <div>
-            <div className="font-bold text-slate-300">
+            <div className="font-bold text-[#071d49]">
               Global AI Regulatory Tracker
             </div>
-            <p className="text-[11px] text-slate-400 mt-0.5">
+            <p className="text-[11px] text-slate-500 mt-0.5">
               Monitoring key artificial intelligence legislation, guidelines, and technical standards across Singapore, US, UK, EU, China, South Korea, and Hong Kong.
             </p>
           </div>
 
           <div className="flex items-center gap-4 text-[11px]">
-            <span className="text-slate-400">
+            <span className="text-slate-600 font-medium">
               Curated by LCD Compliance for internal sharing and information purposes
             </span>
           </div>
