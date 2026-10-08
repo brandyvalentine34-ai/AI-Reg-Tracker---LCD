@@ -140,6 +140,21 @@ export function briefingMarkdown(list: Development[], opts: BriefingOptions): st
   return out.join('\n');
 }
 
+/**
+ * Preview builds (VITE_PREVIEW=true) run inside a sandboxed frame that blocks
+ * file downloads and the print dialog, so exports copy to the clipboard instead.
+ */
+export const IS_PREVIEW = import.meta.env.VITE_PREVIEW === 'true';
+
+/** Download a file, or copy its contents to the clipboard in preview builds. */
+export function exportFile(filename: string, content: string, mime: string): void {
+  if (IS_PREVIEW) {
+    navigator.clipboard?.writeText(content).catch(() => {});
+    return;
+  }
+  downloadFile(filename, content, mime);
+}
+
 export function downloadFile(filename: string, content: string, mime: string): void {
   const blob = new Blob([content], { type: mime });
   const url = URL.createObjectURL(blob);

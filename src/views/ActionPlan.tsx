@@ -4,7 +4,7 @@ import type { ActionStatus, Development, MarketId, Owner } from '../types';
 import { useWorkspace } from '../state/workspace';
 import { MARKETS, MARKET_ORDER } from '../data/markets';
 import { ACTION_STATUSES, IMPACTS, OWNERS } from '../lib/taxonomy';
-import { actionPlanCSV, downloadFile } from '../lib/export';
+import { IS_PREVIEW, actionPlanCSV, exportFile } from '../lib/export';
 import { ActionRow } from '../components/ActionRow';
 import { Button, Card, EmptyState, ImpactBadge, PageHeader, cx } from '../components/ui';
 
@@ -58,8 +58,8 @@ export function ActionPlan({ scoped, onOpen }: { scoped: Development[]; onOpen: 
         title="Action plan"
         description="Recommended actions from each development, ready to assign, track and evidence. Progress is saved in this browser; export to CSV to share with your committee or GRC tool."
         actions={
-          <Button variant="primary" onClick={() => downloadFile('ai-reg-action-plan.csv', actionPlanCSV(inScope, ws.progress), 'text/csv;charset=utf-8')}>
-            <Download className="h-4 w-4" /> Export CSV
+          <Button variant="primary" onClick={() => exportFile('ai-reg-action-plan.csv', actionPlanCSV(inScope, ws.progress), 'text/csv;charset=utf-8')}>
+            <Download className="h-4 w-4" /> {IS_PREVIEW ? 'Copy CSV' : 'Export CSV'}
           </Button>
         }
       />

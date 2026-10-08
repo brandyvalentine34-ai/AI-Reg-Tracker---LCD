@@ -6,7 +6,7 @@ import { MARKETS } from '../data/markets';
 import { APPLICABILITY, IMPACTS, STATUSES, THEMES } from '../lib/taxonomy';
 import { collectMilestones, sortDevelopments } from '../lib/filters';
 import { addDays, formatDate } from '../lib/dates';
-import { briefingMarkdown, downloadFile } from '../lib/export';
+import { IS_PREVIEW, briefingMarkdown, downloadFile } from '../lib/export';
 import { Button, Card, EmptyState, PageHeader, cx } from '../components/ui';
 
 type Scope = 'recent' | 'high' | 'watched' | 'all';
@@ -63,12 +63,16 @@ export function Briefing({ scoped }: { scoped: Development[] }) {
               >
                 <Copy className="h-4 w-4" /> {copied ? 'Copied' : 'Copy Markdown'}
               </Button>
-              <Button disabled={!items.length} onClick={() => downloadFile('ai-regulatory-briefing.md', markdown(), 'text/markdown;charset=utf-8')}>
-                <Download className="h-4 w-4" /> Download .md
-              </Button>
-              <Button variant="primary" disabled={!items.length} onClick={() => window.print()}>
-                <Printer className="h-4 w-4" /> Print / PDF
-              </Button>
+              {!IS_PREVIEW && (
+                <>
+                  <Button disabled={!items.length} onClick={() => downloadFile('ai-regulatory-briefing.md', markdown(), 'text/markdown;charset=utf-8')}>
+                    <Download className="h-4 w-4" /> Download .md
+                  </Button>
+                  <Button variant="primary" disabled={!items.length} onClick={() => window.print()}>
+                    <Printer className="h-4 w-4" /> Print / PDF
+                  </Button>
+                </>
+              )}
             </>
           }
         />

@@ -6,7 +6,7 @@ import { MARKETS, MARKET_ORDER } from '../data/markets';
 import { IMPACTS } from '../lib/taxonomy';
 import { collectMilestones, type MilestoneEntry } from '../lib/filters';
 import { addDays, daysBetween, formatDate, formatMonth, quarterKey, relativeDays } from '../lib/dates';
-import { downloadFile, milestonesICS } from '../lib/export';
+import { IS_PREVIEW, exportFile, milestonesICS } from '../lib/export';
 import { Button, Card, EmptyState, ImpactBadge, PageHeader, cx } from '../components/ui';
 
 const RANGES = [
@@ -63,9 +63,9 @@ export function Horizon({ scoped, onOpen }: { scoped: Development[]; onOpen: (id
           <Button
             variant="primary"
             disabled={entries.length === 0}
-            onClick={() => downloadFile('ai-regulatory-deadlines.ics', milestonesICS(entries.filter((e) => e.date >= ws.today)), 'text/calendar')}
+            onClick={() => exportFile('ai-regulatory-deadlines.ics', milestonesICS(entries.filter((e) => e.date >= ws.today)), 'text/calendar')}
           >
-            <CalendarPlus className="h-4 w-4" /> Add to calendar (.ics)
+            <CalendarPlus className="h-4 w-4" /> {IS_PREVIEW ? 'Copy calendar (.ics)' : 'Add to calendar (.ics)'}
           </Button>
         }
       />
