@@ -1,129 +1,150 @@
-export type JurisdictionId =
-  | 'singapore'
-  | 'us'
-  | 'uk'
-  | 'eu'
-  | 'china'
-  | 'korea'
-  | 'hong_kong';
+/**
+ * Domain model for the Buy-Side AI Regulatory Tracker.
+ *
+ * A "Development" is a single regulatory instrument or event (law, rule,
+ * supervisory guidance, consultation, enforcement action, statement) that a
+ * buy-side asset manager's compliance function should be aware of.
+ */
 
-export type RegulatoryApproach =
-  | 'comprehensive_risk'
-  | 'targeted_service'
-  | 'sectoral_state'
-  | 'pro_innovation'
-  | 'sandbox_governance'
-  | 'balanced_safety';
+export type MarketId =
+  | 'eu'
+  | 'uk'
+  | 'us'
+  | 'ca'
+  | 'ch'
+  | 'sg'
+  | 'hk'
+  | 'jp'
+  | 'au'
+  | 'cn'
+  | 'kr'
+  | 'global';
 
 export type InstrumentType =
-  | 'statute'
-  | 'executive_order'
-  | 'guideline'
-  | 'technical_standard'
-  | 'strategy';
+  | 'legislation'
+  | 'rule'
+  | 'supervisory_guidance'
+  | 'consultation'
+  | 'statement'
+  | 'enforcement'
+  | 'framework'
+  | 'report';
 
-export type EnforcementStatus =
+export type Status =
   | 'in_force'
-  | 'staggered'
+  | 'adopted'
+  | 'consultation'
   | 'proposed'
-  | 'guidance_active';
+  | 'guidance'
+  | 'withdrawn';
 
-export type TopicCategory =
-  | 'generative_ai'
-  | 'risk_classification'
-  | 'transparency_deepfakes'
+export type Impact = 'high' | 'medium' | 'low';
+
+/** direct = binds asset managers; indirect = binds vendors / general law; monitor = horizon scanning */
+export type Applicability = 'direct' | 'indirect' | 'monitor';
+
+export type Theme =
+  | 'governance'
+  | 'model_risk'
+  | 'investment_process'
+  | 'disclosure_marketing'
+  | 'third_party'
   | 'data_privacy'
-  | 'financial_fintech'
-  | 'algorithmic_bias'
-  | 'national_strategy_safety';
+  | 'conduct'
+  | 'cyber_resilience'
+  | 'genai'
+  | 'trading_markets'
+  | 'recordkeeping';
 
-export interface Jurisdiction {
-  id: JurisdictionId;
-  name: string;
-  code: string;
-  flag: string;
-  region: string;
-  approach: RegulatoryApproach;
-  approachLabel: string;
-  approachSummary: string;
-  primaryPhilosophy: string;
-  leadAgencies: string[];
-  keyStats: {
-    bindingLaws: number;
-    guidelines: number;
-    enactedCount: number;
-  };
-  mapCoords: {
-    x: number; // Percentage on SVG 0-1000
-    y: number; // Percentage on SVG 0-500
-    labelX?: number;
-    labelY?: number;
-  };
-  color: string;
+export type Owner =
+  | 'Compliance'
+  | 'Risk'
+  | 'Technology'
+  | 'Legal'
+  | 'Investment'
+  | 'Distribution'
+  | 'Operations'
+  | 'Board';
+
+export type Confidence = 'high' | 'medium' | 'low';
+
+export interface ActionItem {
+  /** Stable id: `${developmentId}-a${n}` */
+  id: string;
+  text: string;
+  owner: Owner;
 }
 
-export interface Regulation {
+export interface Milestone {
+  date: string; // YYYY-MM-DD
+  label: string;
+  /** false = indicative / expected date not yet fixed */
+  confirmed: boolean;
+}
+
+export interface Development {
   id: string;
+  market: MarketId;
   title: string;
   officialTitle: string;
-  nativeTitle?: string;
-  jurisdictionId: JurisdictionId;
-  instrumentType: InstrumentType;
-  status: EnforcementStatus;
-  statusLabel: string;
-  dateAnnounced: string;
-  effectiveDate: string;
-  nextMilestone?: string;
-  leadAgencies: string[];
-  topics: TopicCategory[];
-  summary: string;
-  keyProvisions: string[];
-  scopeAndApplicability: string;
-  complianceObligations: string[];
-  penaltiesAndEnforcement: string;
-  officialUrl: string;
-  isLandmark?: boolean;
-}
-
-export interface FilterState {
-  jurisdictions: JurisdictionId[];
-  topics: TopicCategory[];
-  instrumentTypes: InstrumentType[];
-  statuses: EnforcementStatus[];
-}
-
-export type ViewMode = 'map' | 'directory' | 'industry_news';
-
-export type IndustrySector =
-  | 'energy'
-  | 'infrastructure'
-  | 'compute_cloud';
-
-export interface IndustryNewsItem {
-  id: string;
-  title: string;
-  sector: IndustrySector;
-  sectorLabel: string;
-  jurisdictionId: JurisdictionId;
-  countryName: string;
-  countryFlag: string;
-  date: string;
   regulator: string;
+  instrumentType: InstrumentType;
+  status: Status;
+  datePublished: string;
+  effectiveDate: string | null;
+  lastUpdated: string;
+  latestUpdate: string;
+  impact: Impact;
+  applicability: Applicability;
+  themes: Theme[];
   summary: string;
-  complianceTakeaways: string[];
-  impactLevel: 'Critical' | 'High' | 'Medium';
-  focusArea: string;
-  officialSourceUrl: string;
-  officialSourceLabel: string;
-  tags: string[];
+  buySideImpact: string;
+  keyRequirements: string[];
+  actions: ActionItem[];
+  milestones: Milestone[];
+  sourceUrl: string;
+  sourceLabel: string;
+  confidence: Confidence;
 }
 
-export interface SectorMetric {
-  sector: IndustrySector;
-  label: string;
-  trackedDevelopments: number;
-  activeRegulationsCount: number;
-  iconName: string;
-  description: string;
+export interface Market {
+  id: MarketId;
+  name: string;
+  shortName: string;
+  flag: string;
+  region: 'Europe' | 'Americas' | 'Asia-Pacific' | 'International';
+  /** One-line characterisation of the regulatory model */
+  approach: string;
+  /** What a buy-side firm should know about the market's posture */
+  posture: string;
+  /** Regulators most relevant to asset managers */
+  keyRegulators: string[];
 }
 
+/** ---- User workspace state (persisted locally) ---- */
+
+export type ActionStatus = 'not_started' | 'in_progress' | 'done' | 'not_applicable';
+
+export interface ActionProgress {
+  status: ActionStatus;
+  owner?: Owner;
+  due?: string; // YYYY-MM-DD
+  notes?: string;
+  updatedAt?: string; // ISO timestamp
+}
+
+export interface Filters {
+  query: string;
+  markets: MarketId[];
+  themes: Theme[];
+  statuses: Status[];
+  impacts: Impact[];
+  applicability: Applicability[];
+  types: InstrumentType[];
+  watchedOnly: boolean;
+  unreadOnly: boolean;
+}
+
+export type SortKey = 'latest' | 'impact' | 'next_deadline' | 'market';
+
+export type ViewId = 'overview' | 'developments' | 'horizon' | 'markets' | 'actions' | 'briefing';

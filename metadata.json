@@ -1,6 +1,8 @@
 {
-  "name": "Global AI Regulatory Tracker",
-  "description": "Comprehensive regulatory intelligence tracker monitoring active AI legislation, binding rules, and sector governance across Singapore, US, UK, EU, China, Korea, and Hong Kong enacted in the last 2 years.",
+  "name": "AI Reg Tracker \u00b7 Buy-Side",
+  "description": "Buy-side AI regulatory tracker: latest AI rules, guidance and enforcement across the EU, UK, US, Canada, Switzerland, Singapore, Hong Kong, Japan, Australia, China, Korea and global standard-setters, with impact assessments, deadlines and an action plan for asset managers.",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }
