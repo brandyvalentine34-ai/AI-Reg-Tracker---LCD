@@ -1,8 +1,8 @@
-# AI Reg Tracker · Buy-Side
+# Global AI Regulatory Development Tracker
 
 A regulatory-intelligence workspace for **buy-side asset managers** (UCITS/AIF managers, RIAs, licensed fund managers) to track the latest AI regulatory developments across key markets, understand what they mean for the firm, and turn them into an evidenced action plan.
 
-Curated by LCD Compliance for internal information purposes only. Not legal advice.
+Developed by LCD Compliance for internal information purposes only. Please refer and verify against primary source.
 
 ## What it does
 
@@ -11,18 +11,16 @@ Curated by LCD Compliance for internal information purposes only. Not legal advi
 | **Overview** | KPIs (tracked, high impact, unread, deadlines ≤ 90 days, action completion), latest developments, upcoming deadlines, a market × theme exposure heatmap, and your watchlist. |
 | **Developments** | Faceted library of every tracked law, rule, guidance, consultation and enforcement action. Search, filter by market / theme / impact / status / applicability / instrument, and sort by latest, impact or next deadline. |
 | **Detail panel** | Latest development, summary, *what it means for a buy-side firm*, key requirements, an editable action checklist, timeline, themes, source link and a verification-confidence note. Each item has a shareable URL (`#/developments?item=eu-ai-act`). |
-| **Horizon & deadlines** | Quarter/month timeline of milestones, filterable by window, market and impact. Exports to calendar (`.ics`). Hollow markers are indicative dates. |
-| **Markets** | Regulatory posture, key authorities and tracked items for each market. |
 | **Action plan** | All recommended actions with status, owner, due date and notes, with completion by owner. Exports to CSV for committees or GRC tools. |
 | **Briefing pack** | Generates a committee-ready briefing (key messages, deadlines, developments, actions). Copy as Markdown, download `.md`, or print to PDF. |
 
-**My footprint** (sidebar) lets each user pick the markets where the firm is licensed or distributes. The overview, horizon, action plan and briefing focus on those markets; global standard-setters are always included.
+**My footprint** (sidebar) lets each user pick the markets where the firm is licensed or distributes. The overview, action plan and briefing focus on those markets; global standard-setters are always included.
 
 Workspace state (footprint, watchlist, read status, action progress) is stored in the browser's `localStorage`. Export the action plan to CSV to share or archive it.
 
 ## Coverage
 
-76 developments across 12 markets: EU, UK, US, Canada, Switzerland, Singapore, Hong Kong, Japan, Australia, Mainland China, South Korea, and global standard-setters (IOSCO, FSB, G7, OECD, Council of Europe, ISO/IEC). Content was reviewed on **8 October 2026**.
+70 developments across 10 markets: EU, UK, US, Singapore, Hong Kong, Japan, Australia, Mainland China, South Korea, and global standard-setters (IOSCO, FSB, G7, OECD, Council of Europe, ISO/IEC). Content is updated as of **25 October 2026**.
 
 Each item has a `confidence` rating:
 
@@ -37,7 +35,7 @@ Always check the linked primary source before acting.
 All content lives in [`src/data/developments.json`](src/data/developments.json). The schema and validation rules are in [`src/data/schema.ts`](src/data/schema.ts).
 
 1. Add or edit an entry. Bump `lastUpdated` and rewrite `latestUpdate` whenever something material changes; users will see the item as unread again.
-2. Update `DATA_REVIEWED_ON` in [`src/data/index.ts`](src/data/index.ts).
+2. Change `CONTENT_UPDATED_ON` in [`src/data/index.ts`](src/data/index.ts) to the refresh date. It is shown as *Content is updated as of …* in the sidebar and on the Overview.
 3. Run `bun run test`. The dataset test checks every entry for valid enums, ISO dates, unique ids and at least one action and milestone.
 
 Action progress is keyed by `<development id>-a<n>`. Append new actions rather than reordering existing ones, so that saved progress stays attached to the right action.

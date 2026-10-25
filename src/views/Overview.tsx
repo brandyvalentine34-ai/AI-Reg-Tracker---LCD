@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 import { ArrowRight, BellDot, CalendarClock, Flame, Grid3X3, ListChecks, Star } from 'lucide-react';
-import type { Development, Filters, MarketId, Theme, ViewId } from '../types';
+import type { Development, Filters, MarketId, SortKey, Theme, ViewId } from '../types';
 import { useWorkspace } from '../state/workspace';
 import { MARKETS, MARKET_ORDER } from '../data/markets';
 import { THEMES, THEME_ORDER } from '../lib/taxonomy';
@@ -8,7 +8,7 @@ import { collectMilestones, sortDevelopments } from '../lib/filters';
 import { addDays, daysBetween, formatDate, relativeDays } from '../lib/dates';
 import { DevelopmentRow } from '../components/DevelopmentRow';
 import { Button, Card, CardHeader, ImpactBadge, PageHeader, cx } from '../components/ui';
-import { DATA_REVIEWED_ON } from '../data';
+import { ContentUpdated } from '../components/Brand';
 
 /** Sequential single-hue (blue) ramp: lightest = fewest. Text flips to white on dark steps. */
 const HEAT_STEPS = [
@@ -75,7 +75,7 @@ export function Overview({
   scoped: Development[];
   onOpen: (id: string) => void;
   onNavigate: (v: ViewId) => void;
-  onBrowse: (f: Partial<Filters>) => void;
+  onBrowse: (f: Partial<Filters>, sortBy?: SortKey) => void;
 }) {
   const ws = useWorkspace();
   const horizonEnd = addDays(ws.today, 90);
@@ -102,11 +102,11 @@ export function Overview({
   return (
     <div className="space-y-6">
       <PageHeader
-        title="AI regulatory overview"
+        title="AI Regulatory Development Overview"
         description={
           <>
-            What has changed, what is coming and where your firm stands, across {markets.length} markets in your footprint.
-            Content reviewed {formatDate(DATA_REVIEWED_ON)}.
+            What has changed and what is coming, across {markets.length} markets in our firm's horizon scanning
+            <ContentUpdated className="mt-2" />
           </>
         }
         actions={
@@ -123,7 +123,7 @@ export function Overview({
         <Kpi label="Developments tracked" value={scoped.length} hint={`${markets.length} markets`} icon={Grid3X3} onClick={() => onBrowse({})} />
         <Kpi label="High impact" value={high.length} hint="for asset managers" icon={Flame} tone="rose" onClick={() => onBrowse({ impacts: ['high'] })} />
         <Kpi label="Unread updates" value={unread.length} hint="since you last looked" icon={BellDot} tone="blue" onClick={() => onBrowse({ unreadOnly: true })} />
-        <Kpi label="Deadlines ≤ 90 days" value={next90.length} hint={`to ${formatDate(horizonEnd)}`} icon={CalendarClock} tone="amber" onClick={() => onNavigate('horizon')} />
+        <Kpi label="Deadlines ≤ 90 days" value={next90.length} hint={`to ${formatDate(horizonEnd)}`} icon={CalendarClock} tone="amber" onClick={() => onBrowse({}, 'next_deadline')} />
         <Kpi label="Action plan" value={`${pct}%`} hint={`${doneCount} of ${applicable.length} actions done`} icon={ListChecks} tone="emerald" onClick={() => onNavigate('actions')} />
       </div>
 
@@ -150,8 +150,8 @@ export function Overview({
             title="Upcoming deadlines"
             subtitle="Next milestones, earliest first"
             action={
-              <Button variant="ghost" onClick={() => onNavigate('horizon')}>
-                Horizon <ArrowRight className="h-3.5 w-3.5" />
+              <Button variant="ghost" onClick={() => onBrowse({}, 'next_deadline')}>
+                All deadlines <ArrowRight className="h-3.5 w-3.5" />
               </Button>
             }
           />

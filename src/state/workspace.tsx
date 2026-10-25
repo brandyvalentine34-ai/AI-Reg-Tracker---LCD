@@ -1,7 +1,8 @@
 import { createContext, useCallback, useContext, useMemo, type ReactNode } from 'react';
 import type { ActionProgress, Development, MarketId } from '../types';
 import { usePersistentState } from '../lib/storage';
-import { MARKET_ORDER } from '../data/markets';
+import { MARKETS, MARKET_ORDER } from '../data/markets';
+import { DEVELOPMENTS_BY_ID } from '../data';
 import { todayISO } from '../lib/dates';
 
 interface Workspace {
@@ -31,8 +32,15 @@ const EMPTY_LIST: string[] = [];
 const EMPTY_MAP = {};
 
 export function WorkspaceProvider({ children, today = todayISO() }: { children: ReactNode; today?: string }) {
-  const [footprint, setFootprint, resetFootprint] = usePersistentState<MarketId[]>('footprint', DEFAULT_FOOTPRINT);
-  const [watchlist, setWatchlist, resetWatchlist] = usePersistentState<string[]>('watchlist', EMPTY_LIST);
+  const [storedFootprint, setFootprint, resetFootprint] = usePersistentState<MarketId[]>('footprint', DEFAULT_FOOTPRINT);
+  const [storedWatchlist, setWatchlist, resetWatchlist] = usePersistentState<string[]>('watchlist', EMPTY_LIST);
+
+  // Saved state can reference markets or developments that have since been removed from the dataset.
+  const footprint = useMemo(() => {
+    const valid = storedFootprint.filter((m) => m in MARKETS);
+    return valid.some((m) => m !== 'global') ? valid : DEFAULT_FOOTPRINT;
+  }, [storedFootprint]);
+  const watchlist = useMemo(() => storedWatchlist.filter((id) => id in DEVELOPMENTS_BY_ID), [storedWatchlist]);
   // Maps development id -> the lastUpdated value the user has seen.
   const [readMap, setReadMap, resetRead] = usePersistentState<Record<string, string>>('read', EMPTY_MAP);
   const [progress, setProgress, resetProgress] = usePersistentState<Record<string, ActionProgress>>('actions', EMPTY_MAP);

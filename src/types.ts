@@ -10,8 +10,6 @@ export type MarketId =
   | 'eu'
   | 'uk'
   | 'us'
-  | 'ca'
-  | 'ch'
   | 'sg'
   | 'hk'
   | 'jp'
@@ -147,4 +145,4 @@ export interface Filters {
 
 export type SortKey = 'latest' | 'impact' | 'next_deadline' | 'market';
 
-export type ViewId = 'overview' | 'developments' | 'horizon' | 'markets' | 'actions' | 'briefing';
+export type ViewId = 'overview' | 'developments' | 'actions' | 'briefing';

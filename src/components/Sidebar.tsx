@@ -1,31 +1,14 @@
-import { CalendarRange, FileText, Globe2, LayoutDashboard, ListChecks, Newspaper, Settings2 } from 'lucide-react';
+import { FileText, LayoutDashboard, ListChecks, Newspaper, Settings2 } from 'lucide-react';
 import type { ViewId } from '../types';
 import { cx } from './ui';
-import { formatDate } from '../lib/dates';
-import { DATA_REVIEWED_ON } from '../data';
+import { BrandCompact, BrandHeader, ContentUpdated } from './Brand';
 
 export const NAV: { id: ViewId; label: string; icon: typeof LayoutDashboard }[] = [
   { id: 'overview', label: 'Overview', icon: LayoutDashboard },
   { id: 'developments', label: 'Developments', icon: Newspaper },
-  { id: 'horizon', label: 'Horizon & deadlines', icon: CalendarRange },
-  { id: 'markets', label: 'Markets', icon: Globe2 },
   { id: 'actions', label: 'Action plan', icon: ListChecks },
   { id: 'briefing', label: 'Briefing pack', icon: FileText },
 ];
-
-export function Logo() {
-  return (
-    <div className="flex items-center gap-2.5">
-      <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-sky-400 to-blue-600 text-sm font-black text-white shadow-inner">
-        AI
-      </div>
-      <div className="leading-tight">
-        <p className="text-sm font-bold text-white">AI Reg Tracker</p>
-        <p className="text-[11px] font-medium text-sky-200/80">Buy-side compliance</p>
-      </div>
-    </div>
-  );
-}
 
 export function Sidebar({
   view,
@@ -43,9 +26,9 @@ export function Sidebar({
   onEditFootprint: () => void;
 }) {
   return (
-    <aside className="no-print sticky top-0 hidden h-screen w-64 shrink-0 flex-col bg-[#071d49] px-4 py-5 lg:flex">
-      <Logo />
-      <nav className="mt-8 space-y-1" aria-label="Main">
+    <aside className="no-print sticky top-0 hidden h-screen w-72 shrink-0 flex-col overflow-y-auto bg-[#071d49] px-4 py-5 lg:flex">
+      <BrandHeader />
+      <nav className="mt-6 shrink-0 space-y-1" aria-label="Main">
         {NAV.map(({ id, label, icon: Icon }) => {
           const active = view === id;
           const badge = id === 'developments' ? unreadCount : id === 'actions' ? openActions : 0;
@@ -70,7 +53,7 @@ export function Sidebar({
         })}
       </nav>
 
-      <div className="mt-auto space-y-3">
+      <div className="mt-auto shrink-0 space-y-3 pt-6">
         <button
           type="button"
           onClick={onEditFootprint}
@@ -82,9 +65,7 @@ export function Sidebar({
           </span>
           <span className="mt-1 block text-xs font-medium text-white">{footprintLabel}</span>
         </button>
-        <p className="px-1 text-[11px] leading-relaxed text-slate-400">
-          Content reviewed {formatDate(DATA_REVIEWED_ON)}. For internal information only – not legal advice.
-        </p>
+        <ContentUpdated tone="dark" className="px-1" />
       </div>
     </aside>
   );
@@ -92,10 +73,10 @@ export function Sidebar({
 
 export function MobileNav({ view, onNavigate, onEditFootprint }: { view: ViewId; onNavigate: (v: ViewId) => void; onEditFootprint: () => void }) {
   return (
-    <div className="no-print sticky top-0 z-40 bg-[#071d49] lg:hidden">
-      <div className="flex items-center justify-between px-4 py-3">
-        <Logo />
-        <button type="button" onClick={onEditFootprint} className="rounded-lg p-2 text-slate-300 hover:bg-white/10" aria-label="Edit market footprint">
+    <div className="no-print sticky top-0 z-40 bg-gradient-to-r from-[#0a2559] to-[#071d49] lg:hidden">
+      <div className="flex items-center justify-between gap-3 px-4 py-3">
+        <BrandCompact />
+        <button type="button" onClick={onEditFootprint} className="shrink-0 rounded-lg p-2 text-slate-300 hover:bg-white/10" aria-label="Edit market footprint">
           <Settings2 className="h-5 w-5" />
         </button>
       </div>

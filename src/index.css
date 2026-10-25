@@ -23,6 +23,17 @@
   to { transform: translateX(0); opacity: 1; }
 }
 
+@keyframes orbit {
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .emblem-orbit {
+    transform-origin: 24px 24px;
+    animation: orbit 14s linear infinite;
+  }
+}
+
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(4px); }
   to { opacity: 1; transform: none; }

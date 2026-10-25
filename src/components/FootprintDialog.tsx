@@ -9,10 +9,10 @@ const SELECTABLE = MARKET_ORDER.filter((m) => m !== 'global');
 
 const PRESETS: { label: string; markets: MarketId[] }[] = [
   { label: 'All markets', markets: SELECTABLE },
-  { label: 'Europe', markets: ['eu', 'uk', 'ch'] },
-  { label: 'US & Canada', markets: ['us', 'ca'] },
+  { label: 'Europe', markets: ['eu', 'uk'] },
+  { label: 'United States', markets: ['us'] },
   { label: 'Asia-Pacific', markets: ['sg', 'hk', 'jp', 'au', 'cn', 'kr'] },
-  { label: 'Global UCITS distributor', markets: ['eu', 'uk', 'ch', 'sg', 'hk'] },
+  { label: 'Global UCITS distributor', markets: ['eu', 'uk', 'sg', 'hk'] },
 ];
 
 export function FootprintDialog({ open, onClose }: { open: boolean; onClose: () => void }) {
@@ -38,7 +38,7 @@ export function FootprintDialog({ open, onClose }: { open: boolean; onClose: () 
           <div>
             <h2 id="fp-title" className="text-base font-bold text-slate-900">Your market footprint</h2>
             <p className="mt-1 text-xs text-slate-500">
-              Choose where your firm is licensed, manages money or distributes funds. Overview, horizon, action plan and briefings
+              Choose where your firm is licensed, manages money or distributes funds. The overview, action plan and briefings
               focus on these markets. Global standard-setters are always included.
             </p>
           </div>
