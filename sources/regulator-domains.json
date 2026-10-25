@@ -1,0 +1,99 @@
+{
+  "_comment": "Regulator and official websites the content refresh reads as primary sources. Each site is listed under every host name it uses (bare and www.), because many redirect from one to the other and the cloud environment's Allowed domains list matches host names exactly. Domains found in sourceUrl fields of src/data/developments.json are added automatically by scripts/check-sources.mjs.",
+  "markets": {
+    "eu": [
+      { "name": "European Commission", "hosts": ["ec.europa.eu", "commission.europa.eu", "digital-strategy.ec.europa.eu"] },
+      { "name": "EUR-Lex (Official Journal)", "hosts": ["eur-lex.europa.eu"] },
+      { "name": "ESMA", "hosts": ["www.esma.europa.eu", "esma.europa.eu"] },
+      { "name": "EDPB", "hosts": ["www.edpb.europa.eu", "edpb.europa.eu"] },
+      { "name": "EBA", "hosts": ["www.eba.europa.eu", "eba.europa.eu"] },
+      { "name": "EIOPA", "hosts": ["www.eiopa.europa.eu", "eiopa.europa.eu"] },
+      { "name": "Council of the EU", "hosts": ["www.consilium.europa.eu", "consilium.europa.eu"] },
+      { "name": "European Parliament", "hosts": ["www.europarl.europa.eu", "europarl.europa.eu"] }
+    ],
+    "uk": [
+      { "name": "FCA", "hosts": ["www.fca.org.uk", "fca.org.uk"] },
+      { "name": "Bank of England / PRA", "hosts": ["www.bankofengland.co.uk", "bankofengland.co.uk"] },
+      { "name": "ICO", "hosts": ["ico.org.uk", "www.ico.org.uk"] },
+      { "name": "GOV.UK (HM Treasury, DSIT)", "hosts": ["www.gov.uk", "gov.uk"] },
+      { "name": "Legislation", "hosts": ["www.legislation.gov.uk", "legislation.gov.uk"] },
+      { "name": "Parliament", "hosts": ["www.parliament.uk", "parliament.uk", "committees.parliament.uk", "publications.parliament.uk"] }
+    ],
+    "us": [
+      { "name": "SEC", "hosts": ["www.sec.gov", "sec.gov"] },
+      { "name": "FINRA", "hosts": ["www.finra.org", "finra.org"] },
+      { "name": "CFTC", "hosts": ["www.cftc.gov", "cftc.gov"] },
+      { "name": "NIST", "hosts": ["www.nist.gov", "nist.gov"] },
+      { "name": "White House", "hosts": ["www.whitehouse.gov", "whitehouse.gov"] },
+      { "name": "Federal Register", "hosts": ["www.federalregister.gov", "federalregister.gov"] },
+      { "name": "FTC", "hosts": ["www.ftc.gov", "ftc.gov"] },
+      { "name": "NYDFS", "hosts": ["www.dfs.ny.gov", "dfs.ny.gov"] },
+      { "name": "California CPPA", "hosts": ["cppa.ca.gov", "www.cppa.ca.gov"] },
+      { "name": "California Civil Rights Council", "hosts": ["calcivilrights.ca.gov"] },
+      { "name": "California Legislature", "hosts": ["leginfo.legislature.ca.gov"] },
+      { "name": "Colorado Legislature", "hosts": ["leg.colorado.gov"] },
+      { "name": "Colorado Attorney General", "hosts": ["coag.gov", "www.coag.gov"] },
+      { "name": "Texas Legislature", "hosts": ["capitol.texas.gov", "www.capitol.texas.gov"] },
+      { "name": "Illinois General Assembly", "hosts": ["www.ilga.gov", "ilga.gov"] },
+      { "name": "Connecticut General Assembly", "hosts": ["www.cga.ct.gov", "cga.ct.gov"] }
+    ],
+    "sg": [
+      { "name": "MAS", "hosts": ["www.mas.gov.sg", "mas.gov.sg"] },
+      { "name": "IMDA", "hosts": ["www.imda.gov.sg", "imda.gov.sg"] },
+      { "name": "PDPC", "hosts": ["www.pdpc.gov.sg", "pdpc.gov.sg"] },
+      { "name": "AI Verify Foundation", "hosts": ["aiverifyfoundation.sg", "www.aiverifyfoundation.sg"] }
+    ],
+    "hk": [
+      { "name": "SFC", "hosts": ["www.sfc.hk", "sfc.hk", "apps.sfc.hk"] },
+      { "name": "HKMA", "hosts": ["www.hkma.gov.hk", "hkma.gov.hk"] },
+      { "name": "PCPD", "hosts": ["www.pcpd.org.hk", "pcpd.org.hk"] },
+      { "name": "FSTB", "hosts": ["www.fstb.gov.hk", "fstb.gov.hk"] },
+      { "name": "HK Government press releases", "hosts": ["www.info.gov.hk", "info.gov.hk"] },
+      { "name": "Digital Policy Office", "hosts": ["www.digitalpolicy.gov.hk", "digitalpolicy.gov.hk"] }
+    ],
+    "jp": [
+      { "name": "FSA", "hosts": ["www.fsa.go.jp", "fsa.go.jp"] },
+      { "name": "Bank of Japan", "hosts": ["www.boj.or.jp", "boj.or.jp"] },
+      { "name": "Cabinet Office", "hosts": ["www.cao.go.jp", "www8.cao.go.jp"] },
+      { "name": "METI", "hosts": ["www.meti.go.jp", "meti.go.jp"] },
+      { "name": "MIC", "hosts": ["www.soumu.go.jp", "soumu.go.jp"] },
+      { "name": "PPC", "hosts": ["www.ppc.go.jp", "ppc.go.jp"] }
+    ],
+    "au": [
+      { "name": "ASIC", "hosts": ["www.asic.gov.au", "asic.gov.au"] },
+      { "name": "APRA", "hosts": ["www.apra.gov.au", "apra.gov.au"] },
+      { "name": "OAIC", "hosts": ["www.oaic.gov.au", "oaic.gov.au"] },
+      { "name": "Attorney-General's Department", "hosts": ["www.ag.gov.au", "ag.gov.au", "consultations.ag.gov.au"] },
+      { "name": "Industry, Science and Resources", "hosts": ["www.industry.gov.au", "industry.gov.au"] },
+      { "name": "Federal Register of Legislation", "hosts": ["www.legislation.gov.au", "legislation.gov.au"] },
+      { "name": "Parliament", "hosts": ["www.aph.gov.au", "aph.gov.au"] }
+    ],
+    "cn": [
+      { "name": "CAC", "hosts": ["www.cac.gov.cn", "cac.gov.cn"] },
+      { "name": "CSRC", "hosts": ["www.csrc.gov.cn", "csrc.gov.cn"] },
+      { "name": "AMAC", "hosts": ["www.amac.org.cn", "amac.org.cn"] },
+      { "name": "NFRA", "hosts": ["www.nfra.gov.cn", "nfra.gov.cn"] },
+      { "name": "PBOC", "hosts": ["www.pbc.gov.cn", "pbc.gov.cn"] },
+      { "name": "State Council", "hosts": ["www.gov.cn", "gov.cn"] },
+      { "name": "NPC", "hosts": ["www.npc.gov.cn", "npc.gov.cn"] }
+    ],
+    "kr": [
+      { "name": "FSC", "hosts": ["www.fsc.go.kr", "fsc.go.kr"] },
+      { "name": "FSS", "hosts": ["www.fss.or.kr", "fss.or.kr"] },
+      { "name": "MSIT", "hosts": ["www.msit.go.kr", "msit.go.kr"] },
+      { "name": "PIPC", "hosts": ["www.pipc.go.kr", "pipc.go.kr"] },
+      { "name": "Korea Law Information Center", "hosts": ["www.law.go.kr", "law.go.kr"] },
+      { "name": "Korea.kr (government news)", "hosts": ["www.korea.kr", "korea.kr"] }
+    ],
+    "global": [
+      { "name": "FSB", "hosts": ["www.fsb.org", "fsb.org"] },
+      { "name": "IOSCO", "hosts": ["www.iosco.org", "iosco.org"] },
+      { "name": "BIS", "hosts": ["www.bis.org", "bis.org"] },
+      { "name": "OECD", "hosts": ["www.oecd.org", "oecd.org"] },
+      { "name": "OECD.AI", "hosts": ["oecd.ai", "www.oecd.ai"] },
+      { "name": "Council of Europe", "hosts": ["www.coe.int", "coe.int"] },
+      { "name": "ISO", "hosts": ["www.iso.org", "iso.org"] },
+      { "name": "IMF", "hosts": ["www.imf.org", "imf.org"] }
+    ]
+  }
+}
