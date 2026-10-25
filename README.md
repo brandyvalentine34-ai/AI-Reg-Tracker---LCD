@@ -1,8 +1,8 @@
-# Global AI regulatory development Tracker
+# Global AI Regulatory Development Tracker
 
 A regulatory-intelligence workspace for **buy-side asset managers** (UCITS/AIF managers, RIAs, licensed fund managers) to track the latest AI regulatory developments across key markets, understand what they mean for the firm, and turn them into an evidenced action plan.
 
-Curated by LCD Compliance for internal information purposes only. Not legal advice.
+Developed by LCD Compliance for internal information purposes only. Please refer and verify against primary source.
 
 ## What it does
 
@@ -20,7 +20,7 @@ Workspace state (footprint, watchlist, read status, action progress) is stored i
 
 ## Coverage
 
-76 developments across 12 markets: EU, UK, US, Canada, Switzerland, Singapore, Hong Kong, Japan, Australia, Mainland China, South Korea, and global standard-setters (IOSCO, FSB, G7, OECD, Council of Europe, ISO/IEC). Content was reviewed on **8 October 2026**.
+70 developments across 10 markets: EU, UK, US, Singapore, Hong Kong, Japan, Australia, Mainland China, South Korea, and global standard-setters (IOSCO, FSB, G7, OECD, Council of Europe, ISO/IEC). Content was reviewed on **8 October 2026**.
 
 Each item has a `confidence` rating:
 

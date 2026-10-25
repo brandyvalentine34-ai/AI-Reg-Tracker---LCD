@@ -10,8 +10,6 @@ export type MarketId =
   | 'eu'
   | 'uk'
   | 'us'
-  | 'ca'
-  | 'ch'
   | 'sg'
   | 'hk'
   | 'jp'

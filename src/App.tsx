@@ -76,7 +76,7 @@ export default function App() {
           {view === 'briefing' && <Briefing scoped={scoped} />}
         </main>
         <footer className="no-print border-t border-slate-200 px-4 py-5 text-center text-[11px] text-slate-500 sm:px-6 lg:px-8">
-          Curated by LCD Compliance for internal information purposes only. Not legal advice – always verify against the primary source.
+          For internal information purposes only. Please refer and verify against primary source
         </footer>
       </div>
 

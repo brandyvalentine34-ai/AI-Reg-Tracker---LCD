@@ -34,28 +34,6 @@ export const MARKETS: Record<MarketId, Market> = {
       'Federal policy has shifted towards deregulation and pre-empting state AI laws, but the SEC continues to police AI-washing and AI-related conflicts through existing antifraud, compliance-programme and marketing rules. State laws (Colorado, California, Texas, Illinois, NYC) mainly bite on HR, consumer-facing and vendor uses.',
     keyRegulators: ['SEC', 'FINRA', 'CFTC', 'State attorneys general', 'NYDFS', 'CPPA (California)'],
   },
-  ca: {
-    id: 'ca',
-    name: 'Canada',
-    shortName: 'Canada',
-    flag: '🇨🇦',
-    region: 'Americas',
-    approach: 'Securities-law guidance; federal AI bill lapsed',
-    posture:
-      'The Canadian Securities Administrators have set out how existing securities law applies to AI systems used by registrants and investment fund managers, with emphasis on governance, explainability and disclosure. A federal horizontal AI statute is not currently in place.',
-    keyRegulators: ['Canadian Securities Administrators (CSA)', 'OSC', 'AMF (Québec)', 'OSFI'],
-  },
-  ch: {
-    id: 'ch',
-    name: 'Switzerland',
-    shortName: 'Switzerland',
-    flag: '🇨🇭',
-    region: 'Europe',
-    approach: 'Supervisory expectations via FINMA; sector-specific legislative amendments planned',
-    posture:
-      'FINMA expects supervised institutions, including asset managers and fund management companies, to identify, assess and control AI risks within existing governance and risk-management frameworks. The Federal Council favours targeted amendments over an EU-style AI act.',
-    keyRegulators: ['FINMA', 'Federal Council / FDJP', 'FDPIC'],
-  },
   sg: {
     id: 'sg',
     name: 'Singapore',
@@ -135,4 +113,4 @@ export const MARKETS: Record<MarketId, Market> = {
   },
 };
 
-export const MARKET_ORDER: MarketId[] = ['eu', 'uk', 'us', 'ca', 'ch', 'sg', 'hk', 'jp', 'au', 'cn', 'kr', 'global'];
+export const MARKET_ORDER: MarketId[] = ['eu', 'uk', 'us', 'sg', 'hk', 'jp', 'au', 'cn', 'kr', 'global'];

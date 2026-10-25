@@ -9,10 +9,10 @@ const SELECTABLE = MARKET_ORDER.filter((m) => m !== 'global');
 
 const PRESETS: { label: string; markets: MarketId[] }[] = [
   { label: 'All markets', markets: SELECTABLE },
-  { label: 'Europe', markets: ['eu', 'uk', 'ch'] },
-  { label: 'US & Canada', markets: ['us', 'ca'] },
+  { label: 'Europe', markets: ['eu', 'uk'] },
+  { label: 'United States', markets: ['us'] },
   { label: 'Asia-Pacific', markets: ['sg', 'hk', 'jp', 'au', 'cn', 'kr'] },
-  { label: 'Global UCITS distributor', markets: ['eu', 'uk', 'ch', 'sg', 'hk'] },
+  { label: 'Global UCITS distributor', markets: ['eu', 'uk', 'sg', 'hk'] },
 ];
 
 export function FootprintDialog({ open, onClose }: { open: boolean; onClose: () => void }) {

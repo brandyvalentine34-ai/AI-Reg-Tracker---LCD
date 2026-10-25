@@ -3,6 +3,7 @@ import type { ViewId } from '../types';
 import { cx } from './ui';
 import { formatDate } from '../lib/dates';
 import { DATA_REVIEWED_ON } from '../data';
+import { BrandCompact, BrandHeader } from './Brand';
 
 export const NAV: { id: ViewId; label: string; icon: typeof LayoutDashboard }[] = [
   { id: 'overview', label: 'Overview', icon: LayoutDashboard },
@@ -10,17 +11,6 @@ export const NAV: { id: ViewId; label: string; icon: typeof LayoutDashboard }[] 
   { id: 'actions', label: 'Action plan', icon: ListChecks },
   { id: 'briefing', label: 'Briefing pack', icon: FileText },
 ];
-
-export function Logo() {
-  return (
-    <div className="flex items-center gap-2.5">
-      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-sky-400 to-blue-600 text-sm font-black text-white shadow-inner">
-        AI
-      </div>
-      <p className="text-sm font-bold leading-tight text-white text-balance">Global AI regulatory development Tracker</p>
-    </div>
-  );
-}
 
 export function Sidebar({
   view,
@@ -38,9 +28,9 @@ export function Sidebar({
   onEditFootprint: () => void;
 }) {
   return (
-    <aside className="no-print sticky top-0 hidden h-screen w-64 shrink-0 flex-col bg-[#071d49] px-4 py-5 lg:flex">
-      <Logo />
-      <nav className="mt-8 space-y-1" aria-label="Main">
+    <aside className="no-print sticky top-0 hidden h-screen w-72 shrink-0 flex-col overflow-y-auto bg-[#071d49] px-4 py-5 lg:flex">
+      <BrandHeader />
+      <nav className="mt-6 space-y-1" aria-label="Main">
         {NAV.map(({ id, label, icon: Icon }) => {
           const active = view === id;
           const badge = id === 'developments' ? unreadCount : id === 'actions' ? openActions : 0;
@@ -78,7 +68,7 @@ export function Sidebar({
           <span className="mt-1 block text-xs font-medium text-white">{footprintLabel}</span>
         </button>
         <p className="px-1 text-[11px] leading-relaxed text-slate-400">
-          Content reviewed {formatDate(DATA_REVIEWED_ON)}. For internal information only – not legal advice.
+          Content reviewed {formatDate(DATA_REVIEWED_ON)}
         </p>
       </div>
     </aside>
@@ -87,10 +77,10 @@ export function Sidebar({
 
 export function MobileNav({ view, onNavigate, onEditFootprint }: { view: ViewId; onNavigate: (v: ViewId) => void; onEditFootprint: () => void }) {
   return (
-    <div className="no-print sticky top-0 z-40 bg-[#071d49] lg:hidden">
-      <div className="flex items-center justify-between px-4 py-3">
-        <Logo />
-        <button type="button" onClick={onEditFootprint} className="rounded-lg p-2 text-slate-300 hover:bg-white/10" aria-label="Edit market footprint">
+    <div className="no-print sticky top-0 z-40 bg-gradient-to-r from-[#0a2559] to-[#071d49] lg:hidden">
+      <div className="flex items-center justify-between gap-3 px-4 py-3">
+        <BrandCompact />
+        <button type="button" onClick={onEditFootprint} className="shrink-0 rounded-lg p-2 text-slate-300 hover:bg-white/10" aria-label="Edit market footprint">
           <Settings2 className="h-5 w-5" />
         </button>
       </div>
