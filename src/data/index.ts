@@ -15,8 +15,11 @@ export const DEVELOPMENTS_BY_ID: Record<string, Development> = Object.fromEntrie
   DEVELOPMENTS.map((d) => [d.id, d]),
 );
 
-/** Date the dataset was last reviewed against primary sources. Bump when refreshing developments.json. */
-export const DATA_REVIEWED_ON = '2026-10-08';
+/**
+ * Date shown as "Content is updated as of …" in the sidebar and on the Overview.
+ * Change it to the refresh date every time developments.json is refreshed.
+ */
+export const CONTENT_UPDATED_ON = '2026-10-25';
 
 /** Most recent development date in the dataset. */
 export const LATEST_DEVELOPMENT = DEVELOPMENTS.reduce((max, d) => (d.lastUpdated > max ? d.lastUpdated : max), '0000-00-00');

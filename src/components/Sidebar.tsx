@@ -1,9 +1,7 @@
 import { FileText, LayoutDashboard, ListChecks, Newspaper, Settings2 } from 'lucide-react';
 import type { ViewId } from '../types';
 import { cx } from './ui';
-import { formatDate } from '../lib/dates';
-import { DATA_REVIEWED_ON } from '../data';
-import { BrandCompact, BrandHeader } from './Brand';
+import { BrandCompact, BrandHeader, ContentUpdated } from './Brand';
 
 export const NAV: { id: ViewId; label: string; icon: typeof LayoutDashboard }[] = [
   { id: 'overview', label: 'Overview', icon: LayoutDashboard },
@@ -67,9 +65,7 @@ export function Sidebar({
           </span>
           <span className="mt-1 block text-xs font-medium text-white">{footprintLabel}</span>
         </button>
-        <p className="px-1 text-[11px] leading-relaxed text-slate-400">
-          Content reviewed {formatDate(DATA_REVIEWED_ON)}
-        </p>
+        <ContentUpdated tone="dark" className="px-1" />
       </div>
     </aside>
   );

@@ -20,7 +20,7 @@ Workspace state (footprint, watchlist, read status, action progress) is stored i
 
 ## Coverage
 
-70 developments across 10 markets: EU, UK, US, Singapore, Hong Kong, Japan, Australia, Mainland China, South Korea, and global standard-setters (IOSCO, FSB, G7, OECD, Council of Europe, ISO/IEC). Content was reviewed on **8 October 2026**.
+70 developments across 10 markets: EU, UK, US, Singapore, Hong Kong, Japan, Australia, Mainland China, South Korea, and global standard-setters (IOSCO, FSB, G7, OECD, Council of Europe, ISO/IEC). Content is updated as of **25 October 2026**.
 
 Each item has a `confidence` rating:
 
@@ -35,7 +35,7 @@ Always check the linked primary source before acting.
 All content lives in [`src/data/developments.json`](src/data/developments.json). The schema and validation rules are in [`src/data/schema.ts`](src/data/schema.ts).
 
 1. Add or edit an entry. Bump `lastUpdated` and rewrite `latestUpdate` whenever something material changes; users will see the item as unread again.
-2. Update `DATA_REVIEWED_ON` in [`src/data/index.ts`](src/data/index.ts).
+2. Change `CONTENT_UPDATED_ON` in [`src/data/index.ts`](src/data/index.ts) to the refresh date. It is shown as *Content is updated as of …* in the sidebar and on the Overview.
 3. Run `bun run test`. The dataset test checks every entry for valid enums, ISO dates, unique ids and at least one action and milestone.
 
 Action progress is keyed by `<development id>-a<n>`. Append new actions rather than reordering existing ones, so that saved progress stays attached to the right action.

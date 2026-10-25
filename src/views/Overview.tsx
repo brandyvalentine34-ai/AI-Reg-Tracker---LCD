@@ -8,7 +8,7 @@ import { collectMilestones, sortDevelopments } from '../lib/filters';
 import { addDays, daysBetween, formatDate, relativeDays } from '../lib/dates';
 import { DevelopmentRow } from '../components/DevelopmentRow';
 import { Button, Card, CardHeader, ImpactBadge, PageHeader, cx } from '../components/ui';
-import { DATA_REVIEWED_ON } from '../data';
+import { ContentUpdated } from '../components/Brand';
 
 /** Sequential single-hue (blue) ramp: lightest = fewest. Text flips to white on dark steps. */
 const HEAT_STEPS = [
@@ -106,7 +106,7 @@ export function Overview({
         description={
           <>
             What has changed, what is coming and where your firm stands, across {markets.length} markets in your footprint.
-            Content reviewed {formatDate(DATA_REVIEWED_ON)}.
+            <ContentUpdated className="mt-2" />
           </>
         }
         actions={

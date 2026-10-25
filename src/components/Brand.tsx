@@ -1,4 +1,7 @@
 import { useId } from 'react';
+import { CalendarCheck } from 'lucide-react';
+import { CONTENT_UPDATED_ON } from '../data';
+import { formatDate } from '../lib/dates';
 import { MARKETS, MARKET_ORDER } from '../data/markets';
 import { cx } from './ui';
 
@@ -114,5 +117,21 @@ export function BrandCompact({ className }: { className?: string }) {
         <p className="mt-0.5 text-[10px] leading-snug text-sky-200/85">{APP_SUBTITLE}</p>
       </div>
     </div>
+  );
+}
+
+/** "Content is updated as of …" note, italic in an accent colour so it stands apart from surrounding text. */
+export function ContentUpdated({ tone = 'light', className }: { tone?: 'light' | 'dark'; className?: string }) {
+  return (
+    <span
+      className={cx(
+        'flex items-center gap-1.5 text-xs font-medium italic',
+        tone === 'dark' ? 'text-amber-300' : 'text-amber-700',
+        className,
+      )}
+    >
+      <CalendarCheck className="h-3.5 w-3.5 shrink-0 not-italic" aria-hidden="true" />
+      Content is updated as of {formatDate(CONTENT_UPDATED_ON)}
+    </span>
   );
 }
