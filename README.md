@@ -42,6 +42,21 @@ Action progress is keyed by `<development id>-a<n>`. Append new actions rather t
 
 Market profiles are in [`src/data/markets.ts`](src/data/markets.ts). Taxonomy labels and colours are in [`src/lib/taxonomy.ts`](src/lib/taxonomy.ts).
 
+## Monthly refresh
+
+Each refresh starts by checking which regulator websites the cloud environment can read, so findings are checked against primary sources wherever possible.
+
+1. **Check source access.** Run `bun run check:sources`. It rewrites:
+   - [`sources/ACCESS.md`](sources/ACCESS.md): which regulator sites are readable, and which hosts to add to the environment's **Allowed domains**
+   - [`sources/allowed-domains.txt`](sources/allowed-domains.txt): the full list of hosts to allow
+
+   The site list is [`sources/regulator-domains.json`](sources/regulator-domains.json) plus every host used in a `sourceUrl` in `developments.json`, so new sources are picked up automatically. To add a regulator that has no tracked item yet, edit `regulator-domains.json`. Allow both the bare and `www.` form of each host: many sites redirect from one to the other.
+2. **Research and update.** Ask Claude Code in this repository:
+
+   > Refresh the Global AI Regulatory Development Tracker. First run `bun run check:sources` and read `sources/ACCESS.md`. Research AI regulatory developments since the last refresh (`CONTENT_UPDATED_ON` in `src/data/index.ts`) across all 10 markets, reading primary sources with curl wherever ACCESS.md shows them as readable (send a User-Agent with a name and contact email; the SEC requires one). Update `src/data/developments.json`: add new developments and update changed ones (`lastUpdated`, `latestUpdate`, milestones, confidence). Do not change or reorder existing actions. Set `CONTENT_UPDATED_ON` to today, run `bun run check:sources` again and `bun run test`, then open a pull request listing what changed, which sources were read directly, and anything you could not verify. Do not merge it.
+
+3. **Review and merge** the pull request. Vercel redeploys from `main`.
+
 ## Development
 
 Prerequisites: [Bun](https://bun.sh) (or Node 20+).
