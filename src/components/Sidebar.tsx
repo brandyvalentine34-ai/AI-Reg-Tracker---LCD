@@ -28,7 +28,7 @@ export function Sidebar({
   return (
     <aside className="no-print sticky top-0 hidden h-screen w-72 shrink-0 flex-col overflow-y-auto bg-[#071d49] px-4 py-5 lg:flex">
       <BrandHeader />
-      <nav className="mt-6 space-y-1" aria-label="Main">
+      <nav className="mt-6 shrink-0 space-y-1" aria-label="Main">
         {NAV.map(({ id, label, icon: Icon }) => {
           const active = view === id;
           const badge = id === 'developments' ? unreadCount : id === 'actions' ? openActions : 0;
@@ -53,7 +53,7 @@ export function Sidebar({
         })}
       </nav>
 
-      <div className="mt-auto space-y-3">
+      <div className="mt-auto shrink-0 space-y-3 pt-6">
         <button
           type="button"
           onClick={onEditFootprint}

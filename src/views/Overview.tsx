@@ -102,10 +102,10 @@ export function Overview({
   return (
     <div className="space-y-6">
       <PageHeader
-        title="AI regulatory overview"
+        title="AI Regulatory Development Overview"
         description={
           <>
-            What has changed, what is coming and where your firm stands, across {markets.length} markets in your footprint.
+            What has changed and what is coming, across {markets.length} markets in our firm's horizon scanning
             <ContentUpdated className="mt-2" />
           </>
         }

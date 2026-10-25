@@ -90,7 +90,7 @@ function MarketStrip() {
 /** Full brand block for the desktop sidebar. */
 export function BrandHeader() {
   return (
-    <header className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#0e3478] via-[#0a2559] to-[#071d49] p-4 ring-1 ring-white/10">
+    <header className="relative shrink-0 overflow-hidden rounded-2xl bg-gradient-to-br from-[#0e3478] via-[#0a2559] to-[#071d49] p-4 ring-1 ring-white/10">
       <HeaderArt className="pointer-events-none absolute -right-10 -top-4 h-40 w-56" />
       <div className="relative">
         <Emblem className="h-11 w-11 drop-shadow-[0_4px_12px_rgba(56,189,248,0.35)]" />
