@@ -1,5 +1,5 @@
 import { useCallback, useMemo, useState } from 'react';
-import type { Filters, MarketId, SortKey, Theme, ViewId } from './types';
+import type { Filters, SortKey, Theme, ViewId } from './types';
 import { DEVELOPMENTS, DEVELOPMENTS_BY_ID } from './data';
 import { MARKETS } from './data/markets';
 import { useWorkspace } from './state/workspace';
@@ -10,8 +10,6 @@ import { DevelopmentDrawer } from './components/DevelopmentDrawer';
 import { FootprintDialog } from './components/FootprintDialog';
 import { Overview } from './views/Overview';
 import { Developments } from './views/Developments';
-import { Horizon } from './views/Horizon';
-import { Markets } from './views/Markets';
 import { ActionPlan } from './views/ActionPlan';
 import { Briefing } from './views/Briefing';
 
@@ -24,26 +22,19 @@ export default function App() {
 
   const view = route.view;
   const itemId = route.params.get('item');
-  const marketParam = route.params.get('market') as MarketId | null;
-  const selectedMarket = marketParam && marketParam in MARKETS ? marketParam : null;
   const openItem = itemId ? DEVELOPMENTS_BY_ID[itemId] ?? null : null;
 
-  /** Developments in the user's market footprint – drives dashboards, horizon, actions and briefings. */
+  /** Developments in the user's market footprint – drives the overview, action plan and briefings. */
   const scoped = useMemo(() => DEVELOPMENTS.filter(ws.inFootprint), [ws.inFootprint]);
 
   const go = useCallback((v: ViewId) => navigate(v), [navigate]);
-  const onOpen = useCallback(
-    (id: string) => navigate(view, { market: view === 'markets' ? selectedMarket ?? undefined : undefined, item: id }),
-    [navigate, view, selectedMarket],
-  );
-  const closeItem = useCallback(
-    () => navigate(view, { market: view === 'markets' ? selectedMarket ?? undefined : undefined }),
-    [navigate, view, selectedMarket],
-  );
+  const onOpen = useCallback((id: string) => navigate(view, { item: id }), [navigate, view]);
+  const closeItem = useCallback(() => navigate(view), [navigate, view]);
 
   const browse = useCallback(
-    (f: Partial<Filters>) => {
+    (f: Partial<Filters>, sortBy?: SortKey) => {
       setFilters({ ...EMPTY_FILTERS, ...f });
+      if (sortBy) setSort(sortBy);
       navigate('developments');
     },
     [navigate],
@@ -80,10 +71,6 @@ export default function App() {
           {view === 'overview' && <Overview scoped={scoped} onOpen={onOpen} onNavigate={go} onBrowse={browse} />}
           {view === 'developments' && (
             <Developments all={DEVELOPMENTS} filters={filters} setFilters={setFilters} sort={sort} setSort={setSort} onOpen={onOpen} />
-          )}
-          {view === 'horizon' && <Horizon scoped={scoped} onOpen={onOpen} />}
-          {view === 'markets' && (
-            <Markets all={DEVELOPMENTS} selected={selectedMarket} onSelect={(m) => navigate('markets', { market: m ?? undefined })} onOpen={onOpen} />
           )}
           {view === 'actions' && <ActionPlan scoped={scoped} onOpen={onOpen} />}
           {view === 'briefing' && <Briefing scoped={scoped} />}

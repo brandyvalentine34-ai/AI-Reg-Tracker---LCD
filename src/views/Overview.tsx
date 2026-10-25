@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 import { ArrowRight, BellDot, CalendarClock, Flame, Grid3X3, ListChecks, Star } from 'lucide-react';
-import type { Development, Filters, MarketId, Theme, ViewId } from '../types';
+import type { Development, Filters, MarketId, SortKey, Theme, ViewId } from '../types';
 import { useWorkspace } from '../state/workspace';
 import { MARKETS, MARKET_ORDER } from '../data/markets';
 import { THEMES, THEME_ORDER } from '../lib/taxonomy';
@@ -75,7 +75,7 @@ export function Overview({
   scoped: Development[];
   onOpen: (id: string) => void;
   onNavigate: (v: ViewId) => void;
-  onBrowse: (f: Partial<Filters>) => void;
+  onBrowse: (f: Partial<Filters>, sortBy?: SortKey) => void;
 }) {
   const ws = useWorkspace();
   const horizonEnd = addDays(ws.today, 90);
@@ -123,7 +123,7 @@ export function Overview({
         <Kpi label="Developments tracked" value={scoped.length} hint={`${markets.length} markets`} icon={Grid3X3} onClick={() => onBrowse({})} />
         <Kpi label="High impact" value={high.length} hint="for asset managers" icon={Flame} tone="rose" onClick={() => onBrowse({ impacts: ['high'] })} />
         <Kpi label="Unread updates" value={unread.length} hint="since you last looked" icon={BellDot} tone="blue" onClick={() => onBrowse({ unreadOnly: true })} />
-        <Kpi label="Deadlines ≤ 90 days" value={next90.length} hint={`to ${formatDate(horizonEnd)}`} icon={CalendarClock} tone="amber" onClick={() => onNavigate('horizon')} />
+        <Kpi label="Deadlines ≤ 90 days" value={next90.length} hint={`to ${formatDate(horizonEnd)}`} icon={CalendarClock} tone="amber" onClick={() => onBrowse({}, 'next_deadline')} />
         <Kpi label="Action plan" value={`${pct}%`} hint={`${doneCount} of ${applicable.length} actions done`} icon={ListChecks} tone="emerald" onClick={() => onNavigate('actions')} />
       </div>
 
@@ -150,8 +150,8 @@ export function Overview({
             title="Upcoming deadlines"
             subtitle="Next milestones, earliest first"
             action={
-              <Button variant="ghost" onClick={() => onNavigate('horizon')}>
-                Horizon <ArrowRight className="h-3.5 w-3.5" />
+              <Button variant="ghost" onClick={() => onBrowse({}, 'next_deadline')}>
+                All deadlines <ArrowRight className="h-3.5 w-3.5" />
               </Button>
             }
           />

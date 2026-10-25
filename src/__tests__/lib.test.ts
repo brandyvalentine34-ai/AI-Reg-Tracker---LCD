@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import type { Development } from '../types';
 import { EMPTY_FILTERS, activeFilterCount, collectMilestones, matchesFilters, nextMilestone, sortDevelopments } from '../lib/filters';
-import { actionPlanCSV, briefingMarkdown, milestonesICS, toCSV } from '../lib/export';
+import { actionPlanCSV, briefingMarkdown, toCSV } from '../lib/export';
 import { addDays, daysBetween, formatDate, quarterKey, relativeDays } from '../lib/dates';
 import { parseHash, buildHash } from '../state/router';
 
@@ -106,15 +106,6 @@ describe('exports', () => {
     expect(lines[1]).toContain('"Do, ""the"" thing",Legal,Done');
   });
 
-  it('builds a valid ICS calendar', () => {
-    const d = dev({ milestones: [{ date: '2027-08-02', label: 'Deadline; big', confirmed: true }] });
-    const ics = milestonesICS(collectMilestones([d]), new Date('2026-10-08T00:00:00Z'));
-    expect(ics).toMatch(/^BEGIN:VCALENDAR/);
-    expect(ics).toContain('DTSTART;VALUE=DATE:20270802');
-    expect(ics).toContain('SUMMARY:[EU] Deadline\; big');
-    expect(ics.trim().endsWith('END:VCALENDAR')).toBe(true);
-  });
-
   it('builds a markdown briefing', () => {
     const md = briefingMarkdown([dev({ impact: 'high' })], { title: 'Update', today: '2026-10-08', includeActions: true, upcoming: [] });
     expect(md).toContain('# Update');
@@ -125,9 +116,9 @@ describe('exports', () => {
 
 describe('router', () => {
   it('round-trips views and params', () => {
-    const r = parseHash(buildHash('markets', { market: 'eu', item: 'eu-ai-act' }));
-    expect(r.view).toBe('markets');
-    expect(r.params.get('market')).toBe('eu');
+    const r = parseHash(buildHash('developments', { item: 'eu-ai-act' }));
+    expect(r.view).toBe('developments');
+    expect(parseHash('#/horizon').view).toBe('overview');
     expect(r.params.get('item')).toBe('eu-ai-act');
     expect(parseHash('#/nonsense').view).toBe('overview');
   });

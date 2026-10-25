@@ -1,4 +1,4 @@
-import { CalendarRange, FileText, Globe2, LayoutDashboard, ListChecks, Newspaper, Settings2 } from 'lucide-react';
+import { FileText, LayoutDashboard, ListChecks, Newspaper, Settings2 } from 'lucide-react';
 import type { ViewId } from '../types';
 import { cx } from './ui';
 import { formatDate } from '../lib/dates';
@@ -7,8 +7,6 @@ import { DATA_REVIEWED_ON } from '../data';
 export const NAV: { id: ViewId; label: string; icon: typeof LayoutDashboard }[] = [
   { id: 'overview', label: 'Overview', icon: LayoutDashboard },
   { id: 'developments', label: 'Developments', icon: Newspaper },
-  { id: 'horizon', label: 'Horizon & deadlines', icon: CalendarRange },
-  { id: 'markets', label: 'Markets', icon: Globe2 },
   { id: 'actions', label: 'Action plan', icon: ListChecks },
   { id: 'briefing', label: 'Briefing pack', icon: FileText },
 ];
@@ -16,13 +14,10 @@ export const NAV: { id: ViewId; label: string; icon: typeof LayoutDashboard }[] 
 export function Logo() {
   return (
     <div className="flex items-center gap-2.5">
-      <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-sky-400 to-blue-600 text-sm font-black text-white shadow-inner">
+      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-sky-400 to-blue-600 text-sm font-black text-white shadow-inner">
         AI
       </div>
-      <div className="leading-tight">
-        <p className="text-sm font-bold text-white">AI Reg Tracker</p>
-        <p className="text-[11px] font-medium text-sky-200/80">Buy-side compliance</p>
-      </div>
+      <p className="text-sm font-bold leading-tight text-white text-balance">Global AI regulatory development Tracker</p>
     </div>
   );
 }

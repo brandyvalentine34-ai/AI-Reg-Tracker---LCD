@@ -38,7 +38,7 @@ export function FootprintDialog({ open, onClose }: { open: boolean; onClose: () 
           <div>
             <h2 id="fp-title" className="text-base font-bold text-slate-900">Your market footprint</h2>
             <p className="mt-1 text-xs text-slate-500">
-              Choose where your firm is licensed, manages money or distributes funds. Overview, horizon, action plan and briefings
+              Choose where your firm is licensed, manages money or distributes funds. The overview, action plan and briefings
               focus on these markets. Global standard-setters are always included.
             </p>
           </div>

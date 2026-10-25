@@ -46,52 +46,6 @@ export function actionPlanCSV(list: Development[], progress: Record<string, Acti
   return toCSV([header, ...rows]);
 }
 
-function icsEscape(s: string): string {
-  return s.replace(/\\/g, '\\\\').replace(/;/g, '\;').replace(/,/g, '\\,').replace(/\r?\n/g, '\\n');
-}
-
-/** Fold lines to 75 octets as required by RFC 5545 (approximated by characters). */
-function fold(line: string): string {
-  const parts: string[] = [];
-  let rest = line;
-  while (rest.length > 74) {
-    parts.push(rest.slice(0, 74));
-    rest = ' ' + rest.slice(74);
-  }
-  parts.push(rest);
-  return parts.join('\r\n');
-}
-
-export function milestonesICS(entries: MilestoneEntry[], stamp: Date = new Date()): string {
-  const dtstamp = stamp.toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, '');
-  const lines = [
-    'BEGIN:VCALENDAR',
-    'VERSION:2.0',
-    'PRODID:-//Buy-Side AI Regulatory Tracker//EN',
-    'CALSCALE:GREGORIAN',
-    'X-WR-CALNAME:AI regulatory deadlines',
-  ];
-  entries.forEach((m, i) => {
-    const day = m.date.replace(/-/g, '');
-    const d = m.development;
-    lines.push(
-      'BEGIN:VEVENT',
-      `UID:${d.id}-${day}-${i}@ai-reg-tracker`,
-      `DTSTAMP:${dtstamp}`,
-      `DTSTART;VALUE=DATE:${day}`,
-      fold(`SUMMARY:${icsEscape(`[${MARKETS[d.market].shortName}] ${m.label}`)}`),
-      fold(
-        `DESCRIPTION:${icsEscape(
-          `${d.title} (${d.regulator})${m.confirmed ? '' : ' – indicative date'}\n${d.sourceUrl}`,
-        )}`,
-      ),
-      'END:VEVENT',
-    );
-  });
-  lines.push('END:VCALENDAR');
-  return lines.join('\r\n');
-}
-
 export interface BriefingOptions {
   title: string;
   preparedFor?: string;
