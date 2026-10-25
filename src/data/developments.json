@@ -208,8 +208,8 @@
     "status": "in_force",
     "datePublished": "2025-07-10",
     "effectiveDate": "2025-08-02",
-    "lastUpdated": "2026-08-02",
-    "latestUpdate": "The AI Office's enforcement powers over GPAI providers became exercisable on 2 August 2026. They include information requests, model evaluations, corrective measures and fines of up to 3% of global turnover. Most major US and EU model providers have signed the Code in full. xAI signed only the safety chapter and Meta declined to sign.",
+    "lastUpdated": "2026-10-14",
+    "latestUpdate": "On 14 October 2026 Commissioner Virkkunen said the AI Office has started enforcing the GPAI rules and has sent requests for information on security, external evaluation and monitoring of model use. Euronews reported the recipients as OpenAI and Anthropic, following agent-escape security incidents, and no breaches or fines have been announced. On 12 October the Commission opened a consultation, closing 9 November, on a draft implementing regulation setting procedural rules for AI Act proceedings (access to file, safeguards, limitation periods for penalties), with adoption planned for Q4 2026.",
     "impact": "medium",
     "applicability": "indirect",
     "themes": [
@@ -262,6 +262,26 @@
         "confirmed": true
       },
       {
+        "date": "2026-10-12",
+        "label": "Consultation opens on draft implementing regulation on AI Act enforcement proceedings (Arts. 75c-75d)",
+        "confirmed": true
+      },
+      {
+        "date": "2026-10-14",
+        "label": "Virkkunen announces AI Office requests for information to GPAI providers",
+        "confirmed": true
+      },
+      {
+        "date": "2026-11-09",
+        "label": "Consultation on procedural implementing regulation closes",
+        "confirmed": true
+      },
+      {
+        "date": "2026-12-31",
+        "label": "Planned Commission adoption of procedural implementing regulation (Q4 2026)",
+        "confirmed": false
+      },
+      {
         "date": "2027-08-02",
         "label": "Legacy GPAI models (pre-Aug 2025) must comply",
         "confirmed": true
@@ -269,7 +289,7 @@
     ],
     "sourceUrl": "https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai",
     "sourceLabel": "European Commission",
-    "confidence": "high"
+    "confidence": "medium"
   },
   {
     "id": "eu-ai-act-prohibitions-definition-guidelines",
@@ -349,7 +369,7 @@
     "datePublished": "2026-05-19",
     "effectiveDate": null,
     "lastUpdated": "2026-07-23",
-    "latestUpdate": "The draft guidelines were published on 19 May 2026, and the consultation, extended once, closed on 23 July 2026. Final guidelines had not been confirmed as adopted as of early October 2026.",
+    "latestUpdate": "The draft guidelines were published on 19 May 2026, and the consultation, extended once, closed on 23 July 2026. As of 25 October 2026 the final guidelines had not been adopted. The Commission has indicated adoption by end-2026.",
     "impact": "medium",
     "applicability": "direct",
     "themes": [
@@ -705,8 +725,8 @@
     "status": "guidance",
     "datePublished": "2024-12-17",
     "effectiveDate": "2024-12-17",
-    "lastUpdated": "2024-12-17",
-    "latestUpdate": "The opinion remains the reference position of EU data protection authorities. Separately, the Digital Omnibus GDPR amendments, which would codify a legitimate-interest basis for AI development and operation, were still under negotiation in October 2026 (see eu-digital-omnibus-gdpr-ai).",
+    "lastUpdated": "2026-07-07",
+    "latestUpdate": "Opinion 28/2024 remains the EDPB's reference position. On 7 July 2026 the EDPB adopted draft Guidelines 02/2026 on anonymisation, which take a relative approach to identifiability following the CJEU's EDPS v SRB ruling, and draft Guidelines 03/2026 on web scraping for generative AI. Public consultation on both runs to 30 October 2026, and final versions are not expected before end-2026. Separately, the Council agreed its Digital Omnibus GDPR mandate on 21 October 2026 (see eu-digital-omnibus-gdpr-ai).",
     "impact": "medium",
     "applicability": "indirect",
     "themes": [
@@ -741,6 +761,21 @@
         "date": "2024-12-17",
         "label": "EDPB adopts Opinion 28/2024",
         "confirmed": true
+      },
+      {
+        "date": "2026-07-07",
+        "label": "EDPB adopts draft Guidelines 02/2026 (anonymisation) and 03/2026 (web scraping for generative AI)",
+        "confirmed": true
+      },
+      {
+        "date": "2026-10-30",
+        "label": "Consultation on Guidelines 02/2026 and 03/2026 closes",
+        "confirmed": true
+      },
+      {
+        "date": "2026-12-31",
+        "label": "Final anonymisation and web-scraping guidelines (indicative; not before end-2026)",
+        "confirmed": false
       }
     ],
     "sourceUrl": "https://www.edpb.europa.eu/our-work-tools/our-documents/opinion-board-art-64/opinion-282024-certain-data-protection-aspects_en",
@@ -757,8 +792,8 @@
     "status": "proposed",
     "datePublished": "2025-11-19",
     "effectiveDate": null,
-    "lastUpdated": "2026-09-24",
-    "latestUpdate": "As of September 2026, negotiations continue and there is no final deal. The Council compromise text (doc 12535/26) keeps a legitimate-interest route for AI development and operation, with a balancing test. Unlike the AI Omnibus, the data and GDPR strand has not been adopted.",
+    "lastUpdated": "2026-10-21",
+    "latestUpdate": "EU ambassadors (Coreper) reportedly agreed the Council's negotiating mandate on the data and GDPR Digital Omnibus on 21 October 2026, after votes planned for 7 and 11 October slipped over Franco-German concerns on Data Act trade secrets. Trilogues can start only once Parliament adopts its position, and the LIBE/ITRE committee vote is reportedly planned for February 2027. Nothing has been adopted, and current GDPR rules still apply.",
     "impact": "medium",
     "applicability": "monitor",
     "themes": [
@@ -768,9 +803,10 @@
     "summary": "The broader Digital Omnibus proposes GDPR amendments including a new provision (Art. 88c) confirming that legitimate interest can be relied on for developing and operating AI systems and models. It also proposes a narrow exception for residual special-category data in training sets and changes to the definition of personal data. Parliament and Council are still negotiating these through the ordinary legislative procedure.",
     "buySideImpact": "If adopted, the changes would give firms greater legal certainty for using investor and employee data to fine-tune or operate AI tools, subject to safeguards and an unconditional right to object. Until adoption, firms should continue to rely on EDPB Opinion 28/2024 and existing GDPR practice, and should not build processes that assume the new legal basis.",
     "keyRequirements": [
-      "Proposed: legitimate interest confirmed as a basis for AI development and operation, subject to balancing and safeguards",
+      "Proposed (Commission): legitimate interest confirmed as a basis for AI development and operation, subject to balancing and safeguards",
       "Proposed: right to object and respect for technical opt-out signals",
       "Proposed: limited exception for special-category data incidentally present in training data, with removal duties",
+      "Council mandate (Oct 2026): reportedly drops the revised personal-data definition. Reports differ on how much of the AI legitimate-interest provision (Art. 88c) survives in the operative text versus the recitals",
       "Final content subject to trilogue outcome"
     ],
     "actions": [
@@ -792,6 +828,16 @@
       {
         "date": "2026-09-24",
         "label": "Council compromise text under discussion; no final agreement",
+        "confirmed": true
+      },
+      {
+        "date": "2026-10-21",
+        "label": "Coreper agrees Council negotiating mandate (reported)",
+        "confirmed": true
+      },
+      {
+        "date": "2027-02-28",
+        "label": "European Parliament LIBE/ITRE committee vote (reported plan)",
         "confirmed": false
       },
       {
@@ -875,8 +921,8 @@
     "status": "guidance",
     "datePublished": "2024-04-22",
     "effectiveDate": null,
-    "lastUpdated": "2026-06-19",
-    "latestUpdate": "The FCA has repeated that it will not introduce AI-specific rules and will rely on the Consumer Duty, SM&CR and operational resilience rules. In May 2026 it reopened its AI Input Zone (closed 19 June 2026) to inform examples of good and poor AI practice it says it will publish later in 2026. As of early October 2026, that publication had not been confirmed.",
+    "lastUpdated": "2026-10-19",
+    "latestUpdate": "On 19 October 2026 the FCA published 'AI in financial services: good practice and areas for improvement', with a speech by Chief Data, Information and Intelligence Officer Jessica Rusu ('Building the future of finance in the age of AI'). The examples cover consumer outcomes, governance and accountability, and operational resilience. They create no new rules, and the FCA says it will update them as the technology evolves. The FCA also said it will develop a framework for agentic finance with industry, other regulators and frontier labs.",
     "impact": "high",
     "applicability": "direct",
     "themes": [
@@ -886,13 +932,14 @@
       "third_party",
       "genai"
     ],
-    "summary": "The FCA regulates AI through its existing technology-neutral framework, mapped to the government's five AI principles in its April 2024 AI Update. This covers the Principles for Businesses, Consumer Duty, SM&CR, SYSC governance and outsourcing rules, and operational resilience. Senior managers remain accountable for AI used in their business areas, and the FCA decided against a dedicated AI prescribed responsibility. Further practical guidance has been promised through good and poor practice examples.",
+    "summary": "The FCA regulates AI through its existing technology-neutral framework, mapped to the government's five AI principles in its April 2024 AI Update. This covers the Principles for Businesses, Consumer Duty, SM&CR, SYSC governance and outsourcing rules, and operational resilience. Senior managers remain accountable for AI used in their business areas, and the FCA decided against a dedicated AI prescribed responsibility. In October 2026 the FCA published non-binding examples of good practice and areas for improvement, drawn from supervision, the AI Lab and AI Live Testing.",
     "buySideImpact": "UK asset managers must be able to show which senior manager owns each material AI use case. AI-assisted communications, fund value assessments and client servicing must meet Consumer Duty outcomes, including consumer understanding and avoiding foreseeable harm. Explainability limits and third-party model use do not reduce accountability. Supervisors are likely to test AI governance through Consumer Duty reviews and SM&CR responsibilities maps.",
     "keyRequirements": [
-      "Consumer Duty outcomes apply to AI-enabled products, communications and support journeys",
-      "SM&CR: allocate accountability for AI use within existing SMF responsibilities and statements of responsibilities",
-      "SYSC governance, systems and controls, and outsourcing rules apply to AI and third-party models",
-      "Operational resilience: map AI dependencies to important business services and impact tolerances",
+      "Consumer Duty outcomes apply to AI-enabled products, communications and support journeys: define the consumer need first, test outcomes across customer groups and monitor live outcomes",
+      "SM&CR: allocate accountability for AI use within existing SMF responsibilities. Human oversight must be meaningful, and governance must be in place before deployment, not added after",
+      "SYSC governance, systems and controls, and outsourcing rules apply to AI and third-party models. Do not rely on vendor assurances without testing them",
+      "Operational resilience: map AI dependencies, including concentration on a single model provider, to important business services; keep fallbacks and stress-test AI systems",
+      "FCA expects significant AI failures and near-misses to be reported under existing major incident reporting rules (per the 19 Oct 2026 speech)",
       "Lack of explainability does not excuse non-compliance"
     ],
     "actions": [
@@ -940,9 +987,9 @@
         "confirmed": true
       },
       {
-        "date": "2026-12-31",
-        "label": "FCA good and poor practice examples on AI expected (indicative)",
-        "confirmed": false
+        "date": "2026-10-19",
+        "label": "FCA publishes AI good practice and areas for improvement; Rusu speech on agentic finance",
+        "confirmed": true
       }
     ],
     "sourceUrl": "https://www.fca.org.uk/firms/innovation/ai-approach",
@@ -994,16 +1041,21 @@
       {
         "date": "2025-06-09",
         "label": "Supercharged Sandbox announced with NVIDIA",
-        "confirmed": false
+        "confirmed": true
       },
       {
-        "date": "2025-12-01",
-        "label": "First AI Live Testing cohort begins",
-        "confirmed": false
+        "date": "2025-12-03",
+        "label": "AI Live Testing launched; first cohort named (incl. NatWest, Monzo, Santander, Scottish Widows)",
+        "confirmed": true
       },
       {
         "date": "2026-04-21",
         "label": "Second cohort announced (eight firms)",
+        "confirmed": true
+      },
+      {
+        "date": "2026-10-19",
+        "label": "FCA AI good practice publication draws on AI Live Testing observations",
         "confirmed": true
       },
       {
@@ -1031,8 +1083,8 @@
     "status": "adopted",
     "datePublished": "2026-07-06",
     "effectiveDate": null,
-    "lastUpdated": "2026-07-06",
-    "latestUpdate": "The FCA published the final Mills Review on 6 July 2026 with seven priority recommendations. The most time-bound is a review of the regulatory perimeter over the following 3-6 months, covering advice-like outputs of general-purpose LLMs in savings, investments and pensions. Its outcome is expected around end-2026.",
+    "lastUpdated": "2026-10-19",
+    "latestUpdate": "On 19 October 2026 the FCA's Jessica Rusu asked providers of general-purpose AI chatbots (naming ChatGPT, Gemini and Claude) for 'clear, proportionate and consistent disclaimers' wherever financial information or advice-like output appears. She set no deadline. The FCA is not extending its perimeter for now. As of 25 October 2026 the conclusions of the Mills Review's perimeter review of general-purpose LLMs had not been published.",
     "impact": "medium",
     "applicability": "monitor",
     "themes": [
@@ -1076,8 +1128,13 @@
         "confirmed": true
       },
       {
+        "date": "2026-10-19",
+        "label": "FCA asks general-purpose AI chatbot providers for financial-advice disclaimers (Rusu speech)",
+        "confirmed": true
+      },
+      {
         "date": "2026-12-31",
-        "label": "Perimeter review conclusions expected (3-6 months from July)",
+        "label": "Perimeter review conclusions expected (3-6 months from July; could slip to Jan 2027)",
         "confirmed": false
       }
     ],
@@ -1095,8 +1152,8 @@
     "status": "adopted",
     "datePublished": "2026-01-20",
     "effectiveDate": null,
-    "lastUpdated": "2026-04-16",
-    "latestUpdate": "The Committee published HM Treasury, Bank of England and FCA responses on 16 April 2026. The FCA restated that it has no plans for AI-specific rules but will share good and poor practice examples. HM Treasury made the first critical third party designations (cloud providers) in July 2026, but no AI model providers have been designated yet.",
+    "lastUpdated": "2026-10-19",
+    "latestUpdate": "On 19 October 2026 the FCA published its AI good practice and areas for improvement examples. This is its main answer to the Committee's call for practical AI guidance by end-2026, but it is non-binding and creates no new rules. As of 25 October 2026 no AI model provider had been designated as a critical third party, and no AI-specific stress test had been announced.",
     "impact": "medium",
     "applicability": "monitor",
     "themes": [
@@ -1131,6 +1188,16 @@
       {
         "date": "2026-04-16",
         "label": "Government and regulator responses published",
+        "confirmed": true
+      },
+      {
+        "date": "2026-07-13",
+        "label": "First CTP designations take effect (cloud providers; no AI model providers)",
+        "confirmed": true
+      },
+      {
+        "date": "2026-10-19",
+        "label": "FCA publishes AI good practice and areas for improvement",
         "confirmed": true
       },
       {
@@ -1202,8 +1269,8 @@
     "status": "guidance",
     "datePublished": "2026-05-15",
     "effectiveDate": "2026-05-15",
-    "lastUpdated": "2026-07-01",
-    "latestUpdate": "The authorities warned that frontier AI cyber capabilities already exceed those of skilled human practitioners and set out expected actions under existing operational resilience rules. The FPC's July 2026 Financial Stability Report reinforced the point that frontier AI raises cyber and operational resilience risk.",
+    "lastUpdated": "2026-09-30",
+    "latestUpdate": "The record of the FPC's 25 September 2026 meeting, published 30 September, said recent frontier AI test-environment incidents, in which autonomous agents acted unexpectedly, reinforce its call for firms to prepare for AI-related cyber and operational risks. It urged firms to engage with guidance from regulators, the NCSC and sector groups such as the Frontier AI Information Sharing Forum. The FCA's 19 October 2026 AI good practice publication added resilience expectations: stress-testing, fallbacks, understanding single-model dependency, and reporting significant AI failures under the major incident rules.",
     "impact": "high",
     "applicability": "direct",
     "themes": [
@@ -1244,9 +1311,19 @@
         "confirmed": true
       },
       {
-        "date": "2026-07-01",
-        "label": "FPC Financial Stability Report highlights frontier AI cyber risk",
-        "confirmed": false
+        "date": "2026-07-07",
+        "label": "FPC July 2026 Financial Stability Report: frontier AI significantly increases cyber/operational risk; Bank/PRA cyber and ICT risk consultation signalled",
+        "confirmed": true
+      },
+      {
+        "date": "2026-09-30",
+        "label": "FPC record (25 Sept meeting) reiterates call to prepare for frontier AI cyber and operational risks",
+        "confirmed": true
+      },
+      {
+        "date": "2026-10-19",
+        "label": "FCA AI good practice publication sets operational resilience expectations for AI",
+        "confirmed": true
       }
     ],
     "sourceUrl": "https://www.fca.org.uk/news/statements/fca-boe-treasury-joint-statement-frontier-ai-models-cyber-resilience",
@@ -1320,7 +1397,7 @@
     "datePublished": "2025-06-19",
     "effectiveDate": "2026-02-05",
     "lastUpdated": "2026-05-29",
-    "latestUpdate": "The ADM reforms commenced on 5 February 2026. The ICO consulted on updated ADM and profiling guidance from 31 March to 29 May 2026. Final guidance had not been confirmed as published by early October 2026.",
+    "latestUpdate": "The ADM reforms commenced on 5 February 2026. The ICO consulted on updated ADM and profiling guidance from 31 March to 29 May 2026. As of 25 October 2026 final guidance had not been published, and the ICO's guidance plans page lists the final version for winter 2026.",
     "impact": "medium",
     "applicability": "direct",
     "themes": [
@@ -1431,8 +1508,8 @@
       },
       {
         "date": "2025-10-31",
-        "label": "PRA CRO roundtables on AI/ML in model risk management",
-        "confirmed": false
+        "label": "PRA CRO roundtables on AI/ML in model risk management (Oct 2025, 21 firms; summary published Nov 2025)",
+        "confirmed": true
       },
       {
         "date": "2026-04-01",
@@ -1454,8 +1531,8 @@
     "status": "in_force",
     "datePublished": "2024-03-18",
     "effectiveDate": null,
-    "lastUpdated": "2025-11-17",
-    "latestUpdate": "No new adviser-specific AI-washing settlement was identified in 2025-2026; the SEC has instead embedded 'accuracy of AI representations' in its FY2026 exam priorities (Nov 2025), and Chair Atkins has stressed AI misconduct is pursued under existing, technology-neutral antifraud rules. AI-related fraud cases continue against issuers/promoters (e.g., Presto Automation, Jan 2025; Nate founder, Apr 2025).",
+    "lastUpdated": "2026-10-23",
+    "latestUpdate": "No new adviser-specific AI-washing settlement was identified through 25 Oct 2026. The FY2027 exam priorities (23 Oct 2026) again direct examiners to test whether representations about automated tools are fair and accurate and whether operations match disclosures. AI-themed fraud enforcement continues against non-registrants (e.g., 29 Sep 2026 complaints against Cryptoaiml and TSAI over fake AI trading signals and bots).",
     "impact": "high",
     "applicability": "direct",
     "themes": [
@@ -1506,6 +1583,16 @@
         "date": "2025-11-17",
         "label": "FY2026 exam priorities name accuracy of AI representations as a focus",
         "confirmed": true
+      },
+      {
+        "date": "2026-09-29",
+        "label": "SEC sues Cryptoaiml and TSAI over fake AI trading-signal/bot schemes (~$15m, retail fraud)",
+        "confirmed": true
+      },
+      {
+        "date": "2026-10-23",
+        "label": "FY2027 exam priorities keep accuracy of representations about automated tools as a focus",
+        "confirmed": true
       }
     ],
     "sourceUrl": "https://www.sec.gov/newsroom/press-releases/2024-36",
@@ -1515,15 +1602,15 @@
   {
     "id": "us-sec-exam-priorities-fy2026",
     "market": "us",
-    "title": "SEC Exams FY2026 priorities: AI governance and AI representations",
+    "title": "SEC Exams FY2027 priorities: 'super intelligence' (AI) governance and cyber",
     "officialTitle": "SEC Division of Examinations, Fiscal Year 2026 Examination Priorities",
     "regulator": "SEC (Division of Examinations)",
     "instrumentType": "supervisory_guidance",
     "status": "guidance",
     "datePublished": "2025-11-17",
-    "effectiveDate": "2025-10-01",
-    "lastUpdated": "2025-11-17",
-    "latestUpdate": "FY2026 priorities (first under Chair Atkins) treat AI, cybersecurity and Reg S-P/S-ID as cross-cutting risks, focusing on accuracy of AI representations and on whether AI policies, supervision and controls match practice. FY2027 priorities are expected around Nov 2026 (not yet published as of 2026-10-08).",
+    "effectiveDate": "2026-10-01",
+    "lastUpdated": "2026-10-23",
+    "latestUpdate": "On 23 Oct 2026 the Division of Examinations published its FY2027 priorities, replacing 'AI' with 'super intelligence (SI)' per the Sept 2026 executive order. Examiners will review whether representations about automated tools are fair and accurate, whether operations and controls match disclosures, and whether algorithms produce advice consistent with client profiles, and will test firms' preparedness for SI-enabled threats such as phishing and deepfake voice/video, alongside vendor dependencies and Reg S-P/S-ID compliance.",
     "impact": "high",
     "applicability": "direct",
     "themes": [
@@ -1534,14 +1621,15 @@
       "cyber_resilience",
       "trading_markets"
     ],
-    "summary": "The FY2026 priorities state examiners will review registrants' representations about AI capabilities, and assess whether firms have adequate policies and procedures to monitor and supervise their use of AI, including for automated investment tools, trading algorithms, alternative data, fraud prevention, back-office operations and AML. AI is framed as a cross-cutting risk alongside cybersecurity, operational resiliency and customer-information safeguards.",
-    "buySideImpact": "Expect AI questions in routine RIA and fund exams, including document requests for AI inventories, policies, vendor diligence and marketing substantiation. Firms using AI in portfolio management, trading or client-facing tools should be able to show governance, human oversight, testing and staff training. The 'disclosure vs practice' test means gaps between ADV language and actual workflows are the most likely deficiency.",
+    "summary": "The FY2027 priorities (published 23 Oct 2026) keep investment advisers' fiduciary duty, conflicts and compliance programmes at the top, with focus on private funds and private credit (valuation, due diligence), complex and illiquid products for retail, and never-examined advisers. AI, now termed 'super intelligence (SI)', is treated as a cross-cutting emerging-technology and operational-resiliency risk: for automated tools, examiners test the accuracy of representations, consistency of operations and controls with disclosures, and suitability of algorithm outputs. The Division also says it will use SI in its own exams and risk assessment without displacing examiner judgment.",
+    "buySideImpact": "Expect AI questions in routine RIA and fund exams, including document requests for AI inventories, policies, vendor diligence and marketing substantiation, now also covering defences against AI-enabled social engineering (deepfake voice/video, AI phishing). The 'disclosure vs practice' test and the new emphasis on whether algorithm outputs match client profiles and stated strategies mean gaps between ADV/offering language and actual workflows are the most likely deficiency. Note that SEC documents now say 'SI'; internal search terms and exam-readiness checklists should capture both terms.",
     "keyRequirements": [
-      "Accurate representations of AI capabilities and use (antifraud, Marketing Rule)",
+      "Accurate representations of AI/SI capabilities and use in automated tools (antifraud, Marketing Rule)",
+      "Operations and controls consistent with disclosures made to investors",
+      "Algorithms must produce advice consistent with investors' profiles or stated strategies",
       "Written policies and procedures reasonably designed to supervise AI use (Rule 206(4)-7; Rule 38a-1 for funds)",
-      "Oversight of automated advice tools, trading algorithms and alternative data sources",
-      "Controls over AI-related cyber, operational-resiliency and third-party risks",
-      "Consistency of AI disclosures with fiduciary duty and conflicts management"
+      "Preparedness for SI-enabled cyber threats (AI phishing, deepfake voice/video) and oversight of vendor dependencies and data loss prevention",
+      "Compliance with amended Reg S-P and Reg S-ID as cross-cutting risks"
     ],
     "actions": [
       {
@@ -1568,14 +1656,19 @@
         "confirmed": true
       },
       {
-        "date": "2026-11-30",
-        "label": "FY2027 exam priorities expected (typically Oct-Nov)",
+        "date": "2026-10-23",
+        "label": "FY2027 exam priorities published (AI renamed 'super intelligence')",
+        "confirmed": true
+      },
+      {
+        "date": "2027-11-30",
+        "label": "FY2028 exam priorities expected (typically Oct-Nov)",
         "confirmed": false
       }
     ],
-    "sourceUrl": "https://www.sec.gov/about/divisions-offices/division-examinations",
+    "sourceUrl": "https://www.sec.gov/newsroom/press-releases/2026-109-sec-announces-fiscal-year-2027-examination-priorities",
     "sourceLabel": "SEC.gov",
-    "confidence": "high"
+    "confidence": "medium"
   },
   {
     "id": "us-sec-pda-proposal-withdrawn",
@@ -1644,8 +1737,8 @@
     "status": "in_force",
     "datePublished": "2024-05-16",
     "effectiveDate": "2024-08-02",
-    "lastUpdated": "2026-06-03",
-    "latestUpdate": "The final compliance date for smaller entities (RIAs with < $1.5bn AUM) passed on 3 June 2026; larger entities have had to comply since 3 December 2025. The Division of Examinations held a Reg S-P outreach session on 22 January 2026 and lists Reg S-P implementation, including vendor oversight, as an FY2026 exam priority.",
+    "lastUpdated": "2026-10-23",
+    "latestUpdate": "The FY2027 exam priorities (23 Oct 2026) list compliance with amended Reg S-P and Reg S-ID as cross-cutting risks for all registrants, and examiners will review vendor dependencies and data loss prevention. With both compliance dates passed (3 Dec 2025 and 3 Jun 2026), exams now test implementation rather than readiness.",
     "impact": "high",
     "applicability": "direct",
     "themes": [
@@ -1706,6 +1799,11 @@
         "date": "2026-06-03",
         "label": "Compliance date for smaller entities",
         "confirmed": true
+      },
+      {
+        "date": "2026-10-23",
+        "label": "FY2027 exam priorities list amended Reg S-P (and S-ID) compliance as a cross-cutting risk",
+        "confirmed": true
       }
     ],
     "sourceUrl": "https://www.sec.gov/rules-regulations/2024/05/s7-05-23",
@@ -1722,8 +1820,8 @@
     "status": "guidance",
     "datePublished": "2025-03-27",
     "effectiveDate": null,
-    "lastUpdated": "2026-09-12",
-    "latestUpdate": "In March and September 2026 speeches Chair Atkins said the SEC will address AI through existing technology-neutral rules and the materiality principle, will not prescribe models, and opposes prescriptive AI disclosure rules, despite a Dec 2025 Investor Advisory Committee recommendation for AI disclosure guidance.",
+    "lastUpdated": "2026-10-19",
+    "latestUpdate": "In mid-October 2026 Division of Investment Management Director Brian Daly urged advisers not to wait for regulators before adopting AI, warning that guidance may be 'too limited and too late' and inviting firms to tell the SEC about rules that block AI use (Law360, 19 Oct 2026). This follows Chair Atkins's March and September 2026 remarks that the SEC will apply existing technology-neutral rules and materiality rather than prescriptive AI rules. SEC documents now use 'super intelligence (SI)' in place of 'AI' after the 29 Sep 2026 executive order.",
     "impact": "low",
     "applicability": "monitor",
     "themes": [
@@ -1773,6 +1871,21 @@
         "date": "2026-03-04",
         "label": "Chair Atkins remarks at FSOC AI Innovation Series roundtable",
         "confirmed": true
+      },
+      {
+        "date": "2026-09-10",
+        "label": "Chair Atkins remarks on AI at Investor Advisory Committee meeting",
+        "confirmed": true
+      },
+      {
+        "date": "2026-10-16",
+        "label": "IM Director Daly remarks at Stanford Private Capital Roundtable",
+        "confirmed": true
+      },
+      {
+        "date": "2026-10-19",
+        "label": "Law360 reports IM Director urging advisers not to wait for AI guidance",
+        "confirmed": true
       }
     ],
     "sourceUrl": "https://www.sec.gov/newsroom/press-releases/2025-56",
@@ -1789,8 +1902,8 @@
     "status": "guidance",
     "datePublished": "2024-06-27",
     "effectiveDate": null,
-    "lastUpdated": "2025-12-09",
-    "latestUpdate": "The 2026 Annual Regulatory Oversight Report (9 Dec 2025) added a standalone GenAI section setting expectations for governance, testing and monitoring and, for the first time, flagged risks of AI agents (autonomy, scope/authority, auditability, data sensitivity).",
+    "lastUpdated": "2026-07-09",
+    "latestUpdate": "In Regulatory Notice 26-14 (Jul 2026; comments closed 11 Sep 2026), part of 'FINRA Forward', FINRA proposed replacing principal pre-use approval of retail communications under Rule 2210 with risk-based supervisory frameworks suited to digital and AI-generated content. No new AI-specific FINRA notice was identified between 8 and 25 Oct 2026; the 2026 Oversight Report (Dec 2025) remains the main GenAI and AI-agents guidance.",
     "impact": "medium",
     "applicability": "indirect",
     "themes": [
@@ -1838,6 +1951,16 @@
       {
         "date": "2025-12-09",
         "label": "2026 Oversight Report with standalone GenAI and AI-agents section",
+        "confirmed": true
+      },
+      {
+        "date": "2026-07-09",
+        "label": "Regulatory Notice 26-14 proposes risk-based Rule 2210 supervision, including AI-generated communications",
+        "confirmed": true
+      },
+      {
+        "date": "2026-09-11",
+        "label": "Comment deadline for Regulatory Notice 26-14",
         "confirmed": true
       },
       {
@@ -1910,8 +2033,8 @@
     "status": "in_force",
     "datePublished": "2025-12-11",
     "effectiveDate": "2025-12-11",
-    "lastUpdated": "2026-09-23",
-    "latestUpdate": "Congress has not enacted preemption: the June 2026 bipartisan 'Great American AI Act' discussion draft stalled and the House adjourned in Sept 2026 without passing a major AI bill; 26 state AGs urged Congress (23 Sep 2026) not to preempt. The FTC's proposed policy statement on AI accuracy/preemption (1 Jul 2026) remains unfinalised, and DOJ's first intervention (xAI v. Colorado, Apr 2026) produced a stipulated stay rather than a ruling.",
+    "lastUpdated": "2026-09-29",
+    "latestUpdate": "On 29 Sep 2026 the President signed EO 14434 directing agencies to use 'Super Intelligence (SI)' instead of 'AI' in non-statutory materials (the SEC's FY2027 exam priorities already do), with an OSTP proposal for a statutory definition due within 60 days. This changes no legal definitions. As of 25 Oct 2026 Congress has not enacted preemption, the FTC's proposed AI-accuracy policy statement (Jul 2026) has not been finalised, and no new DOJ challenge to a state AI law has been identified.",
     "impact": "medium",
     "applicability": "monitor",
     "themes": [
@@ -1969,13 +2092,28 @@
         "confirmed": true
       },
       {
+        "date": "2026-06-02",
+        "label": "EO 14409 on advanced AI innovation and security (voluntary frontier-model review)",
+        "confirmed": true
+      },
+      {
         "date": "2026-07-01",
         "label": "FTC proposed policy statement on AI accuracy (comments to 31 Jul 2026)",
         "confirmed": true
       },
       {
+        "date": "2026-09-29",
+        "label": "EO 14434 'Inaugurating the Era of Super Intelligence': agencies to use 'SI' instead of 'AI'",
+        "confirmed": true
+      },
+      {
         "date": "2026-11-03",
         "label": "US midterm elections; preemption legislation unlikely before new Congress",
+        "confirmed": false
+      },
+      {
+        "date": "2026-11-28",
+        "label": "OSTP proposal for a statutory 'super intelligence' definition due (60 days after EO 14434)",
         "confirmed": false
       }
     ],
@@ -1994,7 +2132,7 @@
     "datePublished": "2023-01-26",
     "effectiveDate": null,
     "lastUpdated": "2025-12-16",
-    "latestUpdate": "NIST issued a preliminary draft Cyber AI Profile (IR 8596) on 16 Dec 2025 (comments closed 30 Jan 2026), with an initial public draft expected in 2026; publication of that draft could not be confirmed. AI RMF 1.0 and the GenAI Profile remain current and are referenced as safe harbours in state law (e.g., Texas TRAIGA).",
+    "latestUpdate": "NIST issued a preliminary draft Cyber AI Profile (IR 8596) on 16 Dec 2025 (comments closed 30 Jan 2026), with an initial public draft expected in 2026; as of 25 October 2026 publication of that draft could not be confirmed. AI RMF 1.0 and the GenAI Profile remain current and are referenced as safe harbours in state law (e.g., Texas TRAIGA).",
     "impact": "medium",
     "applicability": "monitor",
     "themes": [
@@ -2288,7 +2426,7 @@
     "datePublished": "2025-06-22",
     "effectiveDate": "2026-01-01",
     "lastUpdated": "2026-09-01",
-    "latestUpdate": "In force since 1 Jan 2026; the AG was required to launch an online complaint mechanism by 1 Sep 2026. No public enforcement actions under TRAIGA identified as of Oct 2026.",
+    "latestUpdate": "In force since 1 Jan 2026. The AG's online complaint portal reportedly went live on the 1 Sep 2026 statutory deadline (complaints can lead to civil investigative demands). No public enforcement actions under TRAIGA were identified as of 25 October 2026.",
     "impact": "low",
     "applicability": "direct",
     "themes": [
@@ -2347,7 +2485,7 @@
     "datePublished": "2024-08-09",
     "effectiveDate": "2026-01-01",
     "lastUpdated": "2026-06-02",
-    "latestUpdate": "In force since 1 Jan 2026. IDHR published proposed notice rules (Subpart J) on 15 May 2026 but withdrew/postponed them on 2 Jun 2026; they had not been refiled as of late Sept 2026, so statutory duties apply without implementing rules.",
+    "latestUpdate": "In force since 1 Jan 2026. IDHR published proposed notice rules (Subpart J) on 15 May 2026 but withdrew/postponed them on 2 Jun 2026; no refiling was identified as of 25 October 2026, so statutory duties apply without implementing rules.",
     "impact": "low",
     "applicability": "direct",
     "themes": [
@@ -2675,8 +2813,8 @@
     "status": "guidance",
     "datePublished": "2026-01-22",
     "effectiveDate": null,
-    "lastUpdated": "2026-01-22",
-    "latestUpdate": "Launched on 22 Jan 2026 at the WEF in Davos as a voluntary framework. It builds on the 2020 Model AI Governance Framework and the May 2024 framework for generative AI. Singapore's AI Tester Accreditation Programme was planned for launch by Q3 2026; its launch is not confirmed.",
+    "lastUpdated": "2026-10-14",
+    "latestUpdate": "On 14 Oct 2026, at the AI Assurance Exchange: The Agentic Edition, IMDA released a Starter Kit for Testing Agentic Systems for Safety and Reliability. Its four steps are identify risks, design tests, analyse results and logs, and keep monitoring. The AI Verify Foundation launched AI TAP, just after its Q3 2026 target, accrediting five testers: AIDX Tech, Knovel Engineering, PwC Singapore, Resaro and Vulcan. Each accreditation lasts one year and covers benchmarking and/or red teaming. IMDA also announced a taskforce on AI-driven cyber threats.",
     "impact": "medium",
     "applicability": "monitor",
     "themes": [
@@ -2686,12 +2824,13 @@
       "cyber_resilience"
     ],
     "summary": "This is a voluntary, cross-sector framework for organisations that deploy AI agents, whether built in-house or bought from third parties. It is organised around four dimensions: assessing and bounding risks upfront, making humans meaningfully accountable, technical controls across the life cycle, and enabling end-user responsibility. It complements IMDA's 2024 Model AI Governance Framework for Generative AI and the AI Verify testing toolkit.",
-    "buySideImpact": "The final MAS Guidelines leave detailed agentic AI expectations to a 2027 consultation, so this framework is currently the main Singapore reference for agent deployments. Typical uses at fund managers include agents that draft trade tickets, reconcile breaks, run KYC checks or call market data and order APIs. Fund managers should use it to set autonomy limits, tool and data access whitelists and human approval checkpoints.",
+    "buySideImpact": "The final MAS Guidelines leave detailed agentic AI expectations to a 2027 consultation, so this framework is currently the main Singapore reference for agent deployments. Typical uses at fund managers include agents that draft trade tickets, reconcile breaks, run KYC checks or call market data and order APIs. Fund managers should use it to set autonomy limits, tool and data access whitelists and human approval checkpoints. The Oct 2026 Starter Kit gives a practical test plan for agent deployments. The AI TAP list can be used in vendor due diligence when picking third-party AI testers, but accreditation shows tester competence only: it does not certify independence or that any tested system is safe.",
     "keyRequirements": [
       "Select suitable agentic use cases and bound agent autonomy, tool access and data access upfront",
       "Define human checkpoints and approval points; humans remain accountable",
       "Life-cycle technical controls, including baseline testing, access restricted to whitelisted services, and monitoring",
-      "Transparency, education and training for end users interacting with agents"
+      "Transparency, education and training for end users interacting with agents",
+      "Starter Kit (Oct 2026): test agent reasoning, tool use and human oversight in four steps (identify risks, design tests, analyse results and logs, monitor continuously)"
     ],
     "actions": [
       {
@@ -2719,14 +2858,19 @@
         "confirmed": true
       },
       {
-        "date": "2026-09-30",
-        "label": "Planned launch of AI Tester Accreditation Programme (AI TAP) by Q3 2026",
-        "confirmed": false
+        "date": "2026-05-18",
+        "label": "AI Tester Accreditation Programme (AI TAP) announced by Minister Josephine Teo (target launch by Q3 2026)",
+        "confirmed": true
+      },
+      {
+        "date": "2026-10-14",
+        "label": "AI TAP launched with first five accredited testers; IMDA Starter Kit for Testing Agentic Systems and AI-cyber taskforce announced",
+        "confirmed": true
       }
     ],
     "sourceUrl": "https://www.mddi.gov.sg/newsroom/singapore-launches-new-model-ai-governance-framework-for-agentic-ai--/",
     "sourceLabel": "MDDI / IMDA",
-    "confidence": "high"
+    "confidence": "medium"
   },
   {
     "id": "sg-pdpc-ai-recommendation-decision-systems-guidelines",
@@ -2739,7 +2883,7 @@
     "datePublished": "2024-03-01",
     "effectiveDate": "2024-03-01",
     "lastUpdated": "2024-03-01",
-    "latestUpdate": "No amendment found as of Oct 2026. The guidelines remain the PDPC's position on how the PDPA applies to AI systems that use personal data.",
+    "latestUpdate": "As of 25 October 2026 these guidelines have not been amended. Separately, law-firm reports say the PDPC finalised new advisory guidelines on using personal data to train (generative) AI models, launched at the Singapore Data Festival on 20 Jul 2026 (another source says 23 Jul). They cover the publicly available exception for scraped data, consent for re-purposing data, and the roles of model providers, system providers and deployers. They have not yet been verified against the PDPC text.",
     "impact": "low",
     "applicability": "indirect",
     "themes": [
@@ -3039,8 +3183,8 @@
     "status": "guidance",
     "datePublished": "2024-10-28",
     "effectiveDate": null,
-    "lastUpdated": "2026-03-05",
-    "latestUpdate": "No revision found. The statement's dual-track approach (promote AI adoption while managing risk) has since been carried out through the cross-regulator GenA.I. Sandbox++ (Mar 2026) and sectoral circulars. A separate FSTB guideline framework has been reported in the press but is not confirmed.",
+    "lastUpdated": "2026-10-15",
+    "latestUpdate": "The 16 Sep 2026 Policy Address will create a Commissioner for AI post under the Digital Policy Office (recruitment reportedly from 2027). The post will coordinate seven AI risk areas, including deepfakes, AI agent management and liability for AI accidents. The Address also noted HKMA and IA action plans for responsible AI adoption. On 15 Oct 2026 the HKMA issued its 'ART' Framework and updated AI supervisory guidance for banks (tracked separately). No revised FSTB statement or FSTB AI guideline framework had been found as of 25 Oct 2026.",
     "impact": "low",
     "applicability": "monitor",
     "themes": [
@@ -3077,11 +3221,21 @@
         "date": "2026-03-05",
         "label": "Cross-regulator GenA.I. Sandbox++ launched under the dual-track policy",
         "confirmed": true
+      },
+      {
+        "date": "2026-09-16",
+        "label": "2026 Policy Address: Commissioner for AI post under the Digital Policy Office; seven-area AI risk governance agenda",
+        "confirmed": true
+      },
+      {
+        "date": "2026-10-15",
+        "label": "HKMA issues 'ART' Framework and updated Supervisory Guidance for Responsible Adoption of AI (banking)",
+        "confirmed": true
       }
     ],
     "sourceUrl": "https://gia.info.gov.hk/general/202410/28/P2024102800154_475819_1_1730083937115.pdf",
     "sourceLabel": "HKSAR Government (info.gov.hk)",
-    "confidence": "high"
+    "confidence": "medium"
   },
   {
     "id": "jp-fsa-ai-discussion-paper",
@@ -3154,8 +3308,8 @@
     "status": "in_force",
     "datePublished": "2025-05-28",
     "effectiveDate": "2025-06-04",
-    "lastUpdated": "2025-12-23",
-    "latestUpdate": "The Act took full effect on 1 Sep 2025, when the AI Strategic Headquarters was established. The Cabinet adopted Japan's first AI Basic Plan on 23 Dec 2025, an adoption-focused strategy with no new binding obligations on businesses.",
+    "lastUpdated": "2026-07-14",
+    "latestUpdate": "On 14 Jul 2026 the Cabinet adopted a revised AI Basic Plan (Phase II), agreed by the AI Strategic Headquarters on 10 Jul. It prioritises vertical AI (support in 19 strategic fields) and physical AI. It sharply strengthens defences against AI-enabled cyberattacks after frontier-model vulnerability-discovery concerns, including expanding the Japan AI Safety Institute. It also commits to ongoing review of the legal framework; one press report says this could include penalties for businesses that refuse to cooperate with AI-misuse investigations. There are still no new binding business obligations. No further revision was found between 8 and 25 Oct 2026.",
     "impact": "low",
     "applicability": "indirect",
     "themes": [
@@ -3196,8 +3350,18 @@
         "confirmed": true
       },
       {
+        "date": "2025-12-19",
+        "label": "AI Strategic Headquarters adopts Guidelines on ensuring appropriateness of AI R&D and use (AI Act Art. 13)",
+        "confirmed": true
+      },
+      {
         "date": "2025-12-23",
         "label": "First AI Basic Plan adopted by Cabinet",
+        "confirmed": true
+      },
+      {
+        "date": "2026-07-14",
+        "label": "Cabinet adopts revised AI Basic Plan (Phase II)",
         "confirmed": true
       }
     ],
@@ -3216,7 +3380,7 @@
     "datePublished": "2024-04-19",
     "effectiveDate": null,
     "lastUpdated": "2026-03-31",
-    "latestUpdate": "Version 1.2 was reportedly published on 31 Mar 2026 and extends the guidelines to AI agents and physical AI, including clarifying who may automate external actions, under what conditions and to what extent. This is based on secondary sources and the METI PDF link; the primary text was not reviewed.",
+    "latestUpdate": "Version 1.2, published by MIC and METI on 31 Mar 2026, is still the current version as of 25 October 2026. It adds AI agents and physical AI, adds to the risk-based approach and clarifies the definition of AI developer. METI has posted the final PDF and a tracked-changes version against v1.1.",
     "impact": "low",
     "applicability": "monitor",
     "themes": [
@@ -3256,7 +3420,7 @@
       {
         "date": "2026-03-31",
         "label": "Version 1.2 published (adds AI agents and physical AI)",
-        "confirmed": false
+        "confirmed": true
       }
     ],
     "sourceUrl": "https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/pdf/20260331_12.pdf",
@@ -3273,8 +3437,8 @@
     "status": "adopted",
     "datePublished": "2026-07-10",
     "effectiveDate": null,
-    "lastUpdated": "2026-07-17",
-    "latestUpdate": "Passed by the Diet on 10 Jul 2026 and promulgated on 17 Jul 2026 as Act No. 56 of 2026, without amendment from the Cabinet bill. Most provisions take effect on a date set by Cabinet Order within two years of promulgation (by mid-July 2028). PPC implementing rules are pending.",
+    "lastUpdated": "2026-10-14",
+    "latestUpdate": "The PPC is working through a series of draft 'basic approaches' for the implementing Cabinet Order and PPC Rules. It presented an overview on 26 Aug 2026, discussed further parts in September, and on 14 Oct 2026 covered part 3 (preventing improper use and ensuring compliance). The PPC Rules will set the conditions for the statistics/AI-development consent exemption, and the Cabinet Order will set surcharge calculation. As of 25 Oct 2026 no draft Cabinet Order or Rules had been put out for public comment and no commencement Cabinet Order had been adopted.",
     "impact": "medium",
     "applicability": "indirect",
     "themes": [
@@ -3319,6 +3483,21 @@
       {
         "date": "2026-07-17",
         "label": "Promulgated as Act No. 56 of 2026",
+        "confirmed": true
+      },
+      {
+        "date": "2026-07-31",
+        "label": "PPC decides next steps and roadmap for smooth implementation of the amended Act",
+        "confirmed": true
+      },
+      {
+        "date": "2026-08-26",
+        "label": "PPC presents draft overview of matters to be set by Cabinet Order, PPC Rules and guidelines",
+        "confirmed": true
+      },
+      {
+        "date": "2026-10-14",
+        "label": "PPC deliberates draft basic approach (part 3: preventing improper use; ensuring compliance) for Cabinet Order and Rules",
         "confirmed": true
       },
       {
@@ -3542,8 +3721,8 @@
     "status": "guidance",
     "datePublished": "2025-10-21",
     "effectiveDate": null,
-    "lastUpdated": "2025-12-02",
-    "latestUpdate": "The National AI Plan (2 Dec 2025) dropped the 2024 proposal for mandatory guardrails for high-risk AI and a standalone AI Act. It relies on existing laws, targeted reforms and a new Australian AI Safety Institute (A$29.9m, established early 2026). AI.gov.au reportedly launched in May 2026 as a guidance hub.",
+    "lastUpdated": "2026-10-08",
+    "latestUpdate": "In a Sydney speech reported for 8 Oct 2026, Assistant Minister Andrew Charlton outlined a 'systems-based' approach for frontier AI. Government would set the standard a developer's safety process must meet, while developers stay responsible for finding, testing, reporting and managing risks. No legislative text, thresholds or dates were released, and the policy still relies on existing laws and sector regulators. The AISI, inside DISR and led by Kate Conroy since May 2026, has been testing frontier models since around July 2026.",
     "impact": "low",
     "applicability": "monitor",
     "themes": [
@@ -3589,13 +3768,28 @@
       },
       {
         "date": "2026-03-31",
-        "label": "Australian AI Safety Institute established (planned early 2026)",
+        "label": "Australian AI Safety Institute operational (early 2026; exact start date not confirmed)",
+        "confirmed": false
+      },
+      {
+        "date": "2026-05-24",
+        "label": "Australia-UK MoU linking the Australian AISI with the UK AI Security Institute",
+        "confirmed": true
+      },
+      {
+        "date": "2026-07-07",
+        "label": "AI Safety Forum: Assistant Minister says AISI is testing frontier models",
+        "confirmed": true
+      },
+      {
+        "date": "2026-10-08",
+        "label": "Assistant Minister Charlton outlines systems-based approach to regulating frontier AI developers (speech; date per secondary reports)",
         "confirmed": false
       }
     ],
     "sourceUrl": "https://www.industry.gov.au/publications/guidance-ai-adoption",
     "sourceLabel": "industry.gov.au",
-    "confidence": "high"
+    "confidence": "medium"
   },
   {
     "id": "cn-amac-llm-application-standard",
@@ -3743,7 +3937,7 @@
     "datePublished": "2023-07-13",
     "effectiveDate": "2023-08-15",
     "lastUpdated": "2026-09-14",
-    "latestUpdate": "CAC's latest tally, published 14 September 2026, puts cumulative filings at 1,112 generative AI services and registrations at 731 apps and features as of 31 August 2026. The 2026 'Qinglang' campaign, launched 30 April 2026, targeted unfiled models, weak safety filtering and unlabelled AI content. New Interim Measures on anthropomorphic AI interaction services reportedly took effect on 15 July 2026.",
+    "latestUpdate": "No new national filing tally was published between 8 and 25 October 2026. The latest CAC figures (14 September 2026) show 1,112 generative AI services filed and 731 apps and features registered as of 31 August 2026, and provincial cyberspace offices continue to publish registration lists. The Interim Measures on anthropomorphic AI interaction services, issued on 10 April 2026 by CAC and four other ministries, took effect on 15 July 2026. A revised draft of the Internet Information Services Measures, re-consulted in July 2026, adds a chapter on intelligent information services.",
     "impact": "medium",
     "applicability": "indirect",
     "themes": [
@@ -3781,14 +3975,24 @@
         "confirmed": true
       },
       {
+        "date": "2026-04-10",
+        "label": "CAC and four ministries issue Interim Measures on anthropomorphic AI interaction services",
+        "confirmed": true
+      },
+      {
         "date": "2026-04-30",
         "label": "2026 Qinglang campaign against AI misuse launched",
         "confirmed": true
       },
       {
+        "date": "2026-07-03",
+        "label": "CAC re-consults on revised Internet Information Services Measures with an intelligent-information-services chapter (comments to 2 Aug 2026)",
+        "confirmed": true
+      },
+      {
         "date": "2026-07-15",
-        "label": "Interim Measures for anthropomorphic AI interaction services reportedly take effect",
-        "confirmed": false
+        "label": "Interim Measures on anthropomorphic AI interaction services take effect",
+        "confirmed": true
       },
       {
         "date": "2026-09-14",
@@ -3811,7 +4015,7 @@
     "datePublished": "2025-03-14",
     "effectiveDate": "2025-09-01",
     "lastUpdated": "2026-04-30",
-    "latestUpdate": "Enforcement continued through the 2026 Qinglang campaign launched 30 April 2026, which named unlabelled AI-generated content as a target. Media reports cite millions of content items removed and thousands of AI products taken down. Those figures are not verified against CAC releases.",
+    "latestUpdate": "No new labelling enforcement notice was found between 8 and 25 October 2026. CAC's first publicly named enforcement under the Labelling Measures came on 28 April 2026, when local cyberspace offices summoned, ordered rectification of and warned CapCut (Jianying), the Maoxiang app and the Jimeng AI website for failing to label AI-generated content. A November 2025 batch action had already removed non-compliant apps, and the 2026 Qinglang campaign (from 30 April 2026) continues to target unlabelled AI content.",
     "impact": "medium",
     "applicability": "indirect",
     "themes": [
@@ -3854,6 +4058,16 @@
         "confirmed": true
       },
       {
+        "date": "2025-11-25",
+        "label": "Cyberspace authorities act against a batch of apps for missing explicit or implicit AI labels",
+        "confirmed": true
+      },
+      {
+        "date": "2026-04-28",
+        "label": "CAC publicly names CapCut (Jianying), Maoxiang and Jimeng AI for labelling failures (summons, rectification, warnings)",
+        "confirmed": true
+      },
+      {
         "date": "2026-04-30",
         "label": "2026 Qinglang enforcement campaign targeting unlabelled AI content begins",
         "confirmed": true
@@ -3874,7 +4088,7 @@
     "datePublished": "2025-10-28",
     "effectiveDate": "2026-01-01",
     "lastUpdated": "2026-05-12",
-    "latestUpdate": "The amended Cybersecurity Law has applied since 1 January 2026. The State Council's 2026 Legislative Work Plan (12 May 2026) calls for accelerating comprehensive AI legislation, but no draft AI law has been published as of October 2026.",
+    "latestUpdate": "As of 25 October 2026 no draft comprehensive AI law has been published. The State Council's 2026 Legislative Work Plan calls for accelerating AI legislation. The NPC Standing Committee's 2026 legislative plan (published 11 May 2026) lists legislation on the healthy development of AI as a preparatory item, with research and drafting to be stepped up and deliberation scheduled 'as appropriate'.",
     "impact": "medium",
     "applicability": "indirect",
     "themes": [
@@ -3922,6 +4136,11 @@
         "confirmed": true
       },
       {
+        "date": "2026-05-11",
+        "label": "NPCSC 2026 legislative plan lists AI healthy-development legislation as a preparatory (research and drafting) item",
+        "confirmed": true
+      },
+      {
         "date": "2026-05-12",
         "label": "State Council 2026 Legislative Work Plan calls for accelerating comprehensive AI legislation",
         "confirmed": true
@@ -3946,8 +4165,8 @@
     "status": "in_force",
     "datePublished": "2025-01-21",
     "effectiveDate": "2026-01-22",
-    "lastUpdated": "2026-07-21",
-    "latestUpdate": "The Act and its Enforcement Decree (Presidential Decree No. 36053) took effect on 22 January 2026, with a grace period of at least one year on administrative fines. A partial amendment reorganising the National AI Strategy Committee took effect on 21 July 2026. A National Assembly bill to defer some generative-AI duties has been reported, but its status is unconfirmed.",
+    "lastUpdated": "2026-10-13",
+    "latestUpdate": "On 13 October 2026 the Cabinet passed amendments to the AI Basic Act and the Data Industry Act, MSIT said. They require AI training data built through government projects to be linked to the national 'AI Hub', with exceptions such as trade secrets, personal data, copyright and national security, and reports say they take effect six months after promulgation (around April 2027). The change does not touch operator duties relevant to asset managers. Dozens of member bills are pending, including one (July 2026) to split generative-AI labelling duties by operator role, but none deferring those duties has been confirmed as passed, and the fine grace period continues.",
     "impact": "high",
     "applicability": "direct",
     "themes": [
@@ -4006,8 +4225,18 @@
         "confirmed": true
       },
       {
+        "date": "2026-10-13",
+        "label": "Cabinet passes AI Basic Act and Data Industry Act amendments on linking public AI training data to AI Hub",
+        "confirmed": true
+      },
+      {
         "date": "2027-01-22",
         "label": "Earliest end of administrative-fine grace period (at least one year; exact end not yet fixed)",
+        "confirmed": false
+      },
+      {
+        "date": "2027-04-30",
+        "label": "AI Hub data-linkage amendment reportedly takes effect six months after promulgation (month indicative)",
         "confirmed": false
       }
     ],
@@ -4111,7 +4340,7 @@
     "datePublished": "2024-08-13",
     "effectiveDate": "2026-04-20",
     "lastUpdated": "2026-09-03",
-    "latestUpdate": "The SaaS exception to network separation was reportedly formalised in April 2026. A one-year no-action easing for using AI and SaaS in cybersecurity defence was offered to 49 large financial firms after a 22 May 2026 meeting on frontier-AI cyber threats. On 3 September 2026 the FSC discussed widening phase 2 to 75 firms, including non-banks.",
+    "latestUpdate": "On 3 September 2026 the FSC announced a second emergency easing round: 75 firms (59 financial companies and 16 electronic financial business operators, including non-banks) were eligible to apply. Up to 15 would be selected, up from 10 in round one, and get one-year no-action letters after an FSC report provisionally set for 7 October 2026. The selection outcome is not confirmed. At the October 2026 National Assembly audit, the FSC Chairman said phased further easing is under review, amid concern that recent hacks at banks and other lenders may have been AI-enabled.",
     "impact": "medium",
     "applicability": "direct",
     "themes": [
@@ -4160,13 +4389,18 @@
       },
       {
         "date": "2026-05-22",
-        "label": "FSC meeting on frontier-AI cyber risk; no-action easing for AI cyber-defence announced",
+        "label": "FSC meeting on frontier-AI cyber risk; round-one no-action easing for AI cyber-defence (49 eligible large firms, about 10 selected)",
         "confirmed": true
       },
       {
         "date": "2026-09-03",
-        "label": "FSC discusses phase 2 expansion to 75 firms including non-banks",
+        "label": "FSC announces round-two emergency easing: 75 eligible firms including non-banks, up to 15 to be selected",
         "confirmed": true
+      },
+      {
+        "date": "2026-10-07",
+        "label": "Provisional FSC decision on round-two selections and one-year no-action letters (outcome not confirmed)",
+        "confirmed": false
       }
     ],
     "sourceUrl": "https://www.fsc.go.kr/eng/pr010101",
@@ -4229,15 +4463,15 @@
   {
     "id": "global-fsb-ai-sound-practices",
     "market": "global",
-    "title": "FSB Sound Practices for Responsible Adoption of AI (final due Oct 2026)",
+    "title": "FSB Sound Practices for Responsible Adoption of AI (final, Oct 2026)",
     "officialTitle": "Sound Practices for Responsible Adoption of Artificial Intelligence (AI): Consultation report",
     "regulator": "Financial Stability Board (FSB)",
     "instrumentType": "consultation",
-    "status": "consultation",
+    "status": "guidance",
     "datePublished": "2026-06-10",
     "effectiveDate": null,
-    "lastUpdated": "2026-08-06",
-    "latestUpdate": "The consultation closed on 22 July 2026, and the FSB published responses on 6 August 2026. The final report is targeted for October 2026 as a US G20 presidency deliverable, but it had not been published as of 8 October 2026.",
+    "lastUpdated": "2026-10-15",
+    "latestUpdate": "The FSB published the final report on 15 October 2026, together with an overview of consultation responses, as a deliverable to the US G20 presidency. The FSB Chair's 12 October letter presented it to G20 finance ministers. The final version keeps the 12 practices and, according to secondary summaries, widens third-party AI risk (Practice 12) to cover AI embedded in vendor products, sub-outsourcing, concentration and exit planning. It also adds material on documentation and traceability, transparency for higher-risk uses, agentic AI and staff deskilling.",
     "impact": "high",
     "applicability": "monitor",
     "themes": [
@@ -4247,14 +4481,14 @@
       "cyber_resilience",
       "genai"
     ],
-    "summary": "The FSB sets out 12 non-binding sound practices for boards and senior management of financial institutions, in three groups. Practices 1-4 cover organisation-wide AI governance, practices 5-10 cover risk management across the AI lifecycle, and practices 11-12 cover AI-related cyber, ICT and third-party risk. Real-world case studies are included, and for agentic AI the report accepts AI-monitoring-AI as a supplement to human oversight.",
-    "buySideImpact": "This is likely to become the reference point that national supervisors (FSC/FSS, CSRC, SFC, MAS, FCA, SEC) use for AI governance expectations of all financial institutions, including asset managers. Boards should expect questions on AI inventories, risk tiering, lifecycle controls, oversight of agentic AI, and concentration on GenAI vendors. Aligning group AI policy now reduces rework when local regulators adopt it.",
+    "summary": "The FSB's final report sets out 12 non-binding sound practices for boards and senior management of financial institutions. Practices 1-4 cover organisation-wide AI governance, including organisational adaptability as AI evolves. Practices 5-12 follow each AI use from inception to retirement: materiality and risk, technology selection, data, explainability, performance, human oversight, cyber and ICT risk, and third-party risk. The report says it does not set an international standard or prescribe how institutions adopt AI, and that applying it does not replace local legal obligations.",
+    "buySideImpact": "The practices are now final. National supervisors (FSC/FSS, CSRC, SFC, MAS, FCA, SEC) are likely to use them as a reference for AI governance expectations of all financial institutions, including asset managers. Boards should expect questions on AI inventories, risk tiering, lifecycle controls, oversight of agentic AI, and dependence on GenAI vendors. The wider Practice 12 means vendor due diligence must also cover AI embedded in tools not sold as AI, such as order management systems, research platforms and CRM, along with sub-outsourcing chains and exit plans.",
     "keyRequirements": [
-      "Board and senior management ownership of an organisation-wide AI strategy and governance",
-      "AI inventory, risk classification and lifecycle controls from development to decommissioning",
-      "Validation, monitoring and human oversight proportionate to risk, supplemented by automated monitoring for agentic AI",
-      "Management of AI-related cyber, ICT and third-party or concentration risks",
-      "Not an international standard and not prescriptive"
+      "Board and senior management ownership of an organisation-wide AI strategy and governance, adapted as AI evolves",
+      "AI inventory, materiality and risk classification, and lifecycle controls from inception to retirement, with documentation that supports traceability",
+      "Validation, monitoring, explainability and human oversight proportionate to risk, including specific considerations for agentic AI",
+      "Third-party AI risk management covering AI embedded in vendor products, sub-outsourcing, concentration risk, continuity and exit planning, alongside AI-related cyber and ICT risk",
+      "Not an international standard and not prescriptive; does not replace local legal or regulatory obligations"
     ],
     "actions": [
       {
@@ -4287,12 +4521,17 @@
         "confirmed": true
       },
       {
-        "date": "2026-10-31",
-        "label": "Final report expected (October 2026, G20 deliverable)",
-        "confirmed": false
+        "date": "2026-10-12",
+        "label": "FSB Chair's letter to G20 finance ministers presents the final sound practices",
+        "confirmed": true
+      },
+      {
+        "date": "2026-10-15",
+        "label": "Final report and overview of consultation responses published",
+        "confirmed": true
       }
     ],
-    "sourceUrl": "https://www.fsb.org/2026/06/sound-practices-for-responsible-adoption-of-artificial-intelligence-ai-consultation-report/",
+    "sourceUrl": "https://www.fsb.org/2026/10/fsb-finalises-sound-practices-for-the-responsible-adoption-of-artificial-intelligence-ai/",
     "sourceLabel": "FSB",
     "confidence": "high"
   },
@@ -4377,8 +4616,8 @@
     "status": "guidance",
     "datePublished": "2025-10-10",
     "effectiveDate": null,
-    "lastUpdated": "2026-08-31",
-    "latestUpdate": "On 31 August 2026 FSB Chair Andrew Bailey told G20 finance ministers that frontier AI's effect on cyber risk is the most immediate financial-stability concern. He urged stronger response and recovery capabilities and resilience of critical third-party providers.",
+    "lastUpdated": "2026-10-12",
+    "latestUpdate": "The FSB Chair's 12 October 2026 letter to G20 finance ministers and central bank governors, sent ahead of their 15 October meeting in Bangkok, listed AI-related risks alongside sovereign bond volatility and private-credit vulnerabilities. It warned that increasingly sophisticated AI-enabled cyberattacks could threaten critical financial institutions and market infrastructure, and it presented the final AI sound practices. The IMF's October 2026 Global Financial Stability Report (13 October) likewise named AI-enabled cyber risk and an AI-related market correction among its near-term risks.",
     "impact": "medium",
     "applicability": "monitor",
     "themes": [
@@ -4387,7 +4626,7 @@
       "trading_markets",
       "governance"
     ],
-    "summary": "The October 2025 report builds on the FSB's November 2024 report on the financial stability implications of AI. It sets out direct and proxy indicators that authorities can use to monitor AI adoption, and it highlights gaps in monitoring third-party dependencies, market correlation and cyber risk. The August 2026 Chair's letter warns that frontier AI may change the speed, scale and economics of cyberattacks, and it flags stretched AI-related valuations and leverage.",
+    "summary": "The October 2025 report builds on the FSB's November 2024 report on the financial stability implications of AI. It sets out direct and proxy indicators that authorities can use to monitor AI adoption, and it highlights gaps in monitoring third-party dependencies, market correlation and cyber risk. The FSB Chair's letters to the G20 of August and October 2026 warn that frontier AI may change the speed, scale and economics of cyberattacks on critical institutions and infrastructure, and the August letter also flags stretched AI-related valuations and leverage.",
     "buySideImpact": "Expect national supervisors to collect more data from asset managers on AI use, AI vendor concentration (cloud and foundation models) and AI-related cyber resilience. Investment teams should treat AI-asset valuation and leverage concerns as market-risk inputs. Operational resilience plans should model AI-accelerated cyberattacks on the firm and its critical providers.",
     "keyRequirements": [
       "Authorities to monitor AI adoption via surveys, supervisory engagement and vendor data using direct and proxy indicators",
@@ -4426,27 +4665,32 @@
         "confirmed": true
       },
       {
+        "date": "2026-10-12",
+        "label": "FSB Chair's October letter to G20 flags AI-enabled cyber risk and presents final AI sound practices",
+        "confirmed": true
+      },
+      {
         "date": "2026-10-15",
-        "label": "G20 finance ministers and central bank governors meet (Bangkok, IMF/WB Annual Meetings)",
+        "label": "G20 finance ministers and central bank governors met in Bangkok (no communique text identified)",
         "confirmed": true
       }
     ],
-    "sourceUrl": "https://www.fsb.org/uploads/P101025.pdf",
+    "sourceUrl": "https://www.fsb.org/2026/10/fsb-chairs-letter-to-g20-finance-ministers-and-central-bank-governors-october-2026/",
     "sourceLabel": "FSB",
     "confidence": "high"
   },
   {
     "id": "global-g7-ceg-ai-cybersecurity",
     "market": "global",
-    "title": "G7 Cyber Expert Group statement on AI and cybersecurity",
+    "title": "G7 CEG statement on AI and cybersecurity; G7 frontier-AI cyber drills agreed",
     "officialTitle": "G7 Cyber Expert Group Statement on Artificial Intelligence and Cybersecurity (September 2025)",
     "regulator": "G7 Cyber Expert Group (published by HM Treasury and US Treasury)",
     "instrumentType": "statement",
     "status": "guidance",
     "datePublished": "2025-10-06",
     "effectiveDate": null,
-    "lastUpdated": "2025-10-06",
-    "latestUpdate": "The statement is dated September 2025 and was published by HM Treasury on 6 October 2025. No follow-up was identified, but the BCBS (May and September 2026) and the FSB Chair (August 2026) have since raised the same frontier-AI cyber concerns.",
+    "lastUpdated": "2026-10-15",
+    "latestUpdate": "On 15 October 2026, G7 finance ministers and central bank governors meeting in Bangkok signed off on tabletop exercises that simulate frontier-AI-driven cyberattacks on the financial sector, according to Japan's finance minister. Results will be used to revise incident-response manuals, and private financial institutions may take part depending on the scenario. No official G7 text has been found, and it is not confirmed whether the Cyber Expert Group will run the exercises.",
     "impact": "medium",
     "applicability": "monitor",
     "themes": [
@@ -4456,7 +4700,7 @@
       "governance"
     ],
     "summary": "The CEG statement is non-binding and says it does not set regulatory expectations. It aims to raise awareness of the cyber dimensions of AI: AI can strengthen defences, but threat actors can use it to increase the frequency and impact of attacks, and generative and agentic AI introduce new vulnerabilities. It lists key considerations and questions for financial institutions and should be read with the G7 Fundamental Elements series.",
-    "buySideImpact": "The statement's questions on governance, AI-specific threats, data integrity, vendor risk and AI literacy are a practical checklist for a CISO's AI cyber review. G7 supervisors are likely to reflect its themes in cyber and operational resilience exams.",
+    "buySideImpact": "The statement's questions on governance, AI-specific threats, data integrity, vendor risk and AI literacy are a practical checklist for a CISO's AI cyber review. G7 supervisors are likely to reflect its themes in cyber and operational-resilience exams. The G7's agreement to run frontier-AI attack simulations means authorities will test incident response and recovery against AI-speed attacks. Large asset managers and their critical vendors may be asked to join scenarios or to evidence equivalent internal testing.",
     "keyRequirements": [
       "Integrate AI-specific threats (prompt injection, data poisoning, model theft, AI-enabled phishing and deepfakes) into cyber risk management",
       "Assess security of AI supply chain and third-party AI providers",
@@ -4478,11 +4722,16 @@
         "date": "2025-10-06",
         "label": "Statement published by HM Treasury",
         "confirmed": true
+      },
+      {
+        "date": "2026-10-15",
+        "label": "G7 finance ministers and central bank governors (Bangkok) agree tabletop exercises on frontier-AI cyberattacks",
+        "confirmed": true
       }
     ],
     "sourceUrl": "https://www.gov.uk/government/publications/g7-cyber-expert-group-statement-on-ai-and-cybersecurity",
     "sourceLabel": "GOV.UK (HM Treasury)",
-    "confidence": "high"
+    "confidence": "medium"
   },
   {
     "id": "global-oecd-ai-principles-haip",
@@ -4610,7 +4859,7 @@
     "datePublished": "2024-09-05",
     "effectiveDate": null,
     "lastUpdated": "2026-05-15",
-    "latestUpdate": "The EU deposited the first ratification on 15 May 2026. As of September 2026 no other ratifications had been reported. Entry into force needs five ratifications, including three Council of Europe member states, plus a three-month waiting period.",
+    "latestUpdate": "The EU deposited the first ratification on 15 May 2026. As of 25 October 2026 no further ratifications had been identified. Entry into force needs five ratifications, including three Council of Europe member states, plus a three-month waiting period.",
     "impact": "low",
     "applicability": "monitor",
     "themes": [
@@ -4650,5 +4899,493 @@
     "sourceUrl": "https://www.coe.int/en/web/artificial-intelligence/the-framework-convention-on-artificial-intelligence",
     "sourceLabel": "Council of Europe",
     "confidence": "medium"
+  },
+  {
+    "id": "hk-hkma-art-framework-responsible-ai",
+    "market": "hk",
+    "title": "HKMA 'ART' Framework and Supervisory Guidance on Responsible AI Adoption",
+    "officialTitle": "\"ART\" Framework to promote responsible A.I. adoption; Supervisory Guidance for Responsible Adoption of Artificial Intelligence",
+    "regulator": "Hong Kong Monetary Authority (HKMA)",
+    "instrumentType": "supervisory_guidance",
+    "status": "guidance",
+    "datePublished": "2026-10-15",
+    "effectiveDate": null,
+    "lastUpdated": "2026-10-15",
+    "latestUpdate": "On 15 Oct 2026 the HKMA announced the ART (Accountability, Resilience, Trust) Framework. It issued updated supervisory guidance with nine principles that replace its 2019 High-Level Principles on AI, drawing on the second GenA.I. Sandbox cohort, where over 60% of use cases were agentic. It also flagged a forthcoming discussion paper on supervisory governance of agentic AI, further agentic testing in GenA.I. Sandbox++, and an AI training-data sharing platform with Cyberport and HKU. No effective date or transition period was identified.",
+    "impact": "medium",
+    "applicability": "indirect",
+    "themes": [
+      "governance",
+      "model_risk",
+      "genai",
+      "conduct",
+      "third_party",
+      "data_privacy"
+    ],
+    "summary": "The HKMA's ART Framework, issued under its Fintech 2030 agenda, supports responsible AI adoption by authorised institutions (banks). It rests on three pillars: Accountability (clear ownership and human oversight across the AI life cycle), Resilience (secure, robust systems that fail safely) and Trust (fairness, transparency, explainability, privacy). The updated supervisory guidance sets nine principles under these pillars and sets more detailed expectations on board governance, risk management and transparency than the 2019 principles.",
+    "buySideImpact": "The guidance binds banks, not SFC-licensed asset managers, but it reaches the buy side in two ways. HK banks are the main retail fund distributors, so their AI-driven suitability, recommendation and chatbot tools will be held to these standards. Bank-owned asset management arms will often have this guidance applied through group AI policy. It also signals where HK cross-regulator thinking on agentic AI is heading (an agent registry, intent-anchored accountability), which the SFC may follow.",
+    "keyRequirements": [
+      "Nine principles across the Accountability, Resilience and Trust pillars, replacing the HKMA's 2019 High-Level Principles on AI",
+      "Clear ownership of each AI use case, supported by an up-to-date inventory of approved AI applications",
+      "Board-level governance and human oversight throughout the AI life cycle, recognising a move from human-in-the-loop to human-on-the-loop oversight where appropriate",
+      "Secure, robust AI systems designed to fail safely",
+      "Fairness, transparency, explainability and privacy in AI use, especially customer-facing"
+    ],
+    "actions": [
+      {
+        "text": "Ask HK bank distribution partners how their AI-driven fund recommendation, suitability and chatbot tools meet the ART guidance, and record the answers in distributor due diligence",
+        "owner": "Distribution"
+      },
+      {
+        "text": "For bank-affiliated HK entities, gap-assess the AI governance policy and AI inventory against the nine ART principles, especially use-case ownership and oversight",
+        "owner": "Risk"
+      },
+      {
+        "text": "Track the HKMA's forthcoming agentic AI discussion paper (agent registry, intervention mechanisms) and any parallel SFC guidance; consider responding through industry associations",
+        "owner": "Compliance"
+      }
+    ],
+    "milestones": [
+      {
+        "date": "2019-11-05",
+        "label": "HKMA guiding principles on consumer protection in big data analytics and AI (BDAI) issued",
+        "confirmed": true
+      },
+      {
+        "date": "2025-10-15",
+        "label": "Second cohort of HKMA GenA.I. Sandbox announced",
+        "confirmed": true
+      },
+      {
+        "date": "2026-10-15",
+        "label": "ART Framework and updated Supervisory Guidance for Responsible Adoption of AI issued",
+        "confirmed": true
+      },
+      {
+        "date": "2026-10-16",
+        "label": "HKMA/Cyberport Finance + A.I. Forum; second sandbox cohort concludes and good-practice insight report issued",
+        "confirmed": true
+      }
+    ],
+    "sourceUrl": "https://www.hkma.gov.hk/eng/news-and-media/press-releases/2026/10/20261015-3/",
+    "sourceLabel": "HKMA",
+    "confidence": "medium"
+  },
+  {
+    "id": "jp-fsa-boj-frontier-ai-cyber-request",
+    "market": "jp",
+    "title": "FSA/BoJ request on short-term measures against frontier AI cyber threats",
+    "officialTitle": "Request Regarding \"Short-Term Measures for Financial Institutions in Response to Changes in Threat Posed by Frontier AI\"",
+    "regulator": "Financial Services Agency (FSA) / Bank of Japan",
+    "instrumentType": "supervisory_guidance",
+    "status": "guidance",
+    "datePublished": "2026-05-22",
+    "effectiveDate": "2026-05-22",
+    "lastUpdated": "2026-05-22",
+    "latestUpdate": "The FSA and BoJ issued the joint request on 22 May 2026, with an English provisional translation on 15 Jun 2026. Firms were asked to urgently check their readiness against nine short-term measures within about one month, under direct senior-management involvement. It is framed as an interim measure, with medium- to long-term steps such as automating vulnerability response to follow. No follow-up found as of 25 Oct 2026.",
+    "impact": "medium",
+    "applicability": "direct",
+    "themes": [
+      "cyber_resilience",
+      "governance",
+      "third_party"
+    ],
+    "summary": "Frontier AI models may find large numbers of system vulnerabilities in a short time and greatly increase the speed and scale of cyberattacks. In response, the FSA and BoJ asked financial institutions to take nine short-term measures. The request followed an FSA public-private meeting on AI threats to financial-sector cybersecurity (24 Apr 2026) and a working-level group (14 May 2026). It is Japan's counterpart to the SFC's June 2026 circular and ASIC's May 2026 letter on AI-enabled cyber threats.",
+    "buySideImpact": "Japanese investment managers and their critical IT vendors (OMS/PMS, fund administration, cloud) need to show faster vulnerability and patch management and tested outage plans. Senior management must own the response. Global managers with Japan entities should align this with the SFC and ASIC AI-cyber expectations in one APAC programme.",
+    "keyRequirements": [
+      "Treat frontier-AI-driven threat changes as an enterprise management issue with direct involvement of top management",
+      "Urgently review (about one month) IT asset management, vulnerability management and patch application capability",
+      "Identify priority IT systems and strengthen monitoring and incident response",
+      "Prepare for system outages, including criteria for proactive service suspension, and strengthen resilience",
+      "Strengthen contract and operational arrangements with vendors and external information sharing"
+    ],
+    "actions": [
+      {
+        "text": "Brief senior management on the nine measures and record management-level ownership of the frontier-AI cyber response for the Japan entity",
+        "owner": "Board"
+      },
+      {
+        "text": "Check the IT asset inventory, vulnerability scanning and patch SLAs for Japan-facing systems against the request and fix gaps",
+        "owner": "Technology"
+      },
+      {
+        "text": "Obtain confirmation from critical vendors (OMS, fund administration, cloud) on accelerated patching and outage arrangements",
+        "owner": "Operations"
+      }
+    ],
+    "milestones": [
+      {
+        "date": "2026-04-24",
+        "label": "FSA public-private meeting on strengthening financial-sector cybersecurity against AI threats",
+        "confirmed": true
+      },
+      {
+        "date": "2026-05-14",
+        "label": "Working-level working group meeting",
+        "confirmed": true
+      },
+      {
+        "date": "2026-05-22",
+        "label": "FSA/BoJ joint request issued",
+        "confirmed": true
+      },
+      {
+        "date": "2026-06-15",
+        "label": "English provisional translation published",
+        "confirmed": true
+      }
+    ],
+    "sourceUrl": "https://www.fsa.go.jp/en/news/2026/20260615/260615.html",
+    "sourceLabel": "FSA (Japan)",
+    "confidence": "medium"
+  },
+  {
+    "id": "au-privacy-act-tranche-2-exposure-draft",
+    "market": "au",
+    "title": "Privacy Act tranche 2 exposure draft (Personal Data Protection Bill 2026)",
+    "officialTitle": "Privacy Amendment (Personal Data Protection) Bill 2026 - Exposure Draft and Consultation Paper",
+    "regulator": "Attorney-General's Department (Cth)",
+    "instrumentType": "consultation",
+    "status": "consultation",
+    "datePublished": "2026-08-31",
+    "effectiveDate": null,
+    "lastUpdated": "2026-09-18",
+    "latestUpdate": "The Attorney-General released the exposure draft and consultation paper on 31 Aug 2026; submissions closed on 18 Sep 2026 (one source says 17 Sep). As of 25 Oct 2026 no bill had been found introduced to Parliament, and commencement and transition terms are not confirmed.",
+    "impact": "medium",
+    "applicability": "monitor",
+    "themes": [
+      "data_privacy",
+      "third_party",
+      "governance"
+    ],
+    "summary": "The second tranche of Privacy Act reforms has about 40 proposals, most from the Privacy Act Review Report plus some new ones. They include a 'fair and reasonable' test for handling personal information, a statutory controller/processor distinction, tighter consent standards, a right of erasure, limits on trading personal data, and stronger data breach and fraud obligations. The consultation also asked for views on emerging technologies.",
+    "buySideImpact": "For Australian fund managers and super funds, the fair-and-reasonable test would apply to using client and member data in AI tools, analytics and marketing, even where consent exists. The controller/processor split would reallocate obligations between managers and their AI vendors, registries and administrators. It builds on the APP 1.7-1.9 ADM transparency duty from 10 Dec 2026.",
+    "keyRequirements": [
+      "Proposed 'fair and reasonable' test for collection, use and disclosure of personal information",
+      "Proposed controller/processor framework concentrating obligations on entities that determine handling",
+      "Tighter consent standards and limits on trading in personal information",
+      "Proposed right of erasure (aimed mainly at large digital platforms)",
+      "Stronger data breach and fraud-related obligations"
+    ],
+    "actions": [
+      {
+        "text": "Assess AI, analytics and marketing uses of client and member data against the proposed fair-and-reasonable test",
+        "owner": "Legal"
+      },
+      {
+        "text": "Map AI vendors, registries and administrators as likely controllers or processors and flag contracts to revisit at renewal",
+        "owner": "Operations"
+      },
+      {
+        "text": "Track introduction of the bill to Parliament and its commencement and transition provisions",
+        "owner": "Compliance"
+      }
+    ],
+    "milestones": [
+      {
+        "date": "2023-02-16",
+        "label": "Privacy Act Review Report released",
+        "confirmed": true
+      },
+      {
+        "date": "2023-09-28",
+        "label": "Government response to the Privacy Act Review Report",
+        "confirmed": true
+      },
+      {
+        "date": "2026-08-31",
+        "label": "Tranche 2 exposure draft bill and consultation paper released",
+        "confirmed": true
+      },
+      {
+        "date": "2026-09-18",
+        "label": "Consultation closed",
+        "confirmed": true
+      }
+    ],
+    "sourceUrl": "https://consultations.ag.gov.au/rights-and-protections/privacy-reform/",
+    "sourceLabel": "Attorney-General's Department consultation hub",
+    "confidence": "medium"
+  },
+  {
+    "id": "cn-csrc-ai-securities-futures-opinions",
+    "market": "cn",
+    "title": "CSRC to issue opinions on safe, compliant AI use in securities and futures",
+    "officialTitle": "Opinions on the Safe and Compliant Application of Artificial Intelligence in the Securities and Futures Industry (人工智能在证券期货业安全合规应用的意见), forthcoming; title as announced, final title not yet published",
+    "regulator": "China Securities Regulatory Commission (CSRC)",
+    "instrumentType": "statement",
+    "status": "proposed",
+    "datePublished": "2026-10-19",
+    "effectiveDate": null,
+    "lastUpdated": "2026-10-19",
+    "latestUpdate": "At the Financial Street Forum on 19 October 2026, CSRC Chairman Wu Qing said the CSRC will soon issue opinions on the safe and compliant application of AI in the securities and futures industry. The opinions will set regulatory norms for business development and data security and support safe use in key scenarios such as risk control and investment research. No text, consultation draft or date has been published.",
+    "impact": "high",
+    "applicability": "monitor",
+    "themes": [
+      "governance",
+      "model_risk",
+      "data_privacy",
+      "investment_process",
+      "conduct",
+      "genai"
+    ],
+    "summary": "The CSRC has announced that it will issue opinions on the safe and compliant application of AI across securities and futures institutions, a group that includes fund management companies. The announcement follows Chairman Wu Qing's June 2026 Lujiazui Forum pledge to issue guiding opinions on regulating AI in the capital markets, alongside a crackdown on AI-enabled illegal stock recommendations and rumour-spreading. Once issued, it would be the CSRC's first dedicated AI instrument for the sector, sitting above AMAC's April 2026 large-model group standard.",
+    "buySideImpact": "Onshore fund management companies, including foreign-owned FMCs and WFOE private fund managers, should expect CSRC-level expectations on AI governance, data security and the use of AI in investment research, risk control and client service. These are likely to be more authoritative than the AMAC group standard and to feed into inspections. Client-facing AI tools that could be seen as giving stock recommendations, and AI-themed product marketing, are likely areas of scrutiny.",
+    "keyRequirements": [
+      "Announced scope: regulatory norms for business development and data security in AI use by securities and futures institutions",
+      "Announced aim: safe and efficient AI application in key scenarios such as risk control and investment research",
+      "Expected focus, per commentary rather than official text: data governance, model management, disclosure and human oversight",
+      "Related CSRC enforcement priority: crackdown on AI-enabled illegal stock recommendations and rumour-spreading",
+      "Final text, binding force and effective date not yet known"
+    ],
+    "actions": [
+      {
+        "text": "Monitor CSRC releases for the opinions or a consultation draft, and compare them with controls already built for AMAC T/AMAC 0004-2026",
+        "owner": "Compliance"
+      },
+      {
+        "text": "Prepare an inventory of China-entity AI use in investment research, risk control, client service and marketing, with the data-security controls applied to each",
+        "owner": "Technology"
+      },
+      {
+        "text": "Review client-facing AI chat and content tools in China for outputs that could amount to unlicensed stock recommendations",
+        "owner": "Distribution"
+      },
+      {
+        "text": "Brief the China entity board and senior management on the forthcoming opinions and their expected effect on AI governance",
+        "owner": "Board"
+      }
+    ],
+    "milestones": [
+      {
+        "date": "2026-06-17",
+        "label": "Wu Qing (Lujiazui Forum): CSRC to issue guiding opinions on regulating AI in capital markets in due course",
+        "confirmed": true
+      },
+      {
+        "date": "2026-10-19",
+        "label": "Wu Qing (Financial Street Forum): CSRC to soon issue opinions on safe and compliant AI application in securities and futures",
+        "confirmed": true
+      },
+      {
+        "date": "2026-12-31",
+        "label": "Expected publication of the opinions or a consultation draft (indicative; 'near term', no date given)",
+        "confirmed": false
+      }
+    ],
+    "sourceUrl": "https://www.21jingji.com/article/20261019/herald/5f556ab1b067545b85f3b92a4fdd3e3f.html",
+    "sourceLabel": "21st Century Business Herald (21jingji.com)",
+    "confidence": "medium"
+  },
+  {
+    "id": "eu-ai-act-harmonised-standards",
+    "market": "eu",
+    "title": "AI Act harmonised standards: first OJ citation (EN 18286 quality management)",
+    "officialTitle": "Commission Implementing Decision (EU) 2026/2274 on harmonised standards for high-risk AI systems drafted in support of Regulation (EU) 2024/1689 (EN 18286:2026 Artificial intelligence - Quality management system for EU AI Act regulatory purposes)",
+    "regulator": "European Commission / CEN-CENELEC JTC 21",
+    "instrumentType": "framework",
+    "status": "in_force",
+    "datePublished": "2026-10-14",
+    "effectiveDate": "2026-10-14",
+    "lastUpdated": "2026-10-14",
+    "latestUpdate": "On 14 October 2026 the Commission published in the Official Journal the reference to EN 18286:2026, the first harmonised standard under the AI Act (Implementing Decision (EU) 2026/2274, dated 12 October). Most other JTC 21 deliverables, such as risk management (prEN 18228) and conformity assessment (prEN 18285), remain in draft.",
+    "impact": "low",
+    "applicability": "indirect",
+    "themes": [
+      "governance",
+      "model_risk",
+      "third_party"
+    ],
+    "summary": "Harmonised standards developed by CEN-CENELEC JTC 21 under the Commission's AI Act standardisation request give providers of high-risk AI systems a presumption of conformity once their references are published in the Official Journal. EN 18286:2026, covering the quality management system required by Art. 17, is the first to be cited. The rest of the high-risk requirements, including risk management, data governance, accuracy, robustness and cybersecurity, still lack cited harmonised standards.",
+    "buySideImpact": "Asset managers are mostly deployers, so the standard does not bind them directly. It becomes a practical benchmark when assessing vendors of Annex III systems such as HR and recruitment screening or consumer creditworthiness tools before the 2 December 2027 high-risk deadline. A firm that builds or substantially modifies a high-risk system in-house and so becomes a provider can use EN 18286 to structure its quality management system. The slow pace of the other standards means vendor conformity evidence will remain uneven through 2027.",
+    "keyRequirements": [
+      "Providers of high-risk AI systems that apply EN 18286:2026 benefit from a presumption of conformity with the Art. 17 quality management system requirements from 14 Oct 2026",
+      "Use of harmonised standards is voluntary; providers may demonstrate conformity by other means",
+      "Other JTC 21 deliverables (e.g. risk management prEN 18228, conformity assessment prEN 18285) are still in draft and not yet cited",
+      "High-risk obligations themselves apply from 2 Dec 2027 (Annex III) and 2 Aug 2028 (Annex I) under the Digital Omnibus"
+    ],
+    "actions": [
+      {
+        "text": "Ask vendors of HR, recruitment and creditworthiness AI tools whether their quality management system aligns with EN 18286 and how they plan to evidence conformity by 2 Dec 2027",
+        "owner": "Technology"
+      },
+      {
+        "text": "For in-house AI systems that could make the firm a high-risk provider, use EN 18286 as the benchmark for the quality management system design",
+        "owner": "Risk"
+      },
+      {
+        "text": "Track further harmonised-standard citations in the Official Journal and update vendor due diligence questions as they are published",
+        "owner": "Compliance"
+      }
+    ],
+    "milestones": [
+      {
+        "date": "2026-07-30",
+        "label": "CEN-CENELEC announces publication of EN 18286:2026",
+        "confirmed": true
+      },
+      {
+        "date": "2026-10-12",
+        "label": "Commission adopts Implementing Decision (EU) 2026/2274",
+        "confirmed": true
+      },
+      {
+        "date": "2026-10-14",
+        "label": "EN 18286 reference published in the Official Journal; presumption of conformity applies",
+        "confirmed": true
+      },
+      {
+        "date": "2027-12-02",
+        "label": "Annex III high-risk obligations apply",
+        "confirmed": true
+      },
+      {
+        "date": "2028-08-02",
+        "label": "Annex I high-risk obligations apply",
+        "confirmed": true
+      }
+    ],
+    "sourceUrl": "https://eur-lex.europa.eu/eli/dec_impl/2026/2274/oj",
+    "sourceLabel": "EUR-Lex",
+    "confidence": "medium"
+  },
+  {
+    "id": "us-ca-sb947-no-robo-bosses",
+    "market": "us",
+    "title": "California SB 947 'No Robo Bosses Act': human review of AI-driven discipline",
+    "officialTitle": "California Senate Bill 947 (2025-2026 Regular Session), No Robo Bosses Act",
+    "regulator": "California Legislature (enforced by California state labor authorities)",
+    "instrumentType": "legislation",
+    "status": "adopted",
+    "datePublished": "2026-09-30",
+    "effectiveDate": "2027-07-01",
+    "lastUpdated": "2026-09-30",
+    "latestUpdate": "Governor Newsom signed SB 947 on 30 Sep 2026, after vetoing a near-identical bill in Oct 2025. It takes effect 1 Jul 2027. Newsom signed 22 of 25 privacy/AI bills by the 30 Sep 2026 deadline, including AB 1883 (restricting emotion-inference workplace surveillance).",
+    "impact": "low",
+    "applicability": "direct",
+    "themes": [
+      "conduct",
+      "governance",
+      "third_party",
+      "recordkeeping"
+    ],
+    "summary": "SB 947 bars California employers of any size from relying solely on an automated decision system (ADS) to discipline or terminate employees. Where an employer primarily relies on ADS output, a human must independently corroborate the decision, for example with performance reviews or personnel files. Affected employees must get written notice that an ADS was used and can request a description of the data it relied on.",
+    "buySideImpact": "Affects asset managers employing staff in California that use AI-enabled HR, performance-analytics, surveillance or productivity tools feeding discipline or termination decisions, including trade and communications surveillance outputs used in conduct cases. It adds to the Civil Rights Council ADS regulations (in force Oct 2025) and CPPA ADMT rules (from Jan 2027). HR, compliance surveillance and employee-relations workflows need a documented human-corroboration step and notice templates before July 2027.",
+    "keyRequirements": [
+      "No discipline or termination based solely on ADS output",
+      "Human corroboration of the decision where an ADS is the primary basis",
+      "Written notice to affected employees that an ADS was used",
+      "Employee right to request a description of the data the ADS used",
+      "Civil penalties for violations; scope of 'primarily relies' is undefined in the statute (per commentators)"
+    ],
+    "actions": [
+      {
+        "text": "Inventory HR, productivity and surveillance tools whose outputs can feed discipline or termination decisions for California employees",
+        "owner": "Operations"
+      },
+      {
+        "text": "Add a documented human-corroboration step and post-decision ADS notice template to disciplinary and termination procedures",
+        "owner": "Legal"
+      },
+      {
+        "text": "Confirm vendors can provide a description of the data their tools used for individual decisions, and retain it",
+        "owner": "Technology"
+      }
+    ],
+    "milestones": [
+      {
+        "date": "2025-10-13",
+        "label": "Governor vetoes predecessor bill (SB 7)",
+        "confirmed": false
+      },
+      {
+        "date": "2026-09-30",
+        "label": "SB 947 signed",
+        "confirmed": true
+      },
+      {
+        "date": "2027-07-01",
+        "label": "SB 947 takes effect",
+        "confirmed": true
+      }
+    ],
+    "sourceUrl": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB947",
+    "sourceLabel": "California Legislative Information",
+    "confidence": "medium"
+  },
+  {
+    "id": "us-ct-sb5-ai-responsibility-act",
+    "market": "us",
+    "title": "Connecticut SB 5 (PA 26-15): AI law with employer AI-decision notice duties",
+    "officialTitle": "Connecticut Substitute Senate Bill No. 5, Public Act No. 26-15 (Artificial Intelligence Responsibility and Transparency Act)",
+    "regulator": "Connecticut General Assembly / Connecticut Attorney General",
+    "instrumentType": "legislation",
+    "status": "adopted",
+    "datePublished": "2026-05-29",
+    "effectiveDate": "2026-10-01",
+    "lastUpdated": "2026-05-29",
+    "latestUpdate": "Signed by Governor Lamont in late May 2026 (reported as 27 or 29 May, with a 2 Jun ceremonial signing). Provisions phase in from 1 Oct 2026 to 2028, and employer notice duties for automated employment decision tools apply to tools deployed on or after 1 Oct 2027. It was not in the 8 Oct 2026 tracker and is added as a missed item.",
+    "impact": "medium",
+    "applicability": "direct",
+    "themes": [
+      "conduct",
+      "governance",
+      "third_party",
+      "data_privacy"
+    ],
+    "summary": "PA 26-15 is a broad Connecticut AI statute covering employment, healthcare, online safety and AI companions. Employers that use automated employment-decision technology to make or materially influence employment decisions must give applicants and employees written notice of its use, the types of personal data considered and the data sources. Developers must pass information to deployers. Violations are unfair trade practices enforceable exclusively by the AG. The Act also confirms that using an AI tool is no defence to discrimination claims and requires notice to the state Labor Department when AI or automation causes a mass layoff.",
+    "buySideImpact": "Material for hedge funds and asset managers with Connecticut headcount (e.g., Greenwich/Stamford), whose recruiting, screening, performance and workforce-planning tools may be in scope. HR vendors will need to supply deployer information, and AI-driven restructuring may trigger Labor Department notice. Firms should align notices with Illinois HB 3773, Colorado SB 26-189 and California rules for a single multi-state approach.",
+    "keyRequirements": [
+      "Written notice to applicants/employees when automated employment-decision technology makes or materially influences decisions (tools deployed on/after 1 Oct 2027)",
+      "Disclosure of the types of personal data used and their sources",
+      "Developer duty to provide information to deployers",
+      "Use of AI is no defence to anti-discrimination claims",
+      "Notice to the CT Labor Department of AI/automation-caused mass layoffs or closures",
+      "Exclusive AG enforcement as an unfair or deceptive trade practice"
+    ],
+    "actions": [
+      {
+        "text": "Identify AI-enabled recruiting, HR and workforce tools used for Connecticut applicants or employees and map them to PA 26-15 notice duties",
+        "owner": "Operations"
+      },
+      {
+        "text": "Obtain developer/vendor disclosures needed to populate employee and applicant notices",
+        "owner": "Legal"
+      },
+      {
+        "text": "Add AI-related layoff notice checks to restructuring and WARN procedures for Connecticut sites",
+        "owner": "Legal"
+      }
+    ],
+    "milestones": [
+      {
+        "date": "2026-05-29",
+        "label": "SB 5 signed by Governor Lamont (date reported variously as 27-29 May; ceremonial signing 2 Jun)",
+        "confirmed": false
+      },
+      {
+        "date": "2026-10-01",
+        "label": "First provisions effective (incl. anti-discrimination amendment and AI layoff disclosure, per secondary sources)",
+        "confirmed": false
+      },
+      {
+        "date": "2027-01-01",
+        "label": "AI companion operator obligations apply",
+        "confirmed": false
+      },
+      {
+        "date": "2027-07-01",
+        "label": "AI regulatory sandbox programme plan due",
+        "confirmed": false
+      },
+      {
+        "date": "2027-10-01",
+        "label": "Employer notice duties apply to AI employment tools deployed on/after this date",
+        "confirmed": true
+      }
+    ],
+    "sourceUrl": "https://www.cga.ct.gov/2026/act/Pa/pdf/2026PA-00015-R00SB-00005-PA.PDF",
+    "sourceLabel": "Connecticut General Assembly",
+    "confidence": "low"
   }
 ]
