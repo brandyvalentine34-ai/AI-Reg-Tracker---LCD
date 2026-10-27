@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import type { Development } from '../types';
 import { EMPTY_FILTERS, activeFilterCount, collectMilestones, matchesFilters, nextMilestone, sortDevelopments } from '../lib/filters';
-import { actionPlanCSV, briefingMarkdown, toCSV } from '../lib/export';
+import { briefingMarkdown, toCSV } from '../lib/export';
 import { addDays, daysBetween, formatDate, quarterKey, relativeDays } from '../lib/dates';
 import { parseHash, buildHash } from '../state/router';
 
@@ -99,18 +99,11 @@ describe('exports', () => {
     expect(toCSV([['a', 'b,c', 'say "hi"']])).toBe('a,"b,c","say ""hi"""');
   });
 
-  it('builds an action plan CSV with saved progress', () => {
-    const csv = actionPlanCSV([dev({})], { 'x-a1': { status: 'done', owner: 'Legal', notes: 'ok' } });
-    const lines = csv.split('\r\n');
-    expect(lines).toHaveLength(2);
-    expect(lines[1]).toContain('"Do, ""the"" thing",Legal,Done');
-  });
-
   it('builds a markdown briefing', () => {
     const md = briefingMarkdown([dev({ impact: 'high' })], { title: 'Update', today: '2026-10-08', includeActions: true, upcoming: [] });
     expect(md).toContain('# Update');
     expect(md).toContain('## Key messages');
-    expect(md).toContain('- [ ] Do, "the" thing _(Compliance)_');
+    expect(md).toContain('- Do, "the" thing _(Compliance)_');
   });
 });
 

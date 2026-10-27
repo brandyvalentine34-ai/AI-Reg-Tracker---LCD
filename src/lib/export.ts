@@ -1,6 +1,6 @@
-import type { ActionProgress, Development } from '../types';
+import type { Development } from '../types';
 import { MARKETS } from '../data/markets';
-import { ACTION_STATUSES, APPLICABILITY, IMPACTS, STATUSES, THEMES } from './taxonomy';
+import { APPLICABILITY, IMPACTS, STATUSES, THEMES } from './taxonomy';
 import { formatDate } from './dates';
 import type { MilestoneEntry } from './filters';
 
@@ -11,39 +11,6 @@ function csvCell(value: string | number | undefined | null): string {
 
 export function toCSV(rows: (string | number | undefined | null)[][]): string {
   return rows.map((r) => r.map(csvCell).join(',')).join('\r\n');
-}
-
-export function actionPlanCSV(list: Development[], progress: Record<string, ActionProgress>): string {
-  const header = [
-    'Market',
-    'Development',
-    'Regulator',
-    'Impact',
-    'Action',
-    'Owner',
-    'Status',
-    'Due',
-    'Notes',
-    'Source',
-  ];
-  const rows = list.flatMap((d) =>
-    d.actions.map((a) => {
-      const p = progress[a.id];
-      return [
-        MARKETS[d.market].shortName,
-        d.title,
-        d.regulator,
-        IMPACTS[d.impact].label,
-        a.text,
-        p?.owner ?? a.owner,
-        ACTION_STATUSES[p?.status ?? 'not_started'].label,
-        p?.due ?? '',
-        p?.notes ?? '',
-        d.sourceUrl,
-      ];
-    }),
-  );
-  return toCSV([header, ...rows]);
 }
 
 export interface BriefingOptions {
@@ -85,7 +52,7 @@ export function briefingMarkdown(list: Development[], opts: BriefingOptions): st
     out.push(`**Themes:** ${d.themes.map((t) => THEMES[t].short).join(', ')}`, '');
     if (opts.includeActions && d.actions.length) {
       out.push('**Recommended actions:**');
-      for (const a of d.actions) out.push(`- [ ] ${a.text} _(${a.owner})_`);
+      for (const a of d.actions) out.push(`- ${a.text} _(${a.owner})_`);
       out.push('');
     }
     out.push(`Source: ${d.sourceUrl}`, '');

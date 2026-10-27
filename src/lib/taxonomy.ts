@@ -1,5 +1,4 @@
 import type {
-  ActionStatus,
   Applicability,
   Confidence,
   Impact,
@@ -145,13 +144,6 @@ export const OWNERS: Owner[] = [
   'Operations',
   'Board',
 ];
-
-export const ACTION_STATUSES: Record<ActionStatus, { label: string; badge: string }> = {
-  not_started: { label: 'Not started', badge: 'bg-slate-100 text-slate-600 ring-slate-200' },
-  in_progress: { label: 'In progress', badge: 'bg-amber-50 text-amber-800 ring-amber-200' },
-  done: { label: 'Done', badge: 'bg-emerald-50 text-emerald-700 ring-emerald-200' },
-  not_applicable: { label: 'N/A', badge: 'bg-white text-slate-400 ring-slate-200' },
-};
 
 export const THEME_ORDER = Object.keys(THEMES) as Theme[];
 export const STATUS_ORDER = Object.keys(STATUSES) as Status[];
