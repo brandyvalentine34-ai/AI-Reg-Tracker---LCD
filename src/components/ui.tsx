@@ -3,6 +3,7 @@ import { Star } from 'lucide-react';
 import type { Development, Impact, MarketId, Status, Theme } from '../types';
 import { MARKETS } from '../data/markets';
 import { IMPACTS, STATUSES, THEMES } from '../lib/taxonomy';
+import { Flag } from './Flag';
 
 export function cx(...parts: (string | false | null | undefined)[]): string {
   return parts.filter(Boolean).join(' ');
@@ -26,7 +27,7 @@ export function MarketTag({ market, compact }: { market: MarketId; compact?: boo
   const m = MARKETS[market];
   return (
     <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-700" title={m.name}>
-      <span aria-hidden className="text-sm leading-none">{m.flag}</span>
+      <Flag market={market} />
       {compact ? m.shortName : m.name}
     </span>
   );

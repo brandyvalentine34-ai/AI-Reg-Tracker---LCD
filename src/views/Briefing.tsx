@@ -8,6 +8,7 @@ import { collectMilestones, sortDevelopments } from '../lib/filters';
 import { addDays, formatDate } from '../lib/dates';
 import { IS_PREVIEW, briefingMarkdown, downloadFile } from '../lib/export';
 import { Button, Card, EmptyState, PageHeader, cx } from '../components/ui';
+import { Flag } from '../components/Flag';
 
 type Scope = 'recent' | 'high' | 'watched' | 'all';
 
@@ -132,7 +133,7 @@ export function Briefing({ scoped }: { scoped: Development[] }) {
                 {(high.length ? high : items.slice(0, 3)).map((d) => (
                   <li key={d.id} className="text-sm leading-relaxed text-slate-700">
                     <span className="font-semibold text-slate-900">
-                      {MARKETS[d.market].flag} {MARKETS[d.market].shortName} – {d.title}:
+                      <Flag market={d.market} /> {MARKETS[d.market].shortName} – {d.title}:
                     </span>{' '}
                     {d.latestUpdate}
                   </li>
@@ -165,7 +166,8 @@ export function Briefing({ scoped }: { scoped: Development[] }) {
               {items.map((d) => (
                 <div key={d.id} className="break-inside-avoid border-l-4 pl-4" style={{ borderColor: d.impact === 'high' ? '#e11d48' : d.impact === 'medium' ? '#fbbf24' : '#cbd5e1' }}>
                   <h4 className="text-base font-bold text-slate-900">
-                    {MARKETS[d.market].flag} {d.title}
+                    <Flag market={d.market} size="md" className="mr-1.5" />
+                    {d.title}
                   </h4>
                   <p className="mt-0.5 text-xs text-slate-500">
                     {d.regulator} · {STATUSES[d.status].label} · {IMPACTS[d.impact].label} · {APPLICABILITY[d.applicability].label} · Updated {formatDate(d.lastUpdated)}

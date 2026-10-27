@@ -5,7 +5,6 @@ export const MARKETS: Record<MarketId, Market> = {
     id: 'eu',
     name: 'European Union',
     shortName: 'EU',
-    flag: '🇪🇺',
     region: 'Europe',
     approach: 'Horizontal, risk-based AI legislation layered on existing financial services rules',
     posture:
@@ -16,7 +15,6 @@ export const MARKETS: Record<MarketId, Market> = {
     id: 'uk',
     name: 'United Kingdom',
     shortName: 'UK',
-    flag: '🇬🇧',
     region: 'Europe',
     approach: 'Principles-based and regulator-led; no AI-specific statute for financial services',
     posture:
@@ -27,7 +25,6 @@ export const MARKETS: Record<MarketId, Market> = {
     id: 'us',
     name: 'United States',
     shortName: 'US',
-    flag: '🇺🇸',
     region: 'Americas',
     approach: 'Enforcement-led at federal level; fragmented state legislation',
     posture:
@@ -38,7 +35,6 @@ export const MARKETS: Record<MarketId, Market> = {
     id: 'sg',
     name: 'Singapore',
     shortName: 'Singapore',
-    flag: '🇸🇬',
     region: 'Asia-Pacific',
     approach: 'Supervisory guidelines and industry frameworks; no horizontal AI law',
     posture:
@@ -49,7 +45,6 @@ export const MARKETS: Record<MarketId, Market> = {
     id: 'hk',
     name: 'Hong Kong',
     shortName: 'Hong Kong',
-    flag: '🇭🇰',
     region: 'Asia-Pacific',
     approach: 'Circulars and supervisory expectations; pro-adoption government policy',
     posture:
@@ -60,7 +55,6 @@ export const MARKETS: Record<MarketId, Market> = {
     id: 'jp',
     name: 'Japan',
     shortName: 'Japan',
-    flag: '🇯🇵',
     region: 'Asia-Pacific',
     approach: 'Promotion-focused soft law; AI Promotion Act with non-binding guidelines',
     posture:
@@ -71,7 +65,6 @@ export const MARKETS: Record<MarketId, Market> = {
     id: 'au',
     name: 'Australia',
     shortName: 'Australia',
-    flag: '🇦🇺',
     region: 'Asia-Pacific',
     approach: 'Existing technology-neutral laws plus voluntary guidance; no standalone AI act',
     posture:
@@ -82,7 +75,6 @@ export const MARKETS: Record<MarketId, Market> = {
     id: 'cn',
     name: 'Mainland China',
     shortName: 'China',
-    flag: '🇨🇳',
     region: 'Asia-Pacific',
     approach: 'Targeted, binding rules on algorithms, generative AI and content labelling',
     posture:
@@ -93,7 +85,6 @@ export const MARKETS: Record<MarketId, Market> = {
     id: 'kr',
     name: 'South Korea',
     shortName: 'Korea',
-    flag: '🇰🇷',
     region: 'Asia-Pacific',
     approach: 'Comprehensive AI framework act plus financial-sector guidelines',
     posture:
@@ -104,7 +95,6 @@ export const MARKETS: Record<MarketId, Market> = {
     id: 'global',
     name: 'Global standard-setters',
     shortName: 'Global',
-    flag: '🌐',
     region: 'International',
     approach: 'International principles and reports that shape national supervision',
     posture:

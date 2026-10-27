@@ -8,6 +8,7 @@ import { daysBetween, formatDate, relativeDays } from '../lib/dates';
 import { ActionRow } from './ActionRow';
 import { ImpactBadge, Pill, StatusBadge, ThemeChip, WatchButton, cx } from './ui';
 import { actionCompletion } from './DevelopmentRow';
+import { Flag } from './Flag';
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
@@ -57,7 +58,7 @@ export function DevelopmentDrawer({
         <header className="border-b border-slate-200 px-5 pb-4 pt-4 sm:px-6">
           <div className="flex items-start justify-between gap-3">
             <div className="flex items-center gap-2 text-xs font-semibold text-slate-600">
-              <span className="text-base leading-none" aria-hidden>{market.flag}</span>
+              <Flag market={d.market} size="md" />
               {market.name}
               <span className="text-slate-300">/</span>
               <span className="font-medium text-slate-500">{TYPES[d.instrumentType].label}</span>
