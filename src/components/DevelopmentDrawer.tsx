@@ -5,9 +5,7 @@ import { MARKETS } from '../data/markets';
 import { useWorkspace } from '../state/workspace';
 import { APPLICABILITY, CONFIDENCE, TYPES } from '../lib/taxonomy';
 import { daysBetween, formatDate, relativeDays } from '../lib/dates';
-import { ActionRow } from './ActionRow';
 import { ImpactBadge, Pill, StatusBadge, ThemeChip, WatchButton, cx } from './ui';
-import { actionCompletion } from './DevelopmentRow';
 import { Flag } from './Flag';
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
@@ -48,7 +46,6 @@ export function DevelopmentDrawer({
 
   if (!d) return null;
   const market = MARKETS[d.market];
-  const { done, total } = actionCompletion(d, ws.progress);
 
   return (
     <div className="fixed inset-0 z-50 flex justify-end" role="dialog" aria-modal="true" aria-labelledby="drawer-title">
@@ -141,10 +138,15 @@ export function DevelopmentDrawer({
             </ul>
           </Section>
 
-          <Section title={`Action plan · ${done}/${total} complete`}>
-            <ul className="space-y-2">
+          <Section title="Recommended actions">
+            <ul className="space-y-1.5">
               {d.actions.map((a) => (
-                <ActionRow key={a.id} action={a} />
+                <li key={a.id} className="flex gap-2 text-sm leading-relaxed text-slate-700">
+                  <span aria-hidden className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-slate-400" />
+                  <span>
+                    {a.text} <span className="text-xs text-slate-400">({a.owner})</span>
+                  </span>
+                </li>
               ))}
             </ul>
           </Section>

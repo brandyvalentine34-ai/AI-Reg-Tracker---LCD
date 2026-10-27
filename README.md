@@ -1,6 +1,6 @@
 # Global AI Regulatory Development Tracker
 
-A regulatory-intelligence workspace for **buy-side asset managers** (UCITS/AIF managers, RIAs, licensed fund managers) to track the latest AI regulatory developments across key markets, understand what they mean for the firm, and turn them into an evidenced action plan.
+A regulatory-intelligence workspace for **buy-side asset managers** (UCITS/AIF managers, RIAs, licensed fund managers) to track the latest AI regulatory developments across key markets, understand what they mean for the firm, and follow wider AI news. It is a reference and information tool.
 
 Developed by LCD Compliance for internal information purposes only. Please refer and verify against primary source.
 
@@ -8,15 +8,15 @@ Developed by LCD Compliance for internal information purposes only. Please refer
 
 | View | Purpose |
 | --- | --- |
-| **Overview** | KPIs (tracked, high impact, unread, deadlines ≤ 90 days, action completion), latest developments, upcoming deadlines, a market × theme exposure heatmap, and your watchlist. |
+| **Overview** | KPIs (tracked, high impact, unread, deadlines ≤ 90 days, recent AI news), latest developments, upcoming deadlines, a market × theme exposure heatmap, and your watchlist. |
 | **Developments** | Faceted library of every tracked law, rule, guidance, consultation and enforcement action. Search, filter by market / theme / impact / status / applicability / instrument, and sort by latest, impact or next deadline. |
-| **Detail panel** | Latest development, summary, *what it means for a buy-side firm*, key requirements, an editable action checklist, timeline, themes, source link and a verification-confidence note. Each item has a shareable URL (`#/developments?item=eu-ai-act`). |
-| **Action plan** | All recommended actions with status, owner, due date and notes, with completion by owner. Exports to CSV for committees or GRC tools. |
+| **Detail panel** | Latest development, summary, *what it means for a buy-side firm*, key requirements, recommended actions, timeline, themes, source link and a verification-confidence note. Each item has a shareable URL (`#/developments?item=eu-ai-act`). |
+| **AI News** | Headlines in three sections (Legal & litigation, Business, Technology) with date, outlet and a link to the original public reporting, modelled on the Ropes & Gray AI newsletter. Filter by section or search. |
 | **Briefing pack** | Generates a committee-ready briefing (key messages, deadlines, developments, actions). Copy as Markdown, download `.md`, or print to PDF. |
 
-**My footprint** (sidebar) lets each user pick the markets where the firm is licensed or distributes. The overview, action plan and briefing focus on those markets; global standard-setters are always included.
+**My footprint** (sidebar) lets each user pick the markets where the firm is licensed or distributes. The overview and briefing focus on those markets; global standard-setters are always included.
 
-Workspace state (footprint, watchlist, read status, action progress) is stored in the browser's `localStorage`. Export the action plan to CSV to share or archive it.
+Workspace state (footprint, watchlist, read status) is stored in the browser's `localStorage`.
 
 ## Coverage
 
@@ -38,7 +38,22 @@ All content lives in [`src/data/developments.json`](src/data/developments.json).
 2. Change `CONTENT_UPDATED_ON` in [`src/data/index.ts`](src/data/index.ts) to the refresh date. It is shown as *Content is updated as of …* in the sidebar and on the Overview.
 3. Run `bun run test`. The dataset test checks every entry for valid enums, ISO dates, unique ids and at least one action and milestone.
 
-Action progress is keyed by `<development id>-a<n>`. Append new actions rather than reordering existing ones, so that saved progress stays attached to the right action.
+### AI news
+
+Headlines live in [`src/data/news.json`](src/data/news.json), one object per story:
+
+| Field | Meaning |
+| --- | --- |
+| `category` | `legal`, `business` or `technology` |
+| `title` | The linked article's own headline |
+| `date` | Publication date, `YYYY-MM-DD` |
+| `publisher` | Outlet, e.g. `TechCrunch`, or `Reuters (via BNN Bloomberg)` for a republished wire story |
+| `url` | Link to the article (`null` only if none could be confirmed) |
+| `subscription` | `true` if the outlet usually needs a subscription |
+| `markets` | Market codes the story is about, e.g. `["us"]`, or `[]` |
+| `via` | Where the story was picked up, e.g. `Ropes & Gray AI newsletter`, or `null` |
+
+Prefer publicly readable sources. `bun run test` validates every entry.
 
 Market profiles are in [`src/data/markets.ts`](src/data/markets.ts). Taxonomy labels and colours are in [`src/lib/taxonomy.ts`](src/lib/taxonomy.ts).
 
@@ -53,7 +68,7 @@ Each refresh starts by checking which regulator websites the cloud environment c
    The site list is [`sources/regulator-domains.json`](sources/regulator-domains.json) plus every host used in a `sourceUrl` in `developments.json`, so new sources are picked up automatically. To add a regulator that has no tracked item yet, edit `regulator-domains.json`. Allow both the bare and `www.` form of each host: many sites redirect from one to the other.
 2. **Research and update.** Ask Claude Code in this repository:
 
-   > Refresh the Global AI Regulatory Development Tracker. First run `bun run check:sources` and read `sources/ACCESS.md`. Research AI regulatory developments since the last refresh (`CONTENT_UPDATED_ON` in `src/data/index.ts`) across all 10 markets, reading primary sources with curl wherever ACCESS.md shows them as readable (send a User-Agent with a name and contact email; the SEC requires one). Update `src/data/developments.json`: add new developments and update changed ones (`lastUpdated`, `latestUpdate`, milestones, confidence). Do not change or reorder existing actions. Set `CONTENT_UPDATED_ON` to today, run `bun run check:sources` again and `bun run test`, then open a pull request listing what changed, which sources were read directly, and anything you could not verify. Do not merge it.
+   > Refresh the Global AI Regulatory Development Tracker. First run `bun run check:sources` and read `sources/ACCESS.md`. Research AI regulatory developments since the last refresh (`CONTENT_UPDATED_ON` in `src/data/index.ts`) across all 10 markets, reading primary sources with curl wherever ACCESS.md shows them as readable (send a User-Agent with a name and contact email; the SEC requires one). Update `src/data/developments.json`: add new developments and update changed ones (`lastUpdated`, `latestUpdate`, milestones, confidence). Do not change or reorder existing actions. Also add AI news since the last refresh to `src/data/news.json` (Legal & litigation, Business and Technology only; public sources preferred; use each article's own headline and a link you have confirmed). Set `CONTENT_UPDATED_ON` to today, run `bun run check:sources` again and `bun run test`, then open a pull request listing what changed, which sources were read directly, and anything you could not verify. Do not merge it.
 
 3. **Review and merge** the pull request. Vercel redeploys from `main`.
 

@@ -1,5 +1,5 @@
 import { createContext, useCallback, useContext, useMemo, type ReactNode } from 'react';
-import type { ActionProgress, Development, MarketId } from '../types';
+import type { Development, MarketId } from '../types';
 import { usePersistentState } from '../lib/storage';
 import { MARKETS, MARKET_ORDER } from '../data/markets';
 import { DEVELOPMENTS_BY_ID } from '../data';
@@ -20,8 +20,6 @@ interface Workspace {
   markRead: (d: Development) => void;
   markAllRead: (list: Development[]) => void;
 
-  progress: Record<string, ActionProgress>;
-  updateAction: (actionId: string, patch: Partial<ActionProgress>) => void;
   resetWorkspace: () => void;
 }
 
@@ -43,7 +41,6 @@ export function WorkspaceProvider({ children, today = todayISO() }: { children: 
   const watchlist = useMemo(() => storedWatchlist.filter((id) => id in DEVELOPMENTS_BY_ID), [storedWatchlist]);
   // Maps development id -> the lastUpdated value the user has seen.
   const [readMap, setReadMap, resetRead] = usePersistentState<Record<string, string>>('read', EMPTY_MAP);
-  const [progress, setProgress, resetProgress] = usePersistentState<Record<string, ActionProgress>>('actions', EMPTY_MAP);
 
   const toggleWatch = useCallback(
     (id: string) => setWatchlist((w) => (w.includes(id) ? w.filter((x) => x !== id) : [...w, id])),
@@ -63,19 +60,6 @@ export function WorkspaceProvider({ children, today = todayISO() }: { children: 
     [setReadMap],
   );
 
-  const updateAction = useCallback(
-    (actionId: string, patch: Partial<ActionProgress>) =>
-      setProgress((p) => ({
-        ...p,
-        [actionId]: {
-          ...(p[actionId] ?? { status: 'not_started' }),
-          ...patch,
-          updatedAt: new Date().toISOString(),
-        },
-      })),
-    [setProgress],
-  );
-
   const value = useMemo<Workspace>(
     () => ({
       today,
@@ -88,18 +72,15 @@ export function WorkspaceProvider({ children, today = todayISO() }: { children: 
       isUnread,
       markRead,
       markAllRead,
-      progress,
-      updateAction,
       resetWorkspace: () => {
         resetFootprint();
         resetWatchlist();
         resetRead();
-        resetProgress();
       },
     }),
     [
       today, footprint, setFootprint, watchlist, toggleWatch, isUnread, markRead, markAllRead,
-      progress, updateAction, resetFootprint, resetWatchlist, resetRead, resetProgress,
+      resetFootprint, resetWatchlist, resetRead,
     ],
   );
 

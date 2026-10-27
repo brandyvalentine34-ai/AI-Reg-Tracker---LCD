@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
 import type { ViewId } from '../types';
 
-const VIEWS: ViewId[] = ['overview', 'developments', 'actions', 'briefing'];
+const VIEWS: ViewId[] = ['overview', 'developments', 'news', 'briefing'];
 
 export interface Route {
   view: ViewId;

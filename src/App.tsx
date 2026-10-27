@@ -10,7 +10,7 @@ import { DevelopmentDrawer } from './components/DevelopmentDrawer';
 import { FootprintDialog } from './components/FootprintDialog';
 import { Overview } from './views/Overview';
 import { Developments } from './views/Developments';
-import { ActionPlan } from './views/ActionPlan';
+import { News } from './views/News';
 import { Briefing } from './views/Briefing';
 
 export default function App() {
@@ -24,7 +24,7 @@ export default function App() {
   const itemId = route.params.get('item');
   const openItem = itemId ? DEVELOPMENTS_BY_ID[itemId] ?? null : null;
 
-  /** Developments in the user's market footprint – drives the overview, action plan and briefings. */
+  /** Developments in the user's market footprint – drives the overview and briefings. */
   const scoped = useMemo(() => DEVELOPMENTS.filter(ws.inFootprint), [ws.inFootprint]);
 
   const go = useCallback((v: ViewId) => navigate(v), [navigate]);
@@ -42,12 +42,6 @@ export default function App() {
   const browseTheme = useCallback((t: Theme) => browse({ themes: [t] }), [browse]);
 
   const unreadCount = scoped.filter(ws.isUnread).length;
-  const openActions = scoped
-    .flatMap((d) => d.actions)
-    .filter((a) => {
-      const s = ws.progress[a.id]?.status ?? 'not_started';
-      return s === 'not_started' || s === 'in_progress';
-    }).length;
 
   const selectable = ws.footprint.filter((m) => m !== 'global');
   const footprintLabel =
@@ -61,7 +55,6 @@ export default function App() {
         view={view}
         onNavigate={go}
         unreadCount={unreadCount}
-        openActions={openActions}
         footprintLabel={footprintLabel}
         onEditFootprint={() => setFootprintOpen(true)}
       />
@@ -72,7 +65,7 @@ export default function App() {
           {view === 'developments' && (
             <Developments all={DEVELOPMENTS} filters={filters} setFilters={setFilters} sort={sort} setSort={setSort} onOpen={onOpen} />
           )}
-          {view === 'actions' && <ActionPlan scoped={scoped} onOpen={onOpen} />}
+          {view === 'news' && <News />}
           {view === 'briefing' && <Briefing scoped={scoped} />}
         </main>
         <footer className="no-print border-t border-slate-200 px-4 py-5 text-center text-[11px] text-slate-500 sm:px-6 lg:px-8">

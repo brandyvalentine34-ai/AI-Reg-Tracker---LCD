@@ -1,12 +1,12 @@
-import { FileText, LayoutDashboard, ListChecks, Newspaper, Settings2 } from 'lucide-react';
+import { FileText, Landmark, LayoutDashboard, Newspaper, Settings2 } from 'lucide-react';
 import type { ViewId } from '../types';
 import { cx } from './ui';
 import { BrandCompact, BrandHeader, ContentUpdated } from './Brand';
 
 export const NAV: { id: ViewId; label: string; icon: typeof LayoutDashboard }[] = [
   { id: 'overview', label: 'Overview', icon: LayoutDashboard },
-  { id: 'developments', label: 'Developments', icon: Newspaper },
-  { id: 'actions', label: 'Action plan', icon: ListChecks },
+  { id: 'developments', label: 'Developments', icon: Landmark },
+  { id: 'news', label: 'AI News', icon: Newspaper },
   { id: 'briefing', label: 'Briefing pack', icon: FileText },
 ];
 
@@ -14,14 +14,12 @@ export function Sidebar({
   view,
   onNavigate,
   unreadCount,
-  openActions,
   footprintLabel,
   onEditFootprint,
 }: {
   view: ViewId;
   onNavigate: (v: ViewId) => void;
   unreadCount: number;
-  openActions: number;
   footprintLabel: string;
   onEditFootprint: () => void;
 }) {
@@ -31,7 +29,7 @@ export function Sidebar({
       <nav className="mt-6 shrink-0 space-y-1" aria-label="Main">
         {NAV.map(({ id, label, icon: Icon }) => {
           const active = view === id;
-          const badge = id === 'developments' ? unreadCount : id === 'actions' ? openActions : 0;
+          const badge = id === 'developments' ? unreadCount : 0;
           return (
             <button
               key={id}

@@ -118,17 +118,28 @@ export interface Market {
   keyRegulators: string[];
 }
 
-/** ---- User workspace state (persisted locally) ---- */
+/** ---- AI news ---- */
 
-export type ActionStatus = 'not_started' | 'in_progress' | 'done' | 'not_applicable';
+export type NewsCategory = 'legal' | 'business' | 'technology';
 
-export interface ActionProgress {
-  status: ActionStatus;
-  owner?: Owner;
-  due?: string; // YYYY-MM-DD
-  notes?: string;
-  updatedAt?: string; // ISO timestamp
+export interface NewsItem {
+  id: string;
+  category: NewsCategory;
+  /** The linked article's headline */
+  title: string;
+  date: string; // YYYY-MM-DD
+  /** Outlet, e.g. "TechCrunch" or "Reuters (via BNN Bloomberg)" */
+  publisher: string;
+  /** Article link; null only when no article could be confirmed */
+  url: string | null;
+  /** The outlet usually needs a subscription */
+  subscription: boolean;
+  markets: MarketId[];
+  /** Where the story was picked up, e.g. "Ropes & Gray AI newsletter" */
+  via: string | null;
 }
+
+/** ---- User workspace state (persisted locally) ---- */
 
 export interface Filters {
   query: string;
@@ -144,4 +155,4 @@ export interface Filters {
 
 export type SortKey = 'latest' | 'impact' | 'next_deadline' | 'market';
 
-export type ViewId = 'overview' | 'developments' | 'actions' | 'briefing';
+export type ViewId = 'overview' | 'developments' | 'news' | 'briefing';

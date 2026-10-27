@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import { ArrowRight, BellDot, CalendarClock, Flame, Grid3X3, ListChecks, Star } from 'lucide-react';
+import { ArrowRight, BellDot, CalendarClock, Flame, Grid3X3, Newspaper, Star } from 'lucide-react';
 import type { Development, Filters, MarketId, SortKey, Theme, ViewId } from '../types';
 import { useWorkspace } from '../state/workspace';
 import { MARKETS, MARKET_ORDER } from '../data/markets';
@@ -10,6 +10,7 @@ import { DevelopmentRow } from '../components/DevelopmentRow';
 import { Flag } from '../components/Flag';
 import { Button, Card, CardHeader, ImpactBadge, PageHeader, cx } from '../components/ui';
 import { ContentUpdated } from '../components/Brand';
+import { NEWS } from '../data/news';
 
 /** Sequential single-hue (blue) ramp: lightest = fewest. Text flips to white on dark steps. */
 const HEAT_STEPS = [
@@ -88,10 +89,8 @@ export function Overview({
   const unread = scoped.filter(ws.isUnread);
   const watched = scoped.filter((d) => ws.isWatched(d.id));
 
-  const actionIds = scoped.flatMap((d) => d.actions.map((a) => a.id));
-  const applicable = actionIds.filter((id) => ws.progress[id]?.status !== 'not_applicable');
-  const doneCount = applicable.filter((id) => ws.progress[id]?.status === 'done').length;
-  const pct = applicable.length ? Math.round((doneCount / applicable.length) * 100) : 0;
+  const newsSince = addDays(ws.today, -30);
+  const recentNews = NEWS.filter((n) => n.date >= newsSince);
 
   const markets = MARKET_ORDER.filter((m) => scoped.some((d) => d.market === m));
   const matrix = useMemo(() => {
@@ -125,7 +124,7 @@ export function Overview({
         <Kpi label="High impact" value={high.length} hint="for asset managers" icon={Flame} tone="rose" onClick={() => onBrowse({ impacts: ['high'] })} />
         <Kpi label="Unread updates" value={unread.length} hint="since you last looked" icon={BellDot} tone="blue" onClick={() => onBrowse({ unreadOnly: true })} />
         <Kpi label="Deadlines ≤ 90 days" value={next90.length} hint={`to ${formatDate(horizonEnd)}`} icon={CalendarClock} tone="amber" onClick={() => onBrowse({}, 'next_deadline')} />
-        <Kpi label="Action plan" value={`${pct}%`} hint={`${doneCount} of ${applicable.length} actions done`} icon={ListChecks} tone="emerald" onClick={() => onNavigate('actions')} />
+        <Kpi label="AI News" value={recentNews.length} hint="headlines in the last 30 days" icon={Newspaper} tone="emerald" onClick={() => onNavigate('news')} />
       </div>
 
       <div className="grid grid-cols-1 gap-6 xl:grid-cols-5">

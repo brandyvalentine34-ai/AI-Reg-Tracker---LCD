@@ -177,17 +177,14 @@ export function Briefing({ scoped }: { scoped: Development[] }) {
                   <p className="mt-1.5 text-xs text-slate-500">Themes: {d.themes.map((t) => THEMES[t].short).join(', ')}</p>
                   {includeActions && (
                     <ul className="mt-2 space-y-1">
-                      {d.actions.map((a) => {
-                        const st = ws.progress[a.id]?.status;
-                        return (
-                          <li key={a.id} className="flex gap-2 text-sm text-slate-700">
-                            <span aria-hidden className="mt-0.5 font-mono text-xs text-slate-400">{st === 'done' ? '[x]' : st === 'not_applicable' ? '[–]' : '[ ]'}</span>
-                            <span>
-                              {a.text} <span className="text-xs text-slate-400">({ws.progress[a.id]?.owner ?? a.owner})</span>
-                            </span>
-                          </li>
-                        );
-                      })}
+                      {d.actions.map((a) => (
+                        <li key={a.id} className="flex gap-2 text-sm text-slate-700">
+                          <span aria-hidden className="mt-2 h-1 w-1 shrink-0 rounded-full bg-slate-400" />
+                          <span>
+                            {a.text} <span className="text-xs text-slate-400">({a.owner})</span>
+                          </span>
+                        </li>
+                      ))}
                     </ul>
                   )}
                   <p className="mt-2 break-all text-xs text-blue-700">{d.sourceUrl}</p>

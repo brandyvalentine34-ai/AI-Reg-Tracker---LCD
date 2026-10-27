@@ -1,0 +1,161 @@
+[
+  {
+    "id": "ftc-probe-ai-labs",
+    "category": "legal",
+    "title": "FTC Opens Probe Into AI Giants Including Anthropic and OpenAI",
+    "date": "2026-09-30",
+    "publisher": "Reuters",
+    "url": null,
+    "subscription": true,
+    "markets": [
+      "us"
+    ],
+    "via": "Ropes & Gray AI newsletter"
+  },
+  {
+    "id": "third-circuit-westlaw-ross",
+    "category": "legal",
+    "title": "Third Circuit Affirms Thomson Reuters’ Westlaw AI Copyright Win",
+    "date": "2026-09-29",
+    "publisher": "Law360",
+    "url": null,
+    "subscription": true,
+    "markets": [
+      "us"
+    ],
+    "via": "Ropes & Gray AI newsletter"
+  },
+  {
+    "id": "dc-circuit-pentagon-anthropic",
+    "category": "legal",
+    "title": "D.C. Circuit Rules Pentagon’s Blacklist of Anthropic Was Legal",
+    "date": "2026-09-25",
+    "publisher": "CNN",
+    "url": null,
+    "subscription": false,
+    "markets": [
+      "us"
+    ],
+    "via": "Ropes & Gray AI newsletter"
+  },
+  {
+    "id": "doj-openai-copyright-brief",
+    "category": "legal",
+    "title": "DOJ’s OpenAI Copyright Brief Previews AI Licensing’s Future",
+    "date": "2026-09-24",
+    "publisher": "Bloomberg Law",
+    "url": "https://news.bloomberglaw.com/social-justice/dojs-openai-copyright-brief-previews-ai-licensing-deals-future",
+    "subscription": true,
+    "markets": [
+      "us"
+    ],
+    "via": "Ropes & Gray AI newsletter"
+  },
+  {
+    "id": "china-probes-deepseek-moonshot",
+    "category": "legal",
+    "title": "China Probes DeepSeek, Moonshot Over Possible Data Transfers to Anthropic's Claude",
+    "date": "2026-09-24",
+    "publisher": "MLex",
+    "url": null,
+    "subscription": false,
+    "markets": [
+      "cn"
+    ],
+    "via": "Ropes & Gray AI newsletter"
+  },
+  {
+    "id": "ags-congress-ai-preemption",
+    "category": "legal",
+    "title": "AGs Push Congress to Regulate AI But Not Preempt State Laws",
+    "date": "2026-09-24",
+    "publisher": "Law360",
+    "url": null,
+    "subscription": false,
+    "markets": [
+      "us"
+    ],
+    "via": "Ropes & Gray AI newsletter"
+  },
+  {
+    "id": "openai-personal-agents",
+    "category": "business",
+    "title": "OpenAI Follows Meta Muse Into the Red-Hot Market for Personal Agents",
+    "date": "2026-09-30",
+    "publisher": "CNBC",
+    "url": null,
+    "subscription": false,
+    "markets": [],
+    "via": "Ropes & Gray AI newsletter"
+  },
+  {
+    "id": "ceos-ai-cyber-crisis-plans",
+    "category": "business",
+    "title": "AI Cyber Risk Spurs Top U.S. CEOs to Build Cross-Industry Crisis Plans",
+    "date": "2026-09-30",
+    "publisher": "Wall Street Journal",
+    "url": null,
+    "subscription": true,
+    "markets": [
+      "us"
+    ],
+    "via": "Ropes & Gray AI newsletter"
+  },
+  {
+    "id": "instinct-series-c",
+    "category": "business",
+    "title": "Viral AI Agent Instinct Raises $1 Billion Series C at a $10 Billion Valuation",
+    "date": "2026-09-28",
+    "publisher": "TechCrunch",
+    "url": "https://techcrunch.com/2026/09/28/viral-ai-agent-instinct-raises-1b-series-c-at-a-10b-valuation",
+    "subscription": false,
+    "markets": [],
+    "via": "Ropes & Gray AI newsletter"
+  },
+  {
+    "id": "anthropic-akamai-cloud-deal",
+    "category": "business",
+    "title": "Anthropic to Pay Akamai $11.6 Billion Over Seven Years in Cloud Deal",
+    "date": "2026-09-25",
+    "publisher": "TechCrunch",
+    "url": "https://techcrunch.com/2026/09/25/anthropic-to-pay-akamai-11-6-billion-over-seven-years-in-cloud-deal/",
+    "subscription": false,
+    "markets": [],
+    "via": "Ropes & Gray AI newsletter"
+  },
+  {
+    "id": "nvidia-agent-safety-system",
+    "category": "technology",
+    "title": "Nvidia Debuts System Designed to Stop AI Agents From Going Awry",
+    "date": "2026-09-28",
+    "publisher": "Bloomberg Law",
+    "url": null,
+    "subscription": true,
+    "markets": [],
+    "via": "Ropes & Gray AI newsletter"
+  },
+  {
+    "id": "openai-agents-government-websites",
+    "category": "technology",
+    "title": "OpenAI Agents Hit U.S. Government Websites",
+    "date": "2026-09-25",
+    "publisher": "Wall Street Journal",
+    "url": null,
+    "subscription": true,
+    "markets": [
+      "us"
+    ],
+    "via": "Ropes & Gray AI newsletter"
+  },
+  {
+    "id": "openai-agents-posted-user-images",
+    "category": "technology",
+    "title": "Unsecured OpenAI Agents Posted 53 User Images on the Internet Without the Lab’s Knowledge",
+    "date": "2026-09-25",
+    "publisher": "TechCrunch",
+    "url": "https://techcrunch.com/2026/09/25/unsecured-openai-agents-posted-53-user-images-on-the-internet-without-the-labs-knowledge/",
+    "subscription": false,
+    "markets": [],
+    "via": "Ropes & Gray AI newsletter"
+  }
+]
