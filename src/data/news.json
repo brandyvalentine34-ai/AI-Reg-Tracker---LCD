@@ -157,5 +157,225 @@
     "subscription": false,
     "markets": [],
     "via": "Ropes & Gray AI newsletter"
+  },
+  {
+    "id": "hawley-murphy-ai-liability-bill",
+    "category": "legal",
+    "title": "Exclusive: Sens. Hawley, Murphy push AI liability as Trump backs self-regulation",
+    "date": "2026-10-01",
+    "publisher": "Axios",
+    "url": "https://www.axios.com/2026/10/01/hawley-murphy-ai-liability-trump",
+    "subscription": false,
+    "markets": [
+      "us"
+    ],
+    "via": null
+  },
+  {
+    "id": "nyc-council-ai-safety-hearing",
+    "category": "legal",
+    "title": "AI researcher warns 'we are racing to build and grow our own adversary' in NYC hearing",
+    "date": "2026-10-05",
+    "publisher": "CNBC",
+    "url": "https://www.cnbc.com/2026/10/05/anthropic-openai-google-meta-execs-testify-nyc-council-ai-hearing.html",
+    "subscription": false,
+    "markets": [
+      "us"
+    ],
+    "via": null
+  },
+  {
+    "id": "trump-ai-task-force-rogue-behavior-directive",
+    "category": "legal",
+    "title": "Trump AI directive sparks questions",
+    "date": "2026-10-13",
+    "publisher": "Semafor",
+    "url": "https://www.semafor.com/article/10/13/2026/trump-ai-directive-sparks-questions",
+    "subscription": false,
+    "markets": [
+      "us"
+    ],
+    "via": null
+  },
+  {
+    "id": "eight-states-sue-openai-chatgpt",
+    "category": "legal",
+    "title": "States sue AI giant OpenAI, saying ChatGPT is hurting children and deceiving adults",
+    "date": "2026-10-15",
+    "publisher": "AP (via Hawaii News Now)",
+    "url": "https://www.hawaiinewsnow.com/2026/10/15/states-sue-ai-giant-openai-saying-chatgpt-is-hurting-children-deceiving-adults/",
+    "subscription": false,
+    "markets": [
+      "us"
+    ],
+    "via": null
+  },
+  {
+    "id": "ftc-cids-openai-anthropic-safety-incidents",
+    "category": "legal",
+    "title": "Scoop: The FTC demanded documents from AI giants over recent safety incidents",
+    "date": "2026-10-15",
+    "publisher": "Axios",
+    "url": "https://www.axios.com/2026/10/15/ftc-openai-anthropic-ai-safety-investigation",
+    "subscription": false,
+    "markets": [
+      "us"
+    ],
+    "via": null
+  },
+  {
+    "id": "ftc-demands-anthropic-exec-testimony",
+    "category": "legal",
+    "title": "Scoop: The FTC is demanding Anthropic execs testify in expanding AI safety probe",
+    "date": "2026-10-26",
+    "publisher": "Axios",
+    "url": "https://www.axios.com/2026/10/26/ftc-ai-safety-probe-anthropic-openai",
+    "subscription": false,
+    "markets": [
+      "us"
+    ],
+    "via": null
+  },
+  {
+    "id": "ai-stocks-sink-openai-revenue-report",
+    "category": "business",
+    "title": "Nvidia, Oracle, CoreWeave and other AI stocks sink on OpenAI revenue report",
+    "date": "2026-10-08",
+    "publisher": "CNBC",
+    "url": "https://www.cnbc.com/2026/10/08/open-ai-revenue-nvidia-oracle-coreweave.html",
+    "subscription": false,
+    "markets": [
+      "us"
+    ],
+    "via": null
+  },
+  {
+    "id": "tenstorrent-series-e-6-2b-valuation",
+    "category": "business",
+    "title": "Tenstorrent hits $6.2B valuation to scale open-weight AI chips",
+    "date": "2026-10-19",
+    "publisher": "TechCrunch",
+    "url": "https://techcrunch.com/2026/10/19/tenstorrent-hits-6-2b-valuation-to-scale-open-weight-ai-chips/",
+    "subscription": false,
+    "markets": [],
+    "via": null
+  },
+  {
+    "id": "openai-30b-raise-1-25t-valuation",
+    "category": "business",
+    "title": "OpenAI working on new $30B raise at $1.25T valuation ahead of IPO",
+    "date": "2026-10-22",
+    "publisher": "TechCrunch",
+    "url": "https://techcrunch.com/2026/10/22/openai-working-on-new-30b-raise-at-1-25t-valuation-ahead-of-ipo/",
+    "subscription": false,
+    "markets": [],
+    "via": null
+  },
+  {
+    "id": "anthropic-files-s1-ipo",
+    "category": "business",
+    "title": "Anthropic files for its IPO",
+    "date": "2026-10-26",
+    "publisher": "Axios",
+    "url": "https://www.axios.com/2026/10/26/anthropic-ipo",
+    "subscription": false,
+    "markets": [
+      "us"
+    ],
+    "via": null
+  },
+  {
+    "id": "meta-95b-stock-offering-ai",
+    "category": "business",
+    "title": "Meta launches plan for $95 billion stock offering to fund AI expansion",
+    "date": "2026-10-26",
+    "publisher": "CNBC",
+    "url": "https://www.cnbc.com/2026/10/26/meta-stock-offering-ai.html",
+    "subscription": false,
+    "markets": [
+      "us"
+    ],
+    "via": null
+  },
+  {
+    "id": "spacex-apollo-40b-gpu-financing",
+    "category": "business",
+    "title": "SpaceX locks in $40B GPU financing deal with Apollo",
+    "date": "2026-10-26",
+    "publisher": "TechCrunch",
+    "url": "https://techcrunch.com/2026/10/26/spacex-locks-in-40b-gpu-financing-deal-with-apollo/",
+    "subscription": false,
+    "markets": [],
+    "via": null
+  },
+  {
+    "id": "mistral-new-open-weight-model",
+    "category": "technology",
+    "title": "Mistral unveils new AI model it says rivals best open systems from China",
+    "date": "2026-10-06",
+    "publisher": "CNBC",
+    "url": "https://www.cnbc.com/2026/10/06/mistral-ai-model-le-chonk.html",
+    "subscription": false,
+    "markets": [],
+    "via": null
+  },
+  {
+    "id": "meta-muse-frontier-model",
+    "category": "technology",
+    "title": "Meta has reached AI ‘frontier,’ Zuckerberg says",
+    "date": "2026-10-12",
+    "publisher": "Semafor",
+    "url": "https://www.semafor.com/article/10/12/2026/meta-has-reached-ai-frontier-zuckerberg-says",
+    "subscription": false,
+    "markets": [],
+    "via": null
+  },
+  {
+    "id": "anthropic-self-replication-home-devices",
+    "category": "technology",
+    "title": "Anthropic warns AI models could soon copy themselves across home devices",
+    "date": "2026-10-13",
+    "publisher": "CNBC",
+    "url": "https://www.cnbc.com/2026/10/13/anthropic-ai-models-self-replication-smart-devices.html",
+    "subscription": false,
+    "markets": [],
+    "via": null
+  },
+  {
+    "id": "anthropic-claude-duet-personal-agent",
+    "category": "technology",
+    "title": "Anthropic announces preview of Claude Duet, a personal AI agent to take on Muse, Dots",
+    "date": "2026-10-21",
+    "publisher": "CNBC",
+    "url": "https://www.cnbc.com/2026/10/21/anthropic-preview-of-claude-duet-personal-ai-agent-take-on-muse-dots.html",
+    "subscription": false,
+    "markets": [],
+    "via": null
+  },
+  {
+    "id": "php-ai-discovered-flaw-websites-go-dark",
+    "category": "technology",
+    "title": "Government websites go dark after AI-discovered flaw sparks security scramble",
+    "date": "2026-10-21",
+    "publisher": "Reuters (via The Daily Record)",
+    "url": "https://thedailyrecord.com/2026/10/21/government-websites-go-dark-after-ai-discovered-flaw-sparks-security-scramble/",
+    "subscription": false,
+    "markets": [
+      "global"
+    ],
+    "via": null
+  },
+  {
+    "id": "microsoft-china-hackers-ai-connectwise",
+    "category": "technology",
+    "title": "Chinese-linked hackers compromise ConnectWise, target hundreds in global attack, Microsoft says",
+    "date": "2026-10-21",
+    "publisher": "Reuters (via KFGO)",
+    "url": "https://kfgo.com/2026/10/21/chinese-linked-hackers-compromise-connectwise-target-hundreds-in-global-attack-microsoft-says/",
+    "subscription": false,
+    "markets": [
+      "global"
+    ],
+    "via": null
   }
 ]
