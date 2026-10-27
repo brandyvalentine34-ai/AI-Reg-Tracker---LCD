@@ -2,11 +2,11 @@
   {
     "id": "ftc-probe-ai-labs",
     "category": "legal",
-    "title": "FTC Opens Probe Into AI Giants Including Anthropic and OpenAI",
+    "title": "FTC opens probe into AI giants including Anthropic and OpenAI",
     "date": "2026-09-30",
-    "publisher": "Reuters",
-    "url": null,
-    "subscription": true,
+    "publisher": "Reuters (via The Star)",
+    "url": "https://www.thestar.com.my/tech/tech-news/2026/09/30/ftc-opens-probe-into-ai-giants-including-anthropic-and-openai-source-says",
+    "subscription": false,
     "markets": [
       "us"
     ],
@@ -15,11 +15,11 @@
   {
     "id": "third-circuit-westlaw-ross",
     "category": "legal",
-    "title": "Third Circuit Affirms Thomson Reuters’ Westlaw AI Copyright Win",
-    "date": "2026-09-29",
-    "publisher": "Law360",
-    "url": null,
-    "subscription": true,
+    "title": "Third Circuit Affirms Revised Fair Use Ruling Against ROSS’ AI Legal Research Platform in Sealed Opinion",
+    "date": "2026-09-30",
+    "publisher": "IPWatchdog",
+    "url": "https://ipwatchdog.com/2026/09/30/third-circuit-affirms-revised-fair-use-ruling-against-ross-ai-legal-research-platform-in-sealed-opinion/",
+    "subscription": false,
     "markets": [
       "us"
     ],
@@ -28,10 +28,10 @@
   {
     "id": "dc-circuit-pentagon-anthropic",
     "category": "legal",
-    "title": "D.C. Circuit Rules Pentagon’s Blacklist of Anthropic Was Legal",
+    "title": "Federal appeals court rules Pentagon’s blacklist of Anthropic was legal",
     "date": "2026-09-25",
     "publisher": "CNN",
-    "url": null,
+    "url": "https://www.cnn.com/2026/09/25/tech/anthropic-pentagon-blacklist-dc-ruling",
     "subscription": false,
     "markets": [
       "us"
@@ -54,10 +54,10 @@
   {
     "id": "china-probes-deepseek-moonshot",
     "category": "legal",
-    "title": "China Probes DeepSeek, Moonshot Over Possible Data Transfers to Anthropic's Claude",
-    "date": "2026-09-24",
-    "publisher": "MLex",
-    "url": null,
+    "title": "China Reportedly Probes DeepSeek, Moonshot Over Claude Data Routing",
+    "date": "2026-09-25",
+    "publisher": "TechRepublic",
+    "url": "https://www.techrepublic.com/article/news-deepseek-moonshot-claude-data-probe-apac-china/",
     "subscription": false,
     "markets": [
       "cn"
@@ -67,10 +67,10 @@
   {
     "id": "ags-congress-ai-preemption",
     "category": "legal",
-    "title": "AGs Push Congress to Regulate AI But Not Preempt State Laws",
+    "title": "23 states urge Congress to regulate AI, warn of risks to national security and infrastructure",
     "date": "2026-09-24",
-    "publisher": "Law360",
-    "url": null,
+    "publisher": "ABC News",
+    "url": "https://abcnews.com/US/23-states-urge-congress-regulate-ai-warn-risks/story?id=136711204",
     "subscription": false,
     "markets": [
       "us"
@@ -80,10 +80,10 @@
   {
     "id": "openai-personal-agents",
     "category": "business",
-    "title": "OpenAI Follows Meta Muse Into the Red-Hot Market for Personal Agents",
+    "title": "OpenAI follows Meta into the red-hot market for personal agents. But will users pay?",
     "date": "2026-09-30",
     "publisher": "CNBC",
-    "url": null,
+    "url": "https://www.cnbc.com/2026/09/30/openai-follows-meta-into-the-red-hot-market-for-personal-agents.html",
     "subscription": false,
     "markets": [],
     "via": "Ropes & Gray AI newsletter"
@@ -91,11 +91,11 @@
   {
     "id": "ceos-ai-cyber-crisis-plans",
     "category": "business",
-    "title": "AI Cyber Risk Spurs Top U.S. CEOs to Build Cross-Industry Crisis Plans",
+    "title": "Who's who of CEOs join group to protect critical infrastructure from AI",
     "date": "2026-09-30",
-    "publisher": "Wall Street Journal",
-    "url": null,
-    "subscription": true,
+    "publisher": "Axios",
+    "url": "https://www.axios.com/2026/09/30/alliance-for-critical-infrastructure-ceos-ai",
+    "subscription": false,
     "markets": [
       "us"
     ],
@@ -126,22 +126,22 @@
   {
     "id": "nvidia-agent-safety-system",
     "category": "technology",
-    "title": "Nvidia Debuts System Designed to Stop AI Agents From Going Awry",
+    "title": "Nvidia unveils security platform to stop AI agents from going rogue",
     "date": "2026-09-28",
-    "publisher": "Bloomberg Law",
-    "url": null,
-    "subscription": true,
+    "publisher": "AP (via PBS NewsHour)",
+    "url": "https://www.pbs.org/newshour/world/nvidia-unveils-security-platform-to-stop-ai-agents-from-going-rogue",
+    "subscription": false,
     "markets": [],
     "via": "Ropes & Gray AI newsletter"
   },
   {
     "id": "openai-agents-government-websites",
     "category": "technology",
-    "title": "OpenAI Agents Hit U.S. Government Websites",
-    "date": "2026-09-25",
-    "publisher": "Wall Street Journal",
-    "url": null,
-    "subscription": true,
+    "title": "OpenAI says its models engaged with US government websites in unexpected ways",
+    "date": "2026-09-26",
+    "publisher": "AP (via WSMV)",
+    "url": "https://www.wsmv.com/2026/09/26/openai-says-its-models-engaged-with-us-government-websites-unexpected-ways/",
+    "subscription": false,
     "markets": [
       "us"
     ],
