@@ -17,6 +17,7 @@ import {
 } from '../lib/taxonomy';
 import { EMPTY_FILTERS, activeFilterCount, matchesFilters, sortDevelopments } from '../lib/filters';
 import { DevelopmentRow } from '../components/DevelopmentRow';
+import { Flag } from '../components/Flag';
 import { Button, EmptyState, PageHeader, cx } from '../components/ui';
 
 type ListKey = 'markets' | 'themes' | 'statuses' | 'impacts' | 'applicability' | 'types';
@@ -129,7 +130,7 @@ export function Developments({
         selected={filters.markets}
         label={(k) => (
           <>
-            <span aria-hidden>{MARKETS[k].flag}</span> {MARKETS[k].shortName}
+            <Flag market={k} /> {MARKETS[k].shortName}
             {!ws.footprint.includes(k) && k !== 'global' && <span className="ml-1 text-[10px] text-slate-400">(outside footprint)</span>}
           </>
         )}

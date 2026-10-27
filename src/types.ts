@@ -109,7 +109,6 @@ export interface Market {
   id: MarketId;
   name: string;
   shortName: string;
-  flag: string;
   region: 'Europe' | 'Americas' | 'Asia-Pacific' | 'International';
   /** One-line characterisation of the regulatory model */
   approach: string;

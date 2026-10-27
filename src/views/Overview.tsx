@@ -7,6 +7,7 @@ import { THEMES, THEME_ORDER } from '../lib/taxonomy';
 import { collectMilestones, sortDevelopments } from '../lib/filters';
 import { addDays, daysBetween, formatDate, relativeDays } from '../lib/dates';
 import { DevelopmentRow } from '../components/DevelopmentRow';
+import { Flag } from '../components/Flag';
 import { Button, Card, CardHeader, ImpactBadge, PageHeader, cx } from '../components/ui';
 import { ContentUpdated } from '../components/Brand';
 
@@ -167,7 +168,7 @@ export function Overview({
                     </div>
                     <div className="min-w-0 flex-1">
                       <p className="text-xs text-slate-500">
-                        <span aria-hidden>{MARKETS[m.development.market].flag}</span> {MARKETS[m.development.market].shortName} ·{' '}
+                        <Flag market={m.development.market} size="xs" /> {MARKETS[m.development.market].shortName} ·{' '}
                         <span className={cx(days <= 30 ? 'font-semibold text-rose-600' : '')}>{relativeDays(days)}</span>
                         {!m.confirmed && <span className="italic"> · indicative</span>}
                       </p>
@@ -206,7 +207,7 @@ export function Overview({
                 <tr key={m}>
                   <th scope="row" className="whitespace-nowrap pr-2 text-left font-semibold text-slate-700">
                     <button type="button" onClick={() => onBrowse({ markets: [m] })} className="hover:text-blue-700">
-                      <span aria-hidden>{MARKETS[m].flag}</span> {MARKETS[m].shortName}
+                      <Flag market={m} /> {MARKETS[m].shortName}
                     </button>
                   </th>
                   {THEME_ORDER.map((t: Theme) => {
@@ -250,7 +251,7 @@ export function Overview({
             {sortDevelopments(watched, 'latest', ws.today).map((d) => (
               <li key={d.id}>
                 <button type="button" onClick={() => onOpen(d.id)} className="flex w-full items-center gap-3 px-5 py-3 text-left hover:bg-slate-50">
-                  <span aria-hidden>{MARKETS[d.market].flag}</span>
+                  <Flag market={d.market} />
                   <span className="min-w-0 flex-1 truncate text-sm font-medium text-slate-800">{d.title}</span>
                   <ImpactBadge impact={d.impact} />
                   <span className="hidden text-[11px] text-slate-500 sm:inline">Updated {formatDate(d.lastUpdated)}</span>

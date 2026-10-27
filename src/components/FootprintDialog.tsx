@@ -4,6 +4,7 @@ import type { MarketId } from '../types';
 import { MARKETS, MARKET_ORDER } from '../data/markets';
 import { useWorkspace } from '../state/workspace';
 import { Button, cx } from './ui';
+import { Flag } from './Flag';
 
 const SELECTABLE = MARKET_ORDER.filter((m) => m !== 'global');
 
@@ -73,7 +74,7 @@ export function FootprintDialog({ open, onClose }: { open: boolean; onClose: () 
                 )}
               >
                 <input type="checkbox" checked={on} onChange={() => toggle(id)} className="accent-blue-600" />
-                <span aria-hidden>{m.flag}</span>
+                <Flag market={id} />
                 <span className="font-medium">{m.shortName}</span>
               </label>
             );

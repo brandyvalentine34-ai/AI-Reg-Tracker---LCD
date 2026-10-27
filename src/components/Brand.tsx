@@ -4,6 +4,7 @@ import { CONTENT_UPDATED_ON } from '../data';
 import { formatDate } from '../lib/dates';
 import { MARKETS, MARKET_ORDER } from '../data/markets';
 import { cx } from './ui';
+import { Flag } from './Flag';
 
 export const APP_TITLE = 'Global AI Regulatory Development Tracker';
 export const APP_SUBTITLE = 'Developed by LCD Compliance for internal information purposes only';
@@ -78,9 +79,9 @@ function MarketStrip() {
         <span
           key={id}
           title={MARKETS[id].name}
-          className="flex h-7 items-center justify-center rounded-md bg-white/10 text-sm leading-none ring-1 ring-white/10"
+          className="flex h-7 items-center justify-center rounded-md bg-white/10 ring-1 ring-white/10"
         >
-          {MARKETS[id].flag}
+          <Flag market={id} size="md" />
         </span>
       ))}
     </div>

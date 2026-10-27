@@ -6,6 +6,7 @@ import { MARKETS, MARKET_ORDER } from '../data/markets';
 import { ACTION_STATUSES, IMPACTS, OWNERS } from '../lib/taxonomy';
 import { IS_PREVIEW, actionPlanCSV, exportFile } from '../lib/export';
 import { ActionRow } from '../components/ActionRow';
+import { Flag } from '../components/Flag';
 import { Button, Card, EmptyState, ImpactBadge, PageHeader, cx } from '../components/ui';
 
 const STATUS_KEYS = Object.keys(ACTION_STATUSES) as ActionStatus[];
@@ -137,7 +138,7 @@ export function ActionPlan({ scoped, onOpen }: { scoped: Development[]; onOpen: 
           {groups.map(({ d, actions }) => (
             <Card key={d.id} className="p-4">
               <div className="mb-3 flex flex-wrap items-center gap-2">
-                <span aria-hidden>{MARKETS[d.market].flag}</span>
+                <Flag market={d.market} />
                 <button type="button" onClick={() => onOpen(d.id)} className="text-sm font-bold text-slate-900 hover:text-blue-700">
                   {d.title}
                 </button>

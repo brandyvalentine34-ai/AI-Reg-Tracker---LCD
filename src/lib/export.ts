@@ -75,7 +75,7 @@ export function briefingMarkdown(list: Development[], opts: BriefingOptions): st
 
   out.push('## Developments', '');
   for (const d of list) {
-    out.push(`### ${MARKETS[d.market].flag} ${d.title}`);
+    out.push(`### [${MARKETS[d.market].shortName}] ${d.title}`);
     out.push(
       `${d.regulator} · ${STATUSES[d.status].label} · ${IMPACTS[d.impact].label} · ${APPLICABILITY[d.applicability].label} · Updated ${formatDate(d.lastUpdated)}`,
       '',
