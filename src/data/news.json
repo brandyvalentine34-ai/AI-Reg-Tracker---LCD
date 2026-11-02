@@ -9,8 +9,7 @@
     "subscription": false,
     "markets": [
       "us"
-    ],
-    "via": "Ropes & Gray AI newsletter"
+    ]
   },
   {
     "id": "third-circuit-westlaw-ross",
@@ -22,8 +21,7 @@
     "subscription": false,
     "markets": [
       "us"
-    ],
-    "via": "Ropes & Gray AI newsletter"
+    ]
   },
   {
     "id": "dc-circuit-pentagon-anthropic",
@@ -35,21 +33,19 @@
     "subscription": false,
     "markets": [
       "us"
-    ],
-    "via": "Ropes & Gray AI newsletter"
+    ]
   },
   {
     "id": "doj-openai-copyright-brief",
     "category": "legal",
-    "title": "DOJ’s OpenAI Copyright Brief Previews AI Licensing’s Future",
-    "date": "2026-09-24",
-    "publisher": "Bloomberg Law",
-    "url": "https://news.bloomberglaw.com/social-justice/dojs-openai-copyright-brief-previews-ai-licensing-deals-future",
-    "subscription": true,
+    "title": "Scoop: DOJ's copyright filing took key agencies by surprise",
+    "date": "2026-09-19",
+    "publisher": "Axios",
+    "url": "https://axios.com/2026/09/19/justice-department-openai-new-york-times",
+    "subscription": false,
     "markets": [
       "us"
-    ],
-    "via": "Ropes & Gray AI newsletter"
+    ]
   },
   {
     "id": "china-probes-deepseek-moonshot",
@@ -61,8 +57,7 @@
     "subscription": false,
     "markets": [
       "cn"
-    ],
-    "via": "Ropes & Gray AI newsletter"
+    ]
   },
   {
     "id": "ags-congress-ai-preemption",
@@ -74,8 +69,7 @@
     "subscription": false,
     "markets": [
       "us"
-    ],
-    "via": "Ropes & Gray AI newsletter"
+    ]
   },
   {
     "id": "openai-personal-agents",
@@ -85,8 +79,7 @@
     "publisher": "CNBC",
     "url": "https://www.cnbc.com/2026/09/30/openai-follows-meta-into-the-red-hot-market-for-personal-agents.html",
     "subscription": false,
-    "markets": [],
-    "via": "Ropes & Gray AI newsletter"
+    "markets": []
   },
   {
     "id": "ceos-ai-cyber-crisis-plans",
@@ -98,8 +91,7 @@
     "subscription": false,
     "markets": [
       "us"
-    ],
-    "via": "Ropes & Gray AI newsletter"
+    ]
   },
   {
     "id": "instinct-series-c",
@@ -109,8 +101,7 @@
     "publisher": "TechCrunch",
     "url": "https://techcrunch.com/2026/09/28/viral-ai-agent-instinct-raises-1b-series-c-at-a-10b-valuation",
     "subscription": false,
-    "markets": [],
-    "via": "Ropes & Gray AI newsletter"
+    "markets": []
   },
   {
     "id": "anthropic-akamai-cloud-deal",
@@ -120,8 +111,7 @@
     "publisher": "TechCrunch",
     "url": "https://techcrunch.com/2026/09/25/anthropic-to-pay-akamai-11-6-billion-over-seven-years-in-cloud-deal/",
     "subscription": false,
-    "markets": [],
-    "via": "Ropes & Gray AI newsletter"
+    "markets": []
   },
   {
     "id": "nvidia-agent-safety-system",
@@ -131,8 +121,7 @@
     "publisher": "AP (via PBS NewsHour)",
     "url": "https://www.pbs.org/newshour/world/nvidia-unveils-security-platform-to-stop-ai-agents-from-going-rogue",
     "subscription": false,
-    "markets": [],
-    "via": "Ropes & Gray AI newsletter"
+    "markets": []
   },
   {
     "id": "openai-agents-government-websites",
@@ -144,8 +133,7 @@
     "subscription": false,
     "markets": [
       "us"
-    ],
-    "via": "Ropes & Gray AI newsletter"
+    ]
   },
   {
     "id": "openai-agents-posted-user-images",
@@ -155,8 +143,7 @@
     "publisher": "TechCrunch",
     "url": "https://techcrunch.com/2026/09/25/unsecured-openai-agents-posted-53-user-images-on-the-internet-without-the-labs-knowledge/",
     "subscription": false,
-    "markets": [],
-    "via": "Ropes & Gray AI newsletter"
+    "markets": []
   },
   {
     "id": "hawley-murphy-ai-liability-bill",
@@ -168,8 +155,7 @@
     "subscription": false,
     "markets": [
       "us"
-    ],
-    "via": null
+    ]
   },
   {
     "id": "nyc-council-ai-safety-hearing",
@@ -181,8 +167,7 @@
     "subscription": false,
     "markets": [
       "us"
-    ],
-    "via": null
+    ]
   },
   {
     "id": "trump-ai-task-force-rogue-behavior-directive",
@@ -194,8 +179,7 @@
     "subscription": false,
     "markets": [
       "us"
-    ],
-    "via": null
+    ]
   },
   {
     "id": "eight-states-sue-openai-chatgpt",
@@ -207,8 +191,7 @@
     "subscription": false,
     "markets": [
       "us"
-    ],
-    "via": null
+    ]
   },
   {
     "id": "ftc-cids-openai-anthropic-safety-incidents",
@@ -220,8 +203,7 @@
     "subscription": false,
     "markets": [
       "us"
-    ],
-    "via": null
+    ]
   },
   {
     "id": "ftc-demands-anthropic-exec-testimony",
@@ -233,8 +215,7 @@
     "subscription": false,
     "markets": [
       "us"
-    ],
-    "via": null
+    ]
   },
   {
     "id": "ai-stocks-sink-openai-revenue-report",
@@ -246,8 +227,7 @@
     "subscription": false,
     "markets": [
       "us"
-    ],
-    "via": null
+    ]
   },
   {
     "id": "tenstorrent-series-e-6-2b-valuation",
@@ -257,8 +237,7 @@
     "publisher": "TechCrunch",
     "url": "https://techcrunch.com/2026/10/19/tenstorrent-hits-6-2b-valuation-to-scale-open-weight-ai-chips/",
     "subscription": false,
-    "markets": [],
-    "via": null
+    "markets": []
   },
   {
     "id": "openai-30b-raise-1-25t-valuation",
@@ -268,8 +247,7 @@
     "publisher": "TechCrunch",
     "url": "https://techcrunch.com/2026/10/22/openai-working-on-new-30b-raise-at-1-25t-valuation-ahead-of-ipo/",
     "subscription": false,
-    "markets": [],
-    "via": null
+    "markets": []
   },
   {
     "id": "anthropic-files-s1-ipo",
@@ -281,8 +259,7 @@
     "subscription": false,
     "markets": [
       "us"
-    ],
-    "via": null
+    ]
   },
   {
     "id": "meta-95b-stock-offering-ai",
@@ -294,8 +271,7 @@
     "subscription": false,
     "markets": [
       "us"
-    ],
-    "via": null
+    ]
   },
   {
     "id": "spacex-apollo-40b-gpu-financing",
@@ -305,8 +281,7 @@
     "publisher": "TechCrunch",
     "url": "https://techcrunch.com/2026/10/26/spacex-locks-in-40b-gpu-financing-deal-with-apollo/",
     "subscription": false,
-    "markets": [],
-    "via": null
+    "markets": []
   },
   {
     "id": "mistral-new-open-weight-model",
@@ -316,8 +291,7 @@
     "publisher": "CNBC",
     "url": "https://www.cnbc.com/2026/10/06/mistral-ai-model-le-chonk.html",
     "subscription": false,
-    "markets": [],
-    "via": null
+    "markets": []
   },
   {
     "id": "meta-muse-frontier-model",
@@ -327,8 +301,7 @@
     "publisher": "Semafor",
     "url": "https://www.semafor.com/article/10/12/2026/meta-has-reached-ai-frontier-zuckerberg-says",
     "subscription": false,
-    "markets": [],
-    "via": null
+    "markets": []
   },
   {
     "id": "anthropic-self-replication-home-devices",
@@ -338,8 +311,7 @@
     "publisher": "CNBC",
     "url": "https://www.cnbc.com/2026/10/13/anthropic-ai-models-self-replication-smart-devices.html",
     "subscription": false,
-    "markets": [],
-    "via": null
+    "markets": []
   },
   {
     "id": "anthropic-claude-duet-personal-agent",
@@ -349,8 +321,7 @@
     "publisher": "CNBC",
     "url": "https://www.cnbc.com/2026/10/21/anthropic-preview-of-claude-duet-personal-ai-agent-take-on-muse-dots.html",
     "subscription": false,
-    "markets": [],
-    "via": null
+    "markets": []
   },
   {
     "id": "php-ai-discovered-flaw-websites-go-dark",
@@ -362,8 +333,7 @@
     "subscription": false,
     "markets": [
       "global"
-    ],
-    "via": null
+    ]
   },
   {
     "id": "microsoft-china-hackers-ai-connectwise",
@@ -375,7 +345,6 @@
     "subscription": false,
     "markets": [
       "global"
-    ],
-    "via": null
+    ]
   }
 ]

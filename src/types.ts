@@ -135,8 +135,6 @@ export interface NewsItem {
   /** The outlet usually needs a subscription */
   subscription: boolean;
   markets: MarketId[];
-  /** Where the story was picked up, e.g. "Ropes & Gray AI newsletter" */
-  via: string | null;
 }
 
 /** ---- User workspace state (persisted locally) ---- */

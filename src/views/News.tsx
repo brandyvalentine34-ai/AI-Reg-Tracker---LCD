@@ -70,7 +70,6 @@ function NewsRow({ n }: { n: NewsItem }) {
           </span>
         )}
         {!n.url && <span className="italic">Link not available</span>}
-        {n.via && <span className="text-slate-400">via {n.via}</span>}
       </div>
     </li>
   );
@@ -186,8 +185,7 @@ export function News() {
       )}
 
       <p className="text-xs text-slate-500">
-        Headlines link to the original reporting. Some outlets need a subscription. Stories marked “via Ropes &amp; Gray AI newsletter”
-        were picked up from that newsletter.
+        Headlines link to the original reporting from publicly available news outlets.
       </p>
     </div>
   );

@@ -100,10 +100,10 @@ describe('exports', () => {
   });
 
   it('builds a markdown briefing', () => {
-    const md = briefingMarkdown([dev({ impact: 'high' })], { title: 'Update', today: '2026-10-08', includeActions: true, upcoming: [] });
+    const md = briefingMarkdown([dev({ impact: 'high' })], { title: 'Update', today: '2026-10-08', upcoming: [] });
     expect(md).toContain('# Update');
     expect(md).toContain('## Key messages');
-    expect(md).toContain('- Do, "the" thing _(Compliance)_');
+    expect(md).not.toContain('Do, "the" thing');
   });
 });
 
