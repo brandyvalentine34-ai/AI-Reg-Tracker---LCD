@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 import type { Development } from '../types';
 import { EMPTY_FILTERS, activeFilterCount, collectMilestones, matchesFilters, nextMilestone, sortDevelopments } from '../lib/filters';
 import { briefingMarkdown, toCSV } from '../lib/export';
-import { addDays, daysBetween, formatDate, quarterKey, relativeDays } from '../lib/dates';
+import { addDays, daysBetween, formatDate, formatDayMonthYear, quarterKey, relativeDays } from '../lib/dates';
 import { parseHash, buildHash } from '../state/router';
 
 function dev(over: Partial<Development>): Development {
@@ -86,6 +86,7 @@ describe('dates', () => {
   it('formats and diffs dates without timezone drift', () => {
     expect(formatDate('2026-10-08')).toBe('8 Oct 2026');
     expect(formatDate(null)).toBe('—');
+    expect(formatDayMonthYear('2026-11-06')).toBe('06-November-2026');
     expect(daysBetween('2026-10-08', '2026-10-18')).toBe(10);
     expect(addDays('2026-12-30', 3)).toBe('2027-01-02');
     expect(quarterKey('2026-11-15')).toBe('2026 Q4');

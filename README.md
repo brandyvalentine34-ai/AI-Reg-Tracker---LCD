@@ -35,7 +35,7 @@ Always check the linked primary source before acting.
 All content lives in [`src/data/developments.json`](src/data/developments.json). The schema and validation rules are in [`src/data/schema.ts`](src/data/schema.ts).
 
 1. Add or edit an entry. Bump `lastUpdated` and rewrite `latestUpdate` whenever something material changes; users will see the item as unread again.
-2. Change `CONTENT_UPDATED_ON` in [`src/data/index.ts`](src/data/index.ts) to the refresh date. It is shown as *Content is updated as of …* in the sidebar and on the Overview.
+2. Change `CONTENT_UPDATED_ON` in [`src/data/index.ts`](src/data/index.ts) to the refresh date. It is shown as *Content is updated as of DD-Month-YYYY* in the sidebar and on the Overview.
 3. Run `bun run test`. The dataset test checks every entry for valid enums, ISO dates, unique ids and at least one action and milestone.
 
 ### AI news
@@ -57,6 +57,8 @@ Use publicly available, credible news outlets (wire services, major newspapers a
 Market profiles are in [`src/data/markets.ts`](src/data/markets.ts). Taxonomy labels and colours are in [`src/lib/taxonomy.ts`](src/lib/taxonomy.ts).
 
 ## Monthly refresh
+
+A scheduled Claude Code routine runs the refresh automatically at about 9am Singapore time on the **first Friday of every month**. It researches, updates the content, sets `CONTENT_UPDATED_ON` to the refresh date (shown on the site as *Content is updated as of DD-Month-YYYY*), runs the checks and opens a pull request. Nothing goes live until the pull request is reviewed and merged. The steps below are what the routine follows, and can also be run by hand at any time.
 
 Each refresh starts by checking which regulator websites the cloud environment can read, so findings are checked against primary sources wherever possible.
 
