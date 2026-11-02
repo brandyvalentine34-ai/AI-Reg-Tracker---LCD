@@ -15,16 +15,14 @@ export function toCSV(rows: (string | number | undefined | null)[][]): string {
 
 export interface BriefingOptions {
   title: string;
-  preparedFor?: string;
   today: string;
-  includeActions: boolean;
   upcoming: MilestoneEntry[];
 }
 
 export function briefingMarkdown(list: Development[], opts: BriefingOptions): string {
   const out: string[] = [];
   out.push(`# ${opts.title}`, '');
-  out.push(`_Prepared ${formatDate(opts.today)}${opts.preparedFor ? ` for ${opts.preparedFor}` : ''}. ${list.length} developments._`, '');
+  out.push(`_Prepared ${formatDate(opts.today)}. ${list.length} developments._`, '');
 
   const high = list.filter((d) => d.impact === 'high');
   out.push('## Key messages', '');
@@ -50,11 +48,6 @@ export function briefingMarkdown(list: Development[], opts: BriefingOptions): st
     out.push(`**Latest:** ${d.latestUpdate}`, '');
     out.push(`**What it means for us:** ${d.buySideImpact}`, '');
     out.push(`**Themes:** ${d.themes.map((t) => THEMES[t].short).join(', ')}`, '');
-    if (opts.includeActions && d.actions.length) {
-      out.push('**Recommended actions:**');
-      for (const a of d.actions) out.push(`- ${a.text} _(${a.owner})_`);
-      out.push('');
-    }
     out.push(`Source: ${d.sourceUrl}`, '');
   }
   out.push('---', '_For internal information purposes only. Not legal advice. Verify against primary sources before relying on any item._');

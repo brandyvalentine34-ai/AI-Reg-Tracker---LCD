@@ -11,7 +11,6 @@ const item = (over: Partial<NewsItem>): NewsItem => ({
   url: 'https://example.com/a',
   subscription: false,
   markets: [],
-  via: null,
   ...over,
 });
 

@@ -20,6 +20,14 @@ export function formatDate(iso: string | null | undefined): string {
   return `${d.getUTCDate()} ${MONTHS[d.getUTCMonth()]} ${d.getUTCFullYear()}`;
 }
 
+const MONTHS_LONG = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+/** "2026-11-06" -> "06-November-2026" (used for the content-updated date). */
+export function formatDayMonthYear(iso: string): string {
+  const d = parseISODate(iso);
+  return `${String(d.getUTCDate()).padStart(2, '0')}-${MONTHS_LONG[d.getUTCMonth()]}-${d.getUTCFullYear()}`;
+}
+
 export function formatMonth(iso: string): string {
   const d = parseISODate(iso);
   return `${MONTHS[d.getUTCMonth()]} ${d.getUTCFullYear()}`;

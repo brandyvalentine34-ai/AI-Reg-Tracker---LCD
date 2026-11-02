@@ -11,8 +11,8 @@ Developed by LCD Compliance for internal information purposes only. Please refer
 | **Overview** | KPIs (tracked, high impact, unread, deadlines ≤ 90 days, recent AI news), latest developments, upcoming deadlines, a market × theme exposure heatmap, and your watchlist. |
 | **Developments** | Faceted library of every tracked law, rule, guidance, consultation and enforcement action. Search, filter by market / theme / impact / status / applicability / instrument, and sort by latest, impact or next deadline. |
 | **Detail panel** | Latest development, summary, *what it means for a buy-side firm*, key requirements, recommended actions, timeline, themes, source link and a verification-confidence note. Each item has a shareable URL (`#/developments?item=eu-ai-act`). |
-| **AI News** | Headlines in three sections (Legal & litigation, Business, Technology) with date, outlet and a link to the original public reporting, modelled on the Ropes & Gray AI newsletter. Filter by section or search. |
-| **Briefing pack** | Generates a committee-ready briefing (key messages, deadlines, developments, actions). Copy as Markdown, download `.md`, or print to PDF. |
+| **AI News** | Headlines in three sections (Legal & litigation, Business, Technology) with date, outlet and a link to the original public reporting, from publicly available, credible news outlets. Filter by section or search. |
+| **Briefing pack** | Generates a committee-ready briefing of developments updated in the last 30 days, 90 days, 6 months or 12 months (key messages, deadlines, developments). Copy as Markdown, download `.md`, or print to PDF. |
 
 **My footprint** (sidebar) lets each user pick the markets where the firm is licensed or distributes. The overview and briefing focus on those markets; global standard-setters are always included.
 
@@ -35,7 +35,7 @@ Always check the linked primary source before acting.
 All content lives in [`src/data/developments.json`](src/data/developments.json). The schema and validation rules are in [`src/data/schema.ts`](src/data/schema.ts).
 
 1. Add or edit an entry. Bump `lastUpdated` and rewrite `latestUpdate` whenever something material changes; users will see the item as unread again.
-2. Change `CONTENT_UPDATED_ON` in [`src/data/index.ts`](src/data/index.ts) to the refresh date. It is shown as *Content is updated as of …* in the sidebar and on the Overview.
+2. Change `CONTENT_UPDATED_ON` in [`src/data/index.ts`](src/data/index.ts) to the refresh date. It is shown as *Content is updated as of DD-Month-YYYY* in the sidebar and on the Overview.
 3. Run `bun run test`. The dataset test checks every entry for valid enums, ISO dates, unique ids and at least one action and milestone.
 
 ### AI news
@@ -51,13 +51,14 @@ Headlines live in [`src/data/news.json`](src/data/news.json), one object per sto
 | `url` | Link to the article (`null` only if none could be confirmed) |
 | `subscription` | `true` if the outlet usually needs a subscription |
 | `markets` | Market codes the story is about, e.g. `["us"]`, or `[]` |
-| `via` | Where the story was picked up, e.g. `Ropes & Gray AI newsletter`, or `null` |
 
-Prefer publicly readable sources. `bun run test` validates every entry.
+Use publicly available, credible news outlets (wire services, major newspapers and broadcasters, established tech and legal press). `bun run test` validates every entry.
 
 Market profiles are in [`src/data/markets.ts`](src/data/markets.ts). Taxonomy labels and colours are in [`src/lib/taxonomy.ts`](src/lib/taxonomy.ts).
 
 ## Monthly refresh
+
+A scheduled Claude Code routine runs the refresh automatically at about 9am Singapore time on the **first Friday of every month**. It researches, updates the content, sets `CONTENT_UPDATED_ON` to the refresh date (shown on the site as *Content is updated as of DD-Month-YYYY*), runs the checks and opens a pull request. Nothing goes live until the pull request is reviewed and merged. The steps below are what the routine follows, and can also be run by hand at any time.
 
 Each refresh starts by checking which regulator websites the cloud environment can read, so findings are checked against primary sources wherever possible.
 
@@ -68,7 +69,7 @@ Each refresh starts by checking which regulator websites the cloud environment c
    The site list is [`sources/regulator-domains.json`](sources/regulator-domains.json) plus every host used in a `sourceUrl` in `developments.json`, so new sources are picked up automatically. To add a regulator that has no tracked item yet, edit `regulator-domains.json`. Allow both the bare and `www.` form of each host: many sites redirect from one to the other.
 2. **Research and update.** Ask Claude Code in this repository:
 
-   > Refresh the Global AI Regulatory Development Tracker. First run `bun run check:sources` and read `sources/ACCESS.md`. Research AI regulatory developments since the last refresh (`CONTENT_UPDATED_ON` in `src/data/index.ts`) across all 10 markets, reading primary sources with curl wherever ACCESS.md shows them as readable (send a User-Agent with a name and contact email; the SEC requires one). Update `src/data/developments.json`: add new developments and update changed ones (`lastUpdated`, `latestUpdate`, milestones, confidence). Do not change or reorder existing actions. Also add AI news since the last refresh to `src/data/news.json` (Legal & litigation, Business and Technology only; public sources preferred; use each article's own headline and a link you have confirmed). Set `CONTENT_UPDATED_ON` to today, run `bun run check:sources` again and `bun run test`, then open a pull request listing what changed, which sources were read directly, and anything you could not verify. Do not merge it.
+   > Refresh the Global AI Regulatory Development Tracker. First run `bun run check:sources` and read `sources/ACCESS.md`. Research AI regulatory developments since the last refresh (`CONTENT_UPDATED_ON` in `src/data/index.ts`) across all 10 markets, reading primary sources with curl wherever ACCESS.md shows them as readable (send a User-Agent with a name and contact email; the SEC requires one). Update `src/data/developments.json`: add new developments and update changed ones (`lastUpdated`, `latestUpdate`, milestones, confidence). Do not change or reorder existing actions. Also add AI news since the last refresh to `src/data/news.json` (Legal & litigation, Business and Technology only; publicly available, credible news outlets only; use each article's own headline and a link you have confirmed). Set `CONTENT_UPDATED_ON` to today, run `bun run check:sources` again and `bun run test`, then open a pull request listing what changed, which sources were read directly, and anything you could not verify. Do not merge it.
 
 3. **Review and merge** the pull request. Vercel redeploys from `main`.
 

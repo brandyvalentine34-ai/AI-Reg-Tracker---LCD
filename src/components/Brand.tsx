@@ -1,7 +1,7 @@
 import { useId } from 'react';
 import { CalendarCheck } from 'lucide-react';
 import { CONTENT_UPDATED_ON } from '../data';
-import { formatDate } from '../lib/dates';
+import { formatDayMonthYear } from '../lib/dates';
 import { MARKETS, MARKET_ORDER } from '../data/markets';
 import { cx } from './ui';
 import { Flag } from './Flag';
@@ -132,7 +132,7 @@ export function ContentUpdated({ tone = 'light', className }: { tone?: 'light' |
       )}
     >
       <CalendarCheck className="h-3.5 w-3.5 shrink-0 not-italic" aria-hidden="true" />
-      Content is updated as of {formatDate(CONTENT_UPDATED_ON)}
+      Content is updated as of {formatDayMonthYear(CONTENT_UPDATED_ON)}
     </span>
   );
 }
