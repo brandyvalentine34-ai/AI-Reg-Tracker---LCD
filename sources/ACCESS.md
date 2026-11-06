@@ -1,6 +1,6 @@
 # Primary-source access check
 
-_Generated 2026-11-06 01:45 UTC by `bun run check:sources`. Do not edit by hand; re-run the command instead._
+_Generated 2026-11-06 02:01 UTC by `bun run check:sources`. Do not edit by hand; re-run the command instead._
 
 **23 of 78 sites readable.** ⚠️ 3 allowed, but the site refuses automated access · ↪️ 6 allowed, but redirects to a host that is not allowed · ⏳ 1 allowed, but no response · ⛔ 45 not allowed
 

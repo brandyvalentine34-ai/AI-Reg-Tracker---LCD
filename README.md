@@ -20,7 +20,7 @@ Workspace state (footprint, watchlist, read status) is stored in the browser's `
 
 ## Coverage
 
-77 developments across 10 markets: EU, UK, US, Singapore, Hong Kong, Japan, Australia, Mainland China, South Korea, and global standard-setters (IOSCO, FSB, G7, OECD, Council of Europe, ISO/IEC). Content is updated as of **25 October 2026**.
+80 developments across 10 markets: EU, UK, US, Singapore, Hong Kong, Japan, Australia, Mainland China, South Korea, and global standard-setters (IOSCO, FSB, G7, OECD, Council of Europe, ISO/IEC). Content is updated as of **6 November 2026**.
 
 Each item has a `confidence` rating:
 
