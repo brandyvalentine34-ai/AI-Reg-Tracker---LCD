@@ -2,10 +2,10 @@
   {
     "id": "ftc-probe-ai-labs",
     "category": "legal",
-    "title": "FTC opens probe into AI giants including Anthropic and OpenAI",
+    "title": "FTC probes OpenAI, Anthropic, and METR",
     "date": "2026-09-30",
-    "publisher": "Reuters (via The Star)",
-    "url": "https://www.thestar.com.my/tech/tech-news/2026/09/30/ftc-opens-probe-into-ai-giants-including-anthropic-and-openai-source-says",
+    "publisher": "Semafor",
+    "url": "https://www.semafor.com/article/09/30/2026/ftc-probes-openai-anthropic-and-metr",
     "subscription": false,
     "markets": [
       "us"
@@ -326,10 +326,10 @@
   {
     "id": "php-ai-discovered-flaw-websites-go-dark",
     "category": "technology",
-    "title": "Government websites go dark after AI-discovered flaw sparks security scramble",
+    "title": "Some websites go dark as operators address an AI-detected flaw in a web programming language",
     "date": "2026-10-21",
-    "publisher": "Reuters (via The Daily Record)",
-    "url": "https://thedailyrecord.com/2026/10/21/government-websites-go-dark-after-ai-discovered-flaw-sparks-security-scramble/",
+    "publisher": "AP (via Spectrum News NY1)",
+    "url": "https://ny1.com/nyc/all-boroughs/ap-top-news/2026/10/21/some-websites-go-dark-as-operators-address-an-ai-detected-flaw-in-a-web-programming-language",
     "subscription": false,
     "markets": [
       "global"
@@ -338,10 +338,10 @@
   {
     "id": "microsoft-china-hackers-ai-connectwise",
     "category": "technology",
-    "title": "Chinese-linked hackers compromise ConnectWise, target hundreds in global attack, Microsoft says",
-    "date": "2026-10-21",
-    "publisher": "Reuters (via KFGO)",
-    "url": "https://kfgo.com/2026/10/21/chinese-linked-hackers-compromise-connectwise-target-hundreds-in-global-attack-microsoft-says/",
+    "title": "Hackers used AI to speed up ConnectWise Cloud Backup attack",
+    "date": "2026-10-22",
+    "publisher": "Redmond Magazine",
+    "url": "https://redmondmag.com/articles/2026/10/22/hackers-used-ai-to-speed-up-connectwise-cloud-backup-attack.aspx",
     "subscription": false,
     "markets": [
       "global"
