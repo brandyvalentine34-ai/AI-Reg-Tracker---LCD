@@ -346,5 +346,223 @@
     "markets": [
       "global"
     ]
+  },
+  {
+    "id": "parents-sue-openai-gpt4o-seizure-medication",
+    "category": "legal",
+    "title": "Parents sue OpenAI, alleging GPT-4o coached their daughter off seizure medication",
+    "date": "2026-10-27",
+    "publisher": "TechCrunch",
+    "url": "https://techcrunch.com/2026/10/27/parents-sue-openai-alleging-gpt-4o-coached-their-daughter-off-seizure-medication/",
+    "subscription": false,
+    "markets": [
+      "us"
+    ]
+  },
+  {
+    "id": "naacp-xai-data-center-lawsuit-proceeds",
+    "category": "legal",
+    "title": "Judge allows NAACP lawsuit over xAI data center pollution to move forward",
+    "date": "2026-10-31",
+    "publisher": "TechCrunch",
+    "url": "https://techcrunch.com/2026/10/31/judge-allows-naacp-lawsuit-over-xai-data-center-pollution-to-move-forward/",
+    "subscription": false,
+    "markets": [
+      "us"
+    ]
+  },
+  {
+    "id": "nyt-outlets-sue-brave-content-scraping",
+    "category": "legal",
+    "title": "New York Times and other outlets sue web browser Brave over alleged content scraping",
+    "date": "2026-11-02",
+    "publisher": "TechCrunch",
+    "url": "https://techcrunch.com/2026/11/02/new-york-times-and-other-outlets-sue-web-browser-brave-over-alleged-content-scraping/",
+    "subscription": false,
+    "markets": [
+      "us"
+    ]
+  },
+  {
+    "id": "hollywood-backs-nyt-openai-copyright",
+    "category": "legal",
+    "title": "Hollywood backs NYT in AI copyright fight with OpenAI and Microsoft",
+    "date": "2026-11-03",
+    "publisher": "Axios",
+    "url": "https://www.axios.com/2026/11/03/hollywood-new-york-times-openai-microsoft",
+    "subscription": false,
+    "markets": [
+      "us"
+    ]
+  },
+  {
+    "id": "voters-rebuff-data-center-ballot-measures",
+    "category": "legal",
+    "title": "Voters rebuff data centers in every ballot measure except one during the 2026 midterms",
+    "date": "2026-11-04",
+    "publisher": "CNBC",
+    "url": "https://www.cnbc.com/2026/11/04/data-center-ballot-measures-2026-midterm.html",
+    "subscription": false,
+    "markets": [
+      "us"
+    ]
+  },
+  {
+    "id": "google-microsoft-hold-capex-forecasts",
+    "category": "business",
+    "title": "AI buildout hits snag as Google and Microsoft put off raising capex forecasts",
+    "date": "2026-10-29",
+    "publisher": "CNBC",
+    "url": "https://www.cnbc.com/2026/10/29/microsoft-google-ai-capex-estimates.html",
+    "subscription": false,
+    "markets": [
+      "us"
+    ]
+  },
+  {
+    "id": "openai-abu-dhabi-deals",
+    "category": "business",
+    "title": "OpenAI deepens Abu Dhabi foothold as Sam Altman inks deals spanning energy, government and investment",
+    "date": "2026-11-02",
+    "publisher": "CNBC",
+    "url": "https://www.cnbc.com/2026/11/02/openai-abu-dhabi-ai-deals.html",
+    "subscription": false,
+    "markets": [
+      "global"
+    ]
+  },
+  {
+    "id": "fal-doubles-valuation-16b",
+    "category": "business",
+    "title": "AI inference startup Fal doubles its valuation to $16B as demand surges",
+    "date": "2026-11-03",
+    "publisher": "TechCrunch",
+    "url": "https://techcrunch.com/2026/11/03/ai-inference-startup-fal-doubles-its-valuation-to-16b-as-demand-surges/",
+    "subscription": false,
+    "markets": [
+      "us"
+    ]
+  },
+  {
+    "id": "meta-acquires-conductor",
+    "category": "business",
+    "title": "Meta acquires AI coding startup Conductor",
+    "date": "2026-11-04",
+    "publisher": "TechCrunch",
+    "url": "https://techcrunch.com/2026/11/04/meta-acquires-ai-coding-startup-conductor/",
+    "subscription": false,
+    "markets": [
+      "us"
+    ]
+  },
+  {
+    "id": "openai-data-center-nda-pledge",
+    "category": "business",
+    "title": "OpenAI pledges to halt NDAs in new data center policy proposal after election rebuke",
+    "date": "2026-11-05",
+    "publisher": "CNBC",
+    "url": "https://www.cnbc.com/2026/11/05/openai-to-pay-for-data-center-power-after-election-shows-ai-concern.html",
+    "subscription": false,
+    "markets": [
+      "us"
+    ]
+  },
+  {
+    "id": "magnificent-7-loses-1-trillion-ai-selloff",
+    "category": "business",
+    "title": "Magnificent 7 loses $1 trillion. The most eye-popping stats from Thursday's tech stock plunge",
+    "date": "2026-11-05",
+    "publisher": "CNBC",
+    "url": "https://www.cnbc.com/2026/11/05/stock-market-selloff-ai-fears.html",
+    "subscription": false,
+    "markets": [
+      "us",
+      "jp",
+      "kr"
+    ]
+  },
+  {
+    "id": "black-october-ai-cyber-scare",
+    "category": "technology",
+    "title": "Inside \"Black October\": AI's cyber scare delivers a Y2K lesson",
+    "date": "2026-10-28",
+    "publisher": "Axios",
+    "url": "https://www.axios.com/2026/10/28/cybersecurity-black-october-ai-hacks",
+    "subscription": false,
+    "markets": [
+      "global"
+    ]
+  },
+  {
+    "id": "anthropic-ai-spending-reporting-tools",
+    "category": "technology",
+    "title": "Anthropic just launched tools to show companies what their AI spending is buying",
+    "date": "2026-10-28",
+    "publisher": "TechCrunch",
+    "url": "https://techcrunch.com/2026/10/28/anthropic-just-launched-tools-to-show-companies-what-their-ai-spending-is-buying/",
+    "subscription": false,
+    "markets": [
+      "global"
+    ]
+  },
+  {
+    "id": "anthropic-warns-near-rsi-capability",
+    "category": "technology",
+    "title": "Anthropic warns that it's very close to RSI capability, aka self-building AI",
+    "date": "2026-11-02",
+    "publisher": "TechCrunch",
+    "url": "https://techcrunch.com/2026/11/02/anthropic-warns-that-its-very-close-to-rsi-capability-aka-self-building-ai/",
+    "subscription": false,
+    "markets": [
+      "global"
+    ]
+  },
+  {
+    "id": "binance-hack-fake-interviews-ai-tool",
+    "category": "technology",
+    "title": "Binance co-CEO Richard Teng says hackers used fake job interviews, AI tool to steal $6.3 billion in crypto",
+    "date": "2026-11-03",
+    "publisher": "CNBC",
+    "url": "https://www.cnbc.com/2026/11/03/binance-co-ceo-teng-says-hackers-used-fake-job-interviews-to-steal-6point3-billion-in-crypto.html",
+    "subscription": false,
+    "markets": [
+      "global"
+    ]
+  },
+  {
+    "id": "google-schools-disable-ai-lose-search",
+    "category": "technology",
+    "title": "Google will let schools disable its AI tools, but not without sacrificing Search",
+    "date": "2026-11-03",
+    "publisher": "TechCrunch",
+    "url": "https://techcrunch.com/2026/11/03/google-will-let-schools-disable-its-ai-tools-but-not-without-sacrificing-search/",
+    "subscription": false,
+    "markets": [
+      "us"
+    ]
+  },
+  {
+    "id": "openai-gpt6-cyber-linux-flaws",
+    "category": "technology",
+    "title": "OpenAI's new cyber model found ways to attack nearly 1000 Linux flaws",
+    "date": "2026-11-05",
+    "publisher": "Axios",
+    "url": "https://www.axios.com/2026/11/05/openai-linux-cyber-model",
+    "subscription": false,
+    "markets": [
+      "global"
+    ]
+  },
+  {
+    "id": "moonshot-nvidia-chips-europe",
+    "category": "business",
+    "title": "China's Moonshot AI sought Nvidia chip access in Europe amid U.S. curbs",
+    "date": "2026-11-05",
+    "publisher": "CNBC",
+    "url": "https://www.cnbc.com/2026/11/05/moonshot-ai-nvidia-chips-europe-china.html",
+    "subscription": false,
+    "markets": [
+      "cn"
+    ]
   }
 ]

@@ -1,14 +1,14 @@
 # Primary-source access check
 
-_Generated 2026-10-25 07:00 UTC by `bun run check:sources`. Do not edit by hand; re-run the command instead._
+_Generated 2026-11-06 02:01 UTC by `bun run check:sources`. Do not edit by hand; re-run the command instead._
 
-**22 of 78 sites readable.** ⚠️ 3 allowed, but the site refuses automated access · ↪️ 6 allowed, but redirects to a host that is not allowed · ⏳ 2 allowed, but no response · ⛔ 45 not allowed
+**23 of 78 sites readable.** ⚠️ 3 allowed, but the site refuses automated access · ↪️ 6 allowed, but redirects to a host that is not allowed · ⏳ 1 allowed, but no response · ⛔ 45 not allowed
 
 ## Add to the environment's Allowed domains
 
 Cloud environment menu → **Edit** → **Network access** → **Allowed domains**. Keep **Allow package managers** ticked.
 
-**Needed to read sites that are blocked now (100):**
+**Needed to read sites that are blocked now (99):**
 
 ```
 21jingji.com
@@ -41,7 +41,6 @@ eur-lex.europa.eu
 europarl.europa.eu
 federalregister.gov
 fsb.org
-fsc.go.kr
 fstb.gov.hk
 ftc.gov
 gia.info.gov.hk
@@ -113,7 +112,7 @@ www.soumu.go.jp
 www8.cao.go.jp
 ```
 
-**Also recommended (23):** other host names of sites that already work, so links using either form keep working.
+**Also recommended (24):** other host names of sites that already work, so links using either form keep working.
 
 ```
 apps.sfc.hk
@@ -126,6 +125,7 @@ digitalpolicy.gov.hk
 fca.org.uk
 finra.org
 fsa.go.jp
+fsc.go.kr
 fss.or.kr
 hkma.gov.hk
 imda.gov.sg
@@ -261,7 +261,7 @@ The complete list of hosts is in [`allowed-domains.txt`](allowed-domains.txt).
 
 | Site | Status | Hosts |
 | --- | --- | --- |
-| FSC | ⏳ | `www.fsc.go.kr` no response; `fsc.go.kr` not allowed |
+| FSC | ✅ | `www.fsc.go.kr` ok; `fsc.go.kr` not allowed |
 | FSS | ✅ | `www.fss.or.kr` ok; `fss.or.kr` not allowed |
 | MSIT | ✅ | `www.msit.go.kr` ok; `msit.go.kr` not allowed |
 | PIPC | ↪️ | `www.pipc.go.kr` → `pipc.go.kr` not allowed; `pipc.go.kr` not allowed |
@@ -279,7 +279,7 @@ The complete list of hosts is in [`allowed-domains.txt`](allowed-domains.txt).
 | OECD.AI | ↪️ | `oecd.ai` not allowed; `www.oecd.ai` → `oecd.ai` not allowed |
 | Council of Europe | ⛔ | `www.coe.int` not allowed; `coe.int` not allowed |
 | ISO | ⛔ | `www.iso.org` not allowed; `iso.org` not allowed |
-| IMF | ⚠️ | `www.imf.org` HTTP 429; `imf.org` not allowed |
+| IMF | ⚠️ | `www.imf.org` HTTP 404; `imf.org` not allowed |
 
 ## Notes
 

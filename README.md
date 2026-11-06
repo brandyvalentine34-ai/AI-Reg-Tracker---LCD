@@ -20,7 +20,7 @@ Workspace state (footprint, watchlist, read status) is stored in the browser's `
 
 ## Coverage
 
-77 developments across 10 markets: EU, UK, US, Singapore, Hong Kong, Japan, Australia, Mainland China, South Korea, and global standard-setters (IOSCO, FSB, G7, OECD, Council of Europe, ISO/IEC). Content is updated as of **25 October 2026**.
+80 developments across 10 markets: EU, UK, US, Singapore, Hong Kong, Japan, Australia, Mainland China, South Korea, and global standard-setters (IOSCO, FSB, G7, OECD, Council of Europe, ISO/IEC). Content is updated as of **6 November 2026**.
 
 Each item has a `confidence` rating:
 
@@ -69,7 +69,7 @@ Each refresh starts by checking which regulator websites the cloud environment c
    The site list is [`sources/regulator-domains.json`](sources/regulator-domains.json) plus every host used in a `sourceUrl` in `developments.json`, so new sources are picked up automatically. To add a regulator that has no tracked item yet, edit `regulator-domains.json`. Allow both the bare and `www.` form of each host: many sites redirect from one to the other.
 2. **Research and update.** Ask Claude Code in this repository:
 
-   > Refresh the Global AI Regulatory Development Tracker. First run `bun run check:sources` and read `sources/ACCESS.md`. Research AI regulatory developments since the last refresh (`CONTENT_UPDATED_ON` in `src/data/index.ts`) across all 10 markets, reading primary sources with curl wherever ACCESS.md shows them as readable (send a User-Agent with a name and contact email; the SEC requires one). Update `src/data/developments.json`: add new developments and update changed ones (`lastUpdated`, `latestUpdate`, milestones, confidence). Do not change or reorder existing actions. Also add AI news since the last refresh to `src/data/news.json` (Legal & litigation, Business and Technology only; publicly available, credible news outlets only; use each article's own headline and a link you have confirmed). Set `CONTENT_UPDATED_ON` to today, run `bun run check:sources` again and `bun run test`, then open a pull request listing what changed, which sources were read directly, and anything you could not verify. Do not merge it.
+   > Refresh the Global AI Regulatory Development Tracker. First run `bun run check:sources` and read `sources/ACCESS.md`. Research AI regulatory developments since the last refresh (`CONTENT_UPDATED_ON` in `src/data/index.ts`) across all 10 markets, reading primary sources with curl wherever ACCESS.md shows them as readable (one request per command; when a site such as the SEC wants a User-Agent with a contact, use the generic `LCD-Compliance AI-Reg-Tracker compliance@example.com`, never a personal email address). Update `src/data/developments.json`: add new developments and update changed ones (`lastUpdated`, `latestUpdate`, milestones, confidence). Do not change or reorder existing actions. Also add AI news since the last refresh to `src/data/news.json` (Legal & litigation, Business and Technology only; publicly available, credible news outlets only; use each article's own headline and a link you have confirmed). Set `CONTENT_UPDATED_ON` to today, run `bun run check:sources` again and `bun run test`, then open a pull request listing what changed, which sources were read directly, and anything you could not verify. Do not merge it.
 
 3. **Review and merge** the pull request. Vercel redeploys from `main`.
 
